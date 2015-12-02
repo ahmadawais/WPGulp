@@ -12,7 +12,6 @@
     "gulp"                      : "^3.8.11",
     "gulp-autoprefixer"         : "^3.1.0",
     "gulp-concat"               : "^2.5.2",
-    "gulp-filter"               : "^3.0.1",
     "gulp-notify"               : "^2.2.0",
     "gulp-rename"               : "^1.2.0",
     "gulp-sass"                 : "^2.0.0",

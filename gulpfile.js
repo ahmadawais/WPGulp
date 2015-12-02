@@ -56,7 +56,6 @@
 	var uglify       = require('gulp-uglify'); // Minifies JS files
 
 	// Utility related plugins.
-	var filter       = require('gulp-filter'); // To filter diferent file types E.g. *.css
 	var rename       = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css
 	var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
 	var notify       = require('gulp-notify'); // Sends message notification to you
@@ -65,7 +64,7 @@
 /**
  * Task: styles
  *
- * Compiles Sass, Autoprfixes it and Minifies CSS.
+ * Compiles Sass, Autoprefixes it and Minifies CSS.
  *
  * This task does the following:
  * 		1. Gets the source scss file
