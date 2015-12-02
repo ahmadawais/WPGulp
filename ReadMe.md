@@ -20,7 +20,7 @@ Use Gulp with WordPress.
 
 ##Prerequisite & Gotchas
 - Tested and built on Mac OS Yosemite.
-- You must have Git and Node NPM installed. 
+- You must have Git and Node, NPM, Gulp installed globally. 
 - You should never commit `node_modules` folder, you should exclude it in `.gitignore` file.
 
 
