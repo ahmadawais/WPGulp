@@ -20,23 +20,27 @@
   * Edit the variables as per your project requirements.
   */
 
-	var project             = 'WPGulpTheme'; // Name
+var project             = 'WPGulpTheme'; // Name
 
-	var styleSRC            = './assets/css/style.scss'; // Path to main .scss file
-	var styleDestination    = './'; // Path to place the compiled CSS file
-									// Defualt set to root folder
-
-
-	var jsVendorSRC         = './assets/js/vendors/*.js'; // Path to JS vendors folder
-	var jsVendorDestination = './assets/js/'; // Path to place the compiled JS vendors file
-	var jsVendorFile        = 'vendors'; // Compiled JS vendors file name
-										// Default set to vendors i.e. vendors.js
+var styleSRC            = './assets/css/style.scss'; // Path to main .scss file
+var styleDestination    = './'; // Path to place the compiled CSS file
+// Defualt set to root folder
 
 
-	var jsCustomSRC         = './assets/js/custom/*.js'; // Path to JS custom scripts folder
-	var jsCustomDestination = './assets/js/'; // Path to place the compiled JS custom scripts file
-	var jsCustomFile        = 'custom'; // Compiled JS custom file name
-										// Default set to custom i.e. custom.js
+var jsVendorSRC         = './assets/js/vendors/*.js'; // Path to JS vendors folder
+var jsVendorDestination = './assets/js/'; // Path to place the compiled JS vendors file
+var jsVendorFile        = 'vendors'; // Compiled JS vendors file name
+// Default set to vendors i.e. vendors.js
+
+
+var jsCustomSRC         = './assets/js/custom/*.js'; // Path to JS custom scripts folder
+var jsCustomDestination = './assets/js/'; // Path to place the compiled JS custom scripts file
+var jsCustomFile        = 'custom'; // Compiled JS custom file name
+// Default set to custom i.e. custom.js
+
+var styleWatchFiles     = './assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them
+var vendorJSWatchFiles  = './assets/js/vendors/*.js'; // Path to all vendors JS files
+var customJSWatchFiles  = './assets/js/custom/*.js'; // Path to all custom JS files
 
 
 /**
@@ -44,21 +48,21 @@
  *
  * Load gulp plugins and assing them semantic names.
  */
-	var gulp         = require('gulp'); // Gulp of-course
+var gulp         = require('gulp'); // Gulp of-course
 
-	// CSS related plugins.
-	var sass         = require('gulp-sass'); // Gulp pluign for Sass compilation
-	var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic
-	var minifycss    = require('gulp-uglifycss'); // Minifies CSS files
+// CSS related plugins.
+var sass         = require('gulp-sass'); // Gulp pluign for Sass compilation
+var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic
+var minifycss    = require('gulp-uglifycss'); // Minifies CSS files
 
-	// JS related plugins.
-	var concat       = require('gulp-concat'); // Concatenates JS files
-	var uglify       = require('gulp-uglify'); // Minifies JS files
+// JS related plugins.
+var concat       = require('gulp-concat'); // Concatenates JS files
+var uglify       = require('gulp-uglify'); // Minifies JS files
 
-	// Utility related plugins.
-	var rename       = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css
-	var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
-	var notify       = require('gulp-notify'); // Sends message notification to you
+// Utility related plugins.
+var rename       = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css
+var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
+var notify       = require('gulp-notify'); // Sends message notification to you
 
 
 /**
@@ -166,7 +170,7 @@ gulp.task( 'customJS', function() {
   */
 
  gulp.task( 'default', [ 'styles', 'vendorsJs', 'customJS' ], function () {
- 	gulp.watch( './assets/css/**/*.scss', [ 'styles' ] );
- 	gulp.watch( './assets/js/vendors/*.js', [ 'vendorsJs' ] );
- 	gulp.watch( './assets/js/custom/*.js', [ 'customJS' ] );
+ 	gulp.watch( styleWatchFiles, [ 'styles' ] );
+ 	gulp.watch( vendorJSWatchFiles, [ 'vendorsJs' ] );
+ 	gulp.watch( customJSWatchFiles, [ 'customJS' ] );
  });
