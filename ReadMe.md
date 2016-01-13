@@ -1,5 +1,8 @@
 #WPGulp
-Use Gulp with WordPress. 
+Use Gulp with WordPress.
+Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ahmadawais.com/introducing-wpgulp-an-easy-to-use-wordpress-gulp-boilerplate/)
+
+![](https://i.imgur.com/zzoByRC.png)
 
 ##Implementations
 - Checkout a basic WordPress theme implementation with WPGulp called [WPGulpTheme](https://github.com/ahmadawais/WPGulpTheme).
@@ -26,5 +29,5 @@ Use Gulp with WordPress.
 
 ##To do 
 - [x] Add base files.
-- [ ] Write a blog post about this.
+- [x] Write a blog post about this.
 - [ ] Add more branches with different implementation of plugins.
