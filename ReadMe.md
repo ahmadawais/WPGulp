@@ -5,10 +5,11 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
 ![](https://i.imgur.com/zzoByRC.png)
 
 ## What Can WPGulp Do?
- 1. Sass to CSS conversion
- 2. JS concatenation
- 3. Watch files
- 4. Live reloads browser with BrowserSync
+1. Live reloads browser with BrowserSync
+2. CSS: Sass to CSS conversion, Autoprixing, Sourcemaps, CSS minification.
+3. JS: Concatenates & uglifies Vendor and Custom JS files.
+4. Images: Minifies PNG, JPEG, GIF and SVG images.
+5. Watches files for changes in CSS or JS
  
 
 ##Implementations
@@ -43,8 +44,9 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
 - [x] Add more branches with different implementation of plugins.
 - [ ] Improve documentation with more links.
 
+##License
 The MIT License (MIT)
-Copyright (c) 2016 ahmadawais <ahmadawais.com>
+Copyright (c) 2016 Ahmad Awais <http://AhmadAwais.com/>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
