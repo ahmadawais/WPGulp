@@ -35,6 +35,7 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
 
 ## Feature Branches
 - Live browser reload with [BrowserSync](https://github.com/ahmadawais/WPGulp/tree/BrowserSync)
+- Images minification with [Imagemin](https://github.com/ahmadawais/WPGulp/tree/Images)
 
 ##To do 
 - [x] Add base files.
