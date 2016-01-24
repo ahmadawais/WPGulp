@@ -4,6 +4,13 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
 
 ![](https://i.imgur.com/zzoByRC.png)
 
+## What Can WPGulp Do?
+ 1. Sass to CSS conversion
+ 2. JS concatenation
+ 3. Watch files
+ 4. Live reloads browser with BrowserSync
+ 
+
 ##Implementations
 - Checkout a basic WordPress theme implementation with WPGulp called [WPGulpTheme](https://github.com/ahmadawais/WPGulpTheme).
 - More coming soon.
@@ -26,7 +33,7 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
 - You must have Git and Node, NPM, Gulp installed globally. 
 - You should never commit `node_modules` folder, you should exclude it in `.gitignore` file.
 
-# Feature Branches
+## Feature Branches
 - Live browser reload with [BrowserSync](https://github.com/ahmadawais/WPGulp/tree/BrowserSync)
 
 
