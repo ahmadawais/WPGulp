@@ -36,15 +36,11 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
 ## Feature Branches
 - Live browser reload with [BrowserSync](https://github.com/ahmadawais/WPGulp/tree/BrowserSync)
 
-
-
-
-
 ##To do 
 - [x] Add base files.
 - [x] Write a blog post about this.
 - [x] Add more branches with different implementation of plugins.
-
+- [ ] Improve documentation with more links.
 
 The MIT License (MIT)
 Copyright (c) 2016 ahmadawais <ahmadawais.com>
