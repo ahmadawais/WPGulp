@@ -158,6 +158,7 @@ gulp.task('styles', function () {
 			// outputStyle: 'expanded',
 			precision: 10
 		} ) )
+		.on('error', console.error.bind(console))
 		.pipe( sourcemaps.write( { includeContent: false } ) )
 		.pipe( sourcemaps.init( { loadMaps: true } ) )
 		.pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
