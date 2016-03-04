@@ -26,6 +26,7 @@
 
 var project             = 'WPGulpTheme'; // Project Name.
 var projecturl          = 'wpgulp.dev'; // Project URL. Could be something like localhost:8888.
+var themeUrl            = './'; // Theme URL. Leave it like it is if this gulpfile lives in the theme's root.
 
 
 var styleSRC            = './assets/css/style.scss'; // Path to main .scss file.
@@ -259,6 +260,7 @@ gulp.task( 'images', function() {
   * Watches for file changes and runs specific tasks.
   */
  gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
+ 	gulp.watch( themeUrl +'*.php', reload);
  	gulp.watch( styleWatchFiles, [ 'styles' ] );
  	gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ]  );
  	gulp.watch( customJSWatchFiles, [ 'customJS', reload ]  );
