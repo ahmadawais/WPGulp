@@ -260,7 +260,7 @@ gulp.task( 'images', function() {
   * Watches for file changes and runs specific tasks.
   */
  gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
- 	gulp.watch( themeUrl +'*.php', reload);
+ 	gulp.watch( themeUrl +'/**/*.php', reload);
  	gulp.watch( styleWatchFiles, [ 'styles' ] );
  	gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ]  );
  	gulp.watch( customJSWatchFiles, [ 'customJS', reload ]  );
