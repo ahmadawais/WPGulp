@@ -6,10 +6,11 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
 
 ## What Can WPGulp Do?
 1. Live reloads browser with BrowserSync
-2. CSS: Sass to CSS conversion, Autoprixing, Sourcemaps, CSS minification.
+2. CSS: Sass to CSS conversion, error catching, Autoprixing, Sourcemaps, CSS minification, and Merge Media Queries.
 3. JS: Concatenates & uglifies Vendor and Custom JS files.
 4. Images: Minifies PNG, JPEG, GIF and SVG images.
 5. Watches files for changes in CSS or JS
+6. Watches files for changes in PHP.
  
 
 ##Implementations
