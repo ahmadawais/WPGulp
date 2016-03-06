@@ -82,9 +82,10 @@ const AUTOPREFIXER_BROWSERS = [
 var gulp         = require('gulp'); // Gulp of-course
 
 // CSS related plugins.
-var sass         = require('gulp-sass'); // Gulp pluign for Sass compilation
-var minifycss    = require('gulp-uglifycss'); // Minifies CSS files
-var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic
+var sass         = require('gulp-sass'); // Gulp pluign for Sass compilation.
+var minifycss    = require('gulp-uglifycss'); // Minifies CSS files.
+var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic.
+var mmq          = require('gulp-merge-media-queries'); // Combine matching media queries into one media query definition.
 
 // JS related plugins.
 var concat       = require('gulp-concat'); // Concatenates JS files
@@ -95,6 +96,7 @@ var imagemin     = require('gulp-imagemin'); // Minify PNG, JPEG, GIF and SVG im
 
 // Utility related plugins.
 var rename       = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css
+var filter       = require('gulp-filter'); // Enables you to work on a subset of the original files by filtering them using globbing.
 var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
 var notify       = require('gulp-notify'); // Sends message notification to you
 var browserSync  = require('browser-sync').create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
@@ -150,6 +152,7 @@ var reload       = browserSync.reload; // For manual browser reload.
  * 		7. Injects CSS or reloads the browser via browserSync
  */
 gulp.task('styles', function () {
+
  	gulp.src( styleSRC )
 		.pipe( sourcemaps.init() )
 		.pipe( sass( {
@@ -168,6 +171,8 @@ gulp.task('styles', function () {
 		.pipe( sourcemaps.write ( styleDestination ) )
 		.pipe( gulp.dest( styleDestination ) )
 
+		.pipe(filter('**/*.css')) // Filtering stream to only css files
+		.pipe(mmq({ log: true })) // Merge Media Queries only for .min.css version.
 
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( minifycss( {
