@@ -14,46 +14,47 @@
  * @author Ahmad Awais (@mrahmadawais)
  */
 
- /**
-  * Configuration.
-  *
-  * Project Configuration for gulp tasks.
-  *
-  * In paths you can add <<glob or array of globs>>
-  *
-  * Edit the variables as per your project requirements.
-  */
+/**
+ * Configuration.
+ *
+ * Project Configuration for gulp tasks.
+ *
+ * In paths you can add <<glob or array of globs>>
+ *
+ * Edit the variables as per your project requirements.
+ */
 
-var project             = 'WPGulpTheme'; // Project Name.
-var projecturl          = 'wpgulp.dev'; // Project URL. Could be something like localhost:8888.
-var themeUrl            = './'; // Theme URL. Leave it like it is if this gulpfile lives in the theme's root.
-
-
-var styleSRC            = './assets/css/style.scss'; // Path to main .scss file.
-var styleDestination    = './'; // Path to place the compiled CSS file.
-								// Defualt set to root folder.
+var project              = 'WPGulpTheme'; // Project Name.
+var projectURL           = 'wpgulp.dev'; // Project URL. Could be something like localhost:8888.
+var productURL           = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
 
-var jsVendorSRC         = './assets/js/vendors/*.js'; // Path to JS vendors folder.
-var jsVendorDestination = './assets/js/'; // Path to place the compiled JS vendors file.
-var jsVendorFile        = 'vendors'; // Compiled JS vendors file name.
-									// Default set to vendors i.e. vendors.js.
+var styleSRC             = './assets/css/style.scss'; // Path to main .scss file.
+var styleDestination     = './'; // Path to place the compiled CSS file.
+// Defualt set to root folder.
 
 
-var jsCustomSRC         = './assets/js/custom/*.js'; // Path to JS custom scripts folder.
-var jsCustomDestination = './assets/js/'; // Path to place the compiled JS custom scripts file.
-var jsCustomFile        = 'custom'; // Compiled JS custom file name.
-									// Default set to custom i.e. custom.js.
+var jsVendorSRC          = './assets/js/vendors/*.js'; // Path to JS vendors folder.
+var jsVendorDestination  = './assets/js/'; // Path to place the compiled JS vendors file.
+var jsVendorFile         = 'vendors'; // Compiled JS vendors file name.
+// Default set to vendors i.e. vendors.js.
 
 
-var imagesSRC			= './assets/img/raw/**/*.{png,jpg,gif,svg}'; // Source folder of images which should be optimized.
-var imagesDestination	= './assets/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
+var jsCustomSRC          = './assets/js/custom/*.js'; // Path to JS custom scripts folder.
+var jsCustomDestination  = './assets/js/'; // Path to place the compiled JS custom scripts file.
+var jsCustomFile         = 'custom'; // Compiled JS custom file name.
+// Default set to custom i.e. custom.js.
+
+
+var imagesSRC            = './assets/img/raw/**/*.{png,jpg,gif,svg}'; // Source folder of images which should be optimized.
+var imagesDestination    = './assets/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
 
 // Watch files paths.
-var styleWatchFiles     = './assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
-var vendorJSWatchFiles  = './assets/js/vendors/*.js'; // Path to all vendors JS files.
-var customJSWatchFiles  = './assets/js/custom/*.js'; // Path to all custom JS files.
+var styleWatchFiles      = './assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
+var vendorJSWatchFiles   = './assets/js/vendors/*.js'; // Path to all vendors JS files.
+var customJSWatchFiles   = './assets/js/custom/*.js'; // Path to all custom JS files.
+var projectPHPWatchFiles = './**/*.php'; // Path to all PHP files.
 
 
 // Browsers you care about for autoprefixing.
@@ -118,10 +119,10 @@ var reload       = browserSync.reload; // For manual browser reload.
  		// @link http://www.browsersync.io/docs/options/
 
  		// Project URL.
- 		proxy: projecturl,
+ 		proxy: projectURL,
 
  		// Stop the browser from automatically opening.
- 		open: false,
+ 		open: true,
 
  		// Inject CSS changes.
  		// Commnet it to reload browser for every CSS change.
@@ -253,15 +254,14 @@ gulp.task( 'images', function() {
 });
 
 
-
- /**
-  * Watch Tasks.
-  *
-  * Watches for file changes and runs specific tasks.
-  */
- gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
- 	gulp.watch( themeUrl +'/**/*.php', reload);
- 	gulp.watch( styleWatchFiles, [ 'styles' ] );
- 	gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ]  );
- 	gulp.watch( customJSWatchFiles, [ 'customJS', reload ]  );
- });
+/**
+ * Watch Tasks.
+ *
+ * Watches for file changes and runs specific tasks.
+ */
+gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
+	gulp.watch( projectPHPWatchFiles, reload); // Reload on PHP file changes.
+	gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
+	gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ]  ); // Reload on vendorsJs file changes.
+	gulp.watch( customJSWatchFiles, [ 'customJS', reload ]  ); // Reload on customJS file changes.
+});
