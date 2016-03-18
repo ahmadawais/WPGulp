@@ -37,7 +37,7 @@ var styleDestination     = './'; // Path to place the compiled CSS file.
 // Defualt set to root folder.
 
 
-var jsVendorSRC          = './assets/js/vendors/*.js'; // Path to JS vendors folder.
+var jsVendorSRC          = './assets/js/vendor/*.js'; // Path to JS vendor folder.
 var jsVendorDestination  = './assets/js/'; // Path to place the compiled JS vendors file.
 var jsVendorFile         = 'vendors'; // Compiled JS vendors file name.
 // Default set to vendors i.e. vendors.js.
@@ -55,7 +55,7 @@ var imagesDestination    = './assets/img/'; // Destination folder of optimized i
 
 // Watch files paths.
 var styleWatchFiles      = './assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
-var vendorJSWatchFiles   = './assets/js/vendors/*.js'; // Path to all vendors JS files.
+var vendorJSWatchFiles   = './assets/js/vendor/*.js'; // Path to all vendor JS files.
 var customJSWatchFiles   = './assets/js/custom/*.js'; // Path to all custom JS files.
 var projectPHPWatchFiles = './**/*.php'; // Path to all PHP files.
 
@@ -174,8 +174,12 @@ gulp.task('styles', function () {
 		.pipe( sourcemaps.write ( styleDestination ) )
 		.pipe( gulp.dest( styleDestination ) )
 
-		.pipe(filter('**/*.css')) // Filtering stream to only css files
-		.pipe(mmq({ log: true })) // Merge Media Queries only for .min.css version.
+		// Uncommenting these two lines will help merging the media queries
+		// but there is a known issue, SCSS changes stop reloading the browser
+		// which is why for now I recommend you to only uncomment these two lines
+		// to process the media queries.
+		//.pipe(filter('**/*.css')) // Filtering stream to only css files
+		//.pipe(mmq({ log: true })) // Merge Media Queries only for .min.css version.
 
 		.pipe( rename( { suffix: '.min' } ) )
 		.pipe( minifycss( {
