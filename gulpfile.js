@@ -11,6 +11,7 @@
  * 			4. Images: Minifies PNG, JPEG, GIF and SVG images.
  * 			5. Watches files for changes in CSS or JS.
  * 			6. Watches files for changes in PHP.
+ * 			7. Corrents the line endings.
  *
  *
  * @since 1.0.0
@@ -99,6 +100,7 @@ var imagemin     = require('gulp-imagemin'); // Minify PNG, JPEG, GIF and SVG im
 
 // Utility related plugins.
 var rename       = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css
+var lineec       = require('gulp-line-ending-corrector'); // Consistent Line Endings for non UNIX systems. Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings)
 var filter       = require('gulp-filter'); // Enables you to work on a subset of the original files by filtering them using globbing.
 var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
 var notify       = require('gulp-notify'); // Sends message notification to you
@@ -205,12 +207,14 @@ gulp.task('styles', function () {
 gulp.task( 'vendorsJs', function() {
 	gulp.src( jsVendorSRC )
 		.pipe( concat( jsVendorFile + '.js' ) )
+		.pipe( lineec() )
 		.pipe( gulp.dest( jsVendorDestination ) )
 		.pipe( rename( {
 			basename: jsVendorFile,
 			suffix: '.min'
 		}))
 		.pipe( uglify() )
+		.pipe( lineec() )
 		.pipe( gulp.dest( jsVendorDestination ) )
 		.pipe( notify( { message: 'TASK: "vendorsJs" Completed!', onLast: true } ) );
 });
@@ -230,12 +234,14 @@ gulp.task( 'vendorsJs', function() {
 gulp.task( 'customJS', function() {
  	gulp.src( jsCustomSRC )
 		.pipe( concat( jsCustomFile + '.js' ) )
+		.pipe( lineec() )
 		.pipe( gulp.dest( jsCustomDestination ) )
 		.pipe( rename( {
 			basename: jsCustomFile,
 			suffix: '.min'
 		}))
 		.pipe( uglify() )
+		.pipe( lineec() )
 		.pipe( gulp.dest( jsCustomDestination ) )
 		.pipe( notify( { message: 'TASK: "customJs" Completed!', onLast: true } ) );
 });
