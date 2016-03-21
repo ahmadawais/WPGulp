@@ -119,27 +119,28 @@ var reload       = browserSync.reload; // For manual browser reload.
  * 		3. You may define a custom port
  * 		4. You may want to stop the browser from openning automatically
  */
- gulp.task( 'browser-sync', function() {
- 	browserSync.init( {
+gulp.task( 'browser-sync', function() {
+	browserSync.init( {
 
- 		// For more options
- 		// @link http://www.browsersync.io/docs/options/
+		// For more options
+		// @link http://www.browsersync.io/docs/options/
 
- 		// Project URL.
- 		proxy: projectURL,
+		// Project URL.
+		proxy: projectURL,
 
- 		// Stop the browser from automatically opening.
- 		open: true,
+		// `true` Automatically open the browser with BrowserSync live server.
+		// `false` Stop the browser from automatically opening.
+		open: true,
 
- 		// Inject CSS changes.
- 		// Commnet it to reload browser for every CSS change.
- 		// injectChanges: true,
+		// Inject CSS changes.
+		// Commnet it to reload browser for every CSS change.
+		injectChanges: true,
 
- 		// Use a specific port (instead of the one auto-detected by Browsersync).
- 		// port: 7000,
+		// Use a specific port (instead of the one auto-detected by Browsersync).
+		// port: 7000,
 
- 	} );
- });
+	} );
+});
 
 
 /**
@@ -156,131 +157,132 @@ var reload       = browserSync.reload; // For manual browser reload.
  * 		6. Minifies the CSS file and generates style.min.css
  * 		7. Injects CSS or reloads the browser via browserSync
  */
-gulp.task('styles', function () {
+ gulp.task('styles', function () {
+  	gulp.src( styleSRC )
+ 		.pipe( sourcemaps.init() )
+ 		.pipe( sass( {
+ 			errLogToConsole: true,
+ 			outputStyle: 'compact',
+ 			//outputStyle: 'compressed',
+ 			// outputStyle: 'nested',
+ 			// outputStyle: 'expanded',
+ 			precision: 10
+ 		} ) )
+ 		.on('error', console.error.bind(console))
+ 		.pipe( sourcemaps.write( { includeContent: false } ) )
+ 		.pipe( sourcemaps.init( { loadMaps: true } ) )
+ 		.pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
 
- 	gulp.src( styleSRC )
-		.pipe( sourcemaps.init() )
-		.pipe( sass( {
-			errLogToConsole: true,
-			outputStyle: 'compact',
-			//outputStyle: 'compressed',
-			// outputStyle: 'nested',
-			// outputStyle: 'expanded',
-			precision: 10
-		} ) )
-		.on('error', console.error.bind(console))
-		.pipe( sourcemaps.write( { includeContent: false } ) )
-		.pipe( sourcemaps.init( { loadMaps: true } ) )
-		.pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
+ 		.pipe( sourcemaps.write ( styleDestination ) )
+ 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+ 		.pipe( gulp.dest( styleDestination ) )
 
-		.pipe( sourcemaps.write ( styleDestination ) )
-		.pipe( gulp.dest( styleDestination ) )
+ 		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
+ 		.pipe( mmq( { log: true } ) ) // Merge Media Queries only for .min.css version.
 
-		// Uncommenting these two lines will help merging the media queries
-		// but there is a known issue, SCSS changes stop reloading the browser
-		// which is why for now I recommend you to only uncomment these two lines
-		// to process the media queries.
-		//.pipe(filter('**/*.css')) // Filtering stream to only css files
-		//.pipe(mmq({ log: true })) // Merge Media Queries only for .min.css version.
+ 		.pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
 
-		.pipe( rename( { suffix: '.min' } ) )
-		.pipe( minifycss( {
-			maxLineLen: 10
-		}))
-		.pipe( gulp.dest( styleDestination ) )
-		.pipe( browserSync.stream() )
-		.pipe( notify( { message: 'TASK: "styles" Completed!', onLast: true } ) )
-});
+ 		.pipe( rename( { suffix: '.min' } ) )
+ 		.pipe( minifycss( {
+ 			maxLineLen: 10
+ 		}))
+ 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+ 		.pipe( gulp.dest( styleDestination ) )
 
-
-/**
- * Task: `vendorJS`.
- *
- * Concatenate and uglify vendor JS scripts.
- *
- * This task does the following:
- * 		1. Gets the source folder for JS vendor files
- * 		2. Concatenates all the files and generates vendors.js
- * 		3. Renames the JS file with suffix .min.js
- * 		4. Uglifes/Minifies the JS file and generates vendors.min.js
- */
-gulp.task( 'vendorsJs', function() {
-	gulp.src( jsVendorSRC )
-		.pipe( concat( jsVendorFile + '.js' ) )
-		.pipe( lineec() )
-		.pipe( gulp.dest( jsVendorDestination ) )
-		.pipe( rename( {
-			basename: jsVendorFile,
-			suffix: '.min'
-		}))
-		.pipe( uglify() )
-		.pipe( lineec() )
-		.pipe( gulp.dest( jsVendorDestination ) )
-		.pipe( notify( { message: 'TASK: "vendorsJs" Completed!', onLast: true } ) );
-});
+ 		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
+ 		.pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
+ 		.pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
+ });
 
 
-/**
- * Task: `customJS`.
- *
- * Concatenate and uglify custom JS scripts.
- *
- * This task does the following:
- * 		1. Gets the source folder for JS custom files
- * 		2. Concatenates all the files and generates custom.js
- * 		3. Renames the JS file with suffix .min.js
- * 		4. Uglifes/Minifies the JS file and generates custom.min.js
- */
-gulp.task( 'customJS', function() {
- 	gulp.src( jsCustomSRC )
-		.pipe( concat( jsCustomFile + '.js' ) )
-		.pipe( lineec() )
-		.pipe( gulp.dest( jsCustomDestination ) )
-		.pipe( rename( {
-			basename: jsCustomFile,
-			suffix: '.min'
-		}))
-		.pipe( uglify() )
-		.pipe( lineec() )
-		.pipe( gulp.dest( jsCustomDestination ) )
-		.pipe( notify( { message: 'TASK: "customJs" Completed!', onLast: true } ) );
-});
+ /**
+  * Task: `vendorJS`.
+  *
+  * Concatenate and uglify vendor JS scripts.
+  *
+  * This task does the following:
+  * 		1. Gets the source folder for JS vendor files
+  * 		2. Concatenates all the files and generates vendors.js
+  * 		3. Renames the JS file with suffix .min.js
+  * 		4. Uglifes/Minifies the JS file and generates vendors.min.js
+  */
+ gulp.task( 'vendorsJs', function() {
+ 	gulp.src( jsVendorSRC )
+ 		.pipe( concat( jsVendorFile + '.js' ) )
+ 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+ 		.pipe( gulp.dest( jsVendorDestination ) )
+ 		.pipe( rename( {
+ 			basename: jsVendorFile,
+ 			suffix: '.min'
+ 		}))
+ 		.pipe( uglify() )
+ 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+ 		.pipe( gulp.dest( jsVendorDestination ) )
+ 		.pipe( notify( { message: 'TASK: "vendorsJs" Completed! 💯', onLast: true } ) );
+ });
 
 
-/**
- * Task: `images`.
- *
- * Minifies PNG, JPEG, GIF and SVG images.
- *
- * This task does the following:
- * 		1. Gets the source of images raw folder
- * 		2. Minifies PNG, JPEG, GIF and SVG images
- * 		3. Generates and saves the optimized images
- *
- * This task will run only once, if you want to run it
- * again, do it with the command `gulp images`.
- */
-gulp.task( 'images', function() {
-	gulp.src( imagesSRC )
-		.pipe( imagemin( {
-					progressive: true,
-					optimizationLevel: 3, // 0-7 low-high
-					interlaced: true,
-					svgoPlugins: [{removeViewBox: false}]
-				} ) )
-		.pipe(gulp.dest( imagesDestination ))
-		.pipe( notify( { message: 'TASK: "images" Completed!', onLast: true } ) );
-});
+ /**
+  * Task: `customJS`.
+  *
+  * Concatenate and uglify custom JS scripts.
+  *
+  * This task does the following:
+  * 		1. Gets the source folder for JS custom files
+  * 		2. Concatenates all the files and generates custom.js
+  * 		3. Renames the JS file with suffix .min.js
+  * 		4. Uglifes/Minifies the JS file and generates custom.min.js
+  */
+ gulp.task( 'customJS', function() {
+  	gulp.src( jsCustomSRC )
+ 		.pipe( concat( jsCustomFile + '.js' ) )
+ 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+ 		.pipe( gulp.dest( jsCustomDestination ) )
+ 		.pipe( rename( {
+ 			basename: jsCustomFile,
+ 			suffix: '.min'
+ 		}))
+ 		.pipe( uglify() )
+ 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+ 		.pipe( gulp.dest( jsCustomDestination ) )
+ 		.pipe( notify( { message: 'TASK: "customJs" Completed! 💯', onLast: true } ) );
+ });
 
 
-/**
- * Watch Tasks.
- *
- * Watches for file changes and runs specific tasks.
- */
-gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
-	gulp.watch( projectPHPWatchFiles, reload); // Reload on PHP file changes.
-	gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
-	gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ]  ); // Reload on vendorsJs file changes.
-	gulp.watch( customJSWatchFiles, [ 'customJS', reload ]  ); // Reload on customJS file changes.
-});
+ /**
+  * Task: `images`.
+  *
+  * Minifies PNG, JPEG, GIF and SVG images.
+  *
+  * This task does the following:
+  * 		1. Gets the source of images raw folder
+  * 		2. Minifies PNG, JPEG, GIF and SVG images
+  * 		3. Generates and saves the optimized images
+  *
+  * This task will run only once, if you want to run it
+  * again, do it with the command `gulp images`.
+  */
+ gulp.task( 'images', function() {
+ 	gulp.src( imagesSRC )
+ 		.pipe( imagemin( {
+ 					progressive: true,
+ 					optimizationLevel: 3, // 0-7 low-high
+ 					interlaced: true,
+ 					svgoPlugins: [{removeViewBox: false}]
+ 				} ) )
+ 		.pipe(gulp.dest( imagesDestination ))
+ 		.pipe( notify( { message: 'TASK: "images" Completed! 💯', onLast: true } ) );
+ });
+
+
+ /**
+  * Watch Tasks.
+  *
+  * Watches for file changes and runs specific tasks.
+  */
+ gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
+ 	gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
+ 	gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
+ 	gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ] ); // Reload on vendorsJs file changes.
+ 	gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
+ });
