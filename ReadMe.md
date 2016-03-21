@@ -11,6 +11,8 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
 4. Images: Minifies PNG, JPEG, GIF and SVG images.
 5. Watches files for changes in CSS or JS
 6. Watches files for changes in PHP.
+7. Corrects the line endings.
+8. InjectCSS instead of browser page reload.
  
 
 ##Implementations

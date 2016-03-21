@@ -11,7 +11,7 @@
  * 			4. Images: Minifies PNG, JPEG, GIF and SVG images.
  * 			5. Watches files for changes in CSS or JS.
  * 			6. Watches files for changes in PHP.
- * 			7. Corrents the line endings.
+ * 			7. Corrects the line endings.
  *
  *
  * @since 1.0.0
