@@ -6,12 +6,14 @@
  * Implements:
  * 			1. Live reloads browser with BrowserSync.
  * 			2. CSS: Sass to CSS conversion, error catching, Autoprixing, Sourcemaps,
- * 				CSS minification, and Merge Media Queries.
+ * 				 CSS minification, and Merge Media Queries.
  * 			3. JS: Concatenates & uglifies Vendor and Custom JS files.
  * 			4. Images: Minifies PNG, JPEG, GIF and SVG images.
  * 			5. Watches files for changes in CSS or JS.
  * 			6. Watches files for changes in PHP.
  * 			7. Corrects the line endings.
+ *      8. InjectCSS instead of browser page reload.
+ *      9. Generates .pot file for i18n and l10n.
  *
  *
  * @since 1.0.0

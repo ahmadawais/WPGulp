@@ -13,6 +13,7 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
 6. Watches files for changes in PHP.
 7. Corrects the line endings.
 8. InjectCSS instead of browser page reload.
+9. Generates .pot file for i18n and l10n.
  
 
 ##Implementations
