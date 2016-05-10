@@ -27,32 +27,40 @@
  *
  * Edit the variables as per your project requirements.
  */
-
+// Project related.
 var project              = 'WPGulpTheme'; // Project Name.
 var projectURL           = 'wpgulp.dev'; // Project URL. Could be something like localhost:8888.
 var productURL           = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
+// Translation related.
+var text_domain          = 'VR';
+var destFile             = 'VR.pot';
+var package              = 'VR';
+var bugReport            = 'http://WPTie.com/contact/';
+var lastTranslator       = 'Ahmad Awais <your_email@email.com>';
+var team                 = 'WPTie <your_email@email.com>';
+var translatePath        = './languages'
 
+// Style related.
 var styleSRC             = './assets/css/style.scss'; // Path to main .scss file.
 var styleDestination     = './'; // Path to place the compiled CSS file.
 // Defualt set to root folder.
 
-
+// JS Vendor related.
 var jsVendorSRC          = './assets/js/vendor/*.js'; // Path to JS vendor folder.
 var jsVendorDestination  = './assets/js/'; // Path to place the compiled JS vendors file.
 var jsVendorFile         = 'vendors'; // Compiled JS vendors file name.
 // Default set to vendors i.e. vendors.js.
 
-
+// JS Custom related.
 var jsCustomSRC          = './assets/js/custom/*.js'; // Path to JS custom scripts folder.
 var jsCustomDestination  = './assets/js/'; // Path to place the compiled JS custom scripts file.
 var jsCustomFile         = 'custom'; // Compiled JS custom file name.
 // Default set to custom i.e. custom.js.
 
-
+// Images related.
 var imagesSRC            = './assets/img/raw/**/*.{png,jpg,gif,svg}'; // Source folder of images which should be optimized.
 var imagesDestination    = './assets/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
-
 
 // Watch files paths.
 var styleWatchFiles      = './assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
@@ -272,6 +280,32 @@ gulp.task( 'browser-sync', function() {
  				} ) )
  		.pipe(gulp.dest( imagesDestination ))
  		.pipe( notify( { message: 'TASK: "images" Completed! 💯', onLast: true } ) );
+ });
+
+
+ /**
+  * WP POT Translation File Generator.
+  *
+  * * This task does the following:
+  *     1. Gets the source of all the PHP files
+  *     2. Sort files in stream by path or any custom sort comparator
+  *     3. Applies wpPot with the variable set at the top of this file
+  *     4. Generate a .pot file of i18n that can be used for l10n to build .mo file
+  */
+ gulp.task( 'translate', function () {
+     return gulp.src( projectPHPWatchFiles )
+         .pipe(sort())
+         .pipe(wpPot( {
+             domain        : text_domain,
+             destFile      : destFile,
+             package       : package,
+             bugReport     : bugReport,
+             lastTranslator: lastTranslator,
+             team          : team
+         } ))
+        .pipe(gulp.dest(translatePath))
+        .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) )
+
  });
 
 

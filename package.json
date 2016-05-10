@@ -22,6 +22,8 @@
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.5.3",
-    "gulp-uglifycss": "^1.0.6"
+    "gulp-uglifycss": "^1.0.6",
+    "gulp-sort": "^2.0.0",
+    "gulp-wp-pot": "^1.2.2"
   }
 }
