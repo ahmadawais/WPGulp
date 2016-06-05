@@ -16,7 +16,7 @@
  *      9. Generates .pot file for i18n and l10n.
  *
  * @author Ahmad Awais (@ahmadawais)
- * @version 1.0.1
+ * @version 1.0.2
  */
 
 /**
