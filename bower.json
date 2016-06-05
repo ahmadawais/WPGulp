@@ -1,0 +1,20 @@
+{
+  "name": "WPGulp",
+  "description": "Gulp with WordPress. Start using Gulp with your WordPress plugins and themes.",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "keywords": [
+    "gulp",
+    "js",
+    "workflow",
+    "wordpress"
+  ],
+  "homepage": "https://github.com/ahmadawais/WPGulp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
