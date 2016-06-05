@@ -1,7 +1,7 @@
 /**
  * Gulpfile.
  *
- * A simple implementation of Gulp.
+ * Gulp with WordPress.
  *
  * Implements:
  * 			1. Live reloads browser with BrowserSync.
