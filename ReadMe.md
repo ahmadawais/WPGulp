@@ -64,7 +64,7 @@ sudo npm install
 npm install
 ```
 
-### → STEP #4: Installing Node Dependencies
+### → STEP #5: Just run `Gulp`
 Once the NodeJS dependencies are downloaded just run the following command to get up and running with WPGulp
 ```bash
 # To start gulp
@@ -73,7 +73,7 @@ gulp
 # To stop gulp press CTRL (⌃) + C
 ```
 
-### → Optional Step #5: Images and Translation
+### → Optional Step #6: Images and Translation
 To optiomize images and generate WP POT translation file, you can run the following commands
 ```bash
 # To optimize images
