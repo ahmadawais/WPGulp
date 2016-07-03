@@ -24,10 +24,10 @@
  *
  * Project Configuration for gulp tasks.
  *
- * In paths you can add <<glob or array of globs>>
- *
- * Edit the variables as per your project requirements.
+ * In paths you can add <<glob or array of globs>>. Edit the variables as per your project requirements.
  */
+
+// START Editing Project Variables.
 // Project related.
 var project                 = 'WPGulpTheme'; // Project Name.
 var projectURL              = 'wpgulp.dev'; // Project URL. Could be something like localhost:8888.
@@ -86,6 +86,7 @@ const AUTOPREFIXER_BROWSERS = [
     'bb >= 10'
   ];
 
+// STOP Editing Project Variables.
 
 /**
  * Load Plugins.
