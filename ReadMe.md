@@ -107,11 +107,11 @@ Checkout a basic WordPress theme implementation with WPGulp called [WPGulpTheme]
 
 ## To do 
 It's hard to maintain a FOSS free and open source software project on my own. Which is why there's a backlog and an incomplete to-do list.
-- [ x ] Build WPGulp ✔︎
-- [ x ] Write an introductory blog post about WPGulp ✔︎
-- [ x ] Improve documentation with more easy to follow details ✔︎
-- [   ] Find sponsorship to produce free of cost video tutorials for WPGulp ⓦ
-- [   ] Write about the new WPGulp tasks, `gulp images` to optimize images and   `gulp translate` to generate WP POT translation file.
+- [x] Build WPGulp ✔︎
+- [x] Write an introductory blog post about WPGulp ✔︎
+- [x] Improve documentation with more easy to follow details ✔︎
+- [ ] Find sponsorship to produce free of cost video tutorials for WPGulp ⓦ
+- [ ] Write about the new WPGulp tasks, `gulp images` to optimize images and   `gulp translate` to generate WP POT translation file.
 
 ## Contribute
 I am looking for WordPress ⓦ developers to contribute. I am open to all kinds of new NodeJS packages and workflows. I can always host custom, opioniated workflows in form of a separate branch and WPGulp. Just make sure you follow the WordPress Coding Standards. 
