@@ -46,7 +46,7 @@ npm -v
 
 NodeJS and NPM are installed, now we need to install `Gulp` globally. To do that, run the following command
 ```bash
-# For MAC OS X; run the following command with supper user
+# For MAC OS X; run the following command with superuser
 sudo npm install --global gulp
 
 # For Linux; run the following command
@@ -57,7 +57,7 @@ npm install --global gulp
 We are in the root folder of our WordPress plugin or WordPress theme at the moment, let's install the Node Dependencies. In the terminal run this command and wait for it to download all the NodeJS dependencies. It's a one time process and can take about 5 mins depending upon the internet speed of your connection.
 
 ```bash
-# For MAC OS X run the following command with supper user
+# For MAC OS X run the following command with superuser
 sudo npm install
 
 # For Linux run the following command
@@ -87,7 +87,7 @@ gulp translate
 1. Delete old files and download the latest [`gulpfile.js`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js), [`pacakage.json`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json), and [`.gitignore`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore) files in the root of your WP project.
 2. Open your WordPress project (plugin/theme) root folder in the terminal and run
 ```bash
-# For MAC OS X run the following command with supper user
+# For MAC OS X run the following command with superuser
 sudo npm install
 
 # For Linux run the fo
