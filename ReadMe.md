@@ -90,8 +90,7 @@ gulp translate
 # For MAC OS X run the following command with supper user
 sudo npm install
 
-# For Linux run the fo
-# llowing command
+# For Linux run the following command
 npm install
 ```
  
