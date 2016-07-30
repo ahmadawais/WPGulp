@@ -116,7 +116,7 @@ var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file
 var notify       = require('gulp-notify'); // Sends message notification to you
 var browserSync  = require('browser-sync').create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
 var reload       = browserSync.reload; // For manual browser reload.
-
+var wpPot        = require('gulp-wp-pot');// For generating the .pot file.
 
 /**
  * Task: `browser-sync`.
