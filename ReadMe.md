@@ -116,6 +116,11 @@ I am looking for WordPress ⓦ developers to contribute. I am open to all kinds 
 
 ## Changelog
 
+###Version 1.0.3
+- FIX: Required `gulp-wp-pot`
+- FIX: Required `gulp-sort`
+- IMPROVEMENT: Better docs for Translation variables
+
 ###Version 1.0.2 
 - NEW: Documentation update `README.md` 
 - TASK: Image optimization `gulp images`
