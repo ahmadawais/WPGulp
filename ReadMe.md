@@ -23,7 +23,7 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
 - Download [`gulpfile.js`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js), [`pacakage.json`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json), and [`.gitignore`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore) files inside the root folder of your WordPress plugin or WordPress theme
 - If you have cURL installed then you can run the following command to download both files in one go (just make sure you open the root folder of your WordPress plugin or WordPress theme and download these two files in the root):
 ```bash
-curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json && curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js && curl -O curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore
+curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json && curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js && curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore
 ```
 
 ### → STEP #2: Editing the Project Variables
