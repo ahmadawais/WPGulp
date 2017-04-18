@@ -1,3 +1,7 @@
+> 🙌 If 500 people [signup here](http://eepurl.com/cLwjeH), I will build a video series for WPGulp.
+
+---
+
 # WPGulp
 [![Project Supported by](https://img.shields.io/badge/Project_Supported_By-ES6.io%20Tutorials-brightgreen.svg?style=flat-square)](https://ahmda.ws/Learn_ES6) [![WPGulp](https://img.shields.io/badge/Built%20For%20WordPress-%E2%93%A6-lightgrey.svg?style=flat-square)](https://github.com/ahmadawais/WPGulp/) [![](https://img.shields.io/wordpress/v/akismet.svg?maxAge=2592000&style=flat-square&label=WordPress)](https://github.com/ahmadawais/WPGulp/) [![GitHub release](https://img.shields.io/github/release/ahmadawais/WPGulp.svg?maxAge=2592000&style=flat-square&label=Version)](https://github.com/ahmadawais/WPGulp/releases) [![](https://img.shields.io/github/stars/ahmadawais/WPGulp.svg?style=social&label=Star&maxAge=2592000)](https://github.com/ahmadawais/WPGulp/)
 
@@ -137,3 +141,7 @@ I am looking for WordPress ⓦ developers to contribute. I am open to all kinds 
 ## License
 Released under GNU GPLv2.0 or later license.
 Copyright [Ahmad Awais](https://AhmadAwais.com/)
+
+---
+
+> 🙌 If 500 people [signup here](http://eepurl.com/cLwjeH), I will build a video series for WPGulp.
