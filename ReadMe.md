@@ -1,4 +1,4 @@
-> 🙌 If 500 people [signup here](http://eepurl.com/cLwjeH), I will build a video series for WPGulp.
+🙌 If 500 people [signup here](http://eepurl.com/cLwjeH), I will build a video series for WPGulp.
 
 ---
 
@@ -144,4 +144,4 @@ Copyright [Ahmad Awais](https://AhmadAwais.com/)
 
 ---
 
-> 🙌 If 500 people [signup here](http://eepurl.com/cLwjeH), I will build a video series for WPGulp.
+🙌 If 500 people [signup here](http://eepurl.com/cLwjeH), I will build a video series for WPGulp.
