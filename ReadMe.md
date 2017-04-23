@@ -24,14 +24,14 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
  
 ## 🎗 Getting Started?
 ### → Step #1. Download the Required Files
-- Download [`gulpfile.js`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js), [`pacakage.json`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json), and [`.gitignore`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore) files inside the root folder of your WordPress plugin or WordPress theme
-- If you have cURL installed then you can run the following command to download both files in one go (just make sure you open the root folder of your WordPress plugin or WordPress theme and download these two files in the root):
+- Download [`gulpfile.js`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js), [`package.json`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json), and [`.gitignore`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore) files inside the root folder of your WordPress plugin or WordPress theme
+- If you have cURL installed then you can run the following command to download all three files in one go (just make sure you open the root folder of your WordPress plugin or WordPress theme and download these files in the root):
 ```bash
 curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json && curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js && curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore
 ```
 
 ### → STEP #2: Editing the Project Variables
-Configure the project variables E.g. paths, translation data, etc in the `gulpfile.js`. Project variables can be found between the following two comments
+Configure the project variables E.g. paths, translation data, etc in `gulpfile.js`. Project variables can be found between the following two comments
 ```JS
 // START Editing Project Variables.
 {PROJECT VARIABLES}
@@ -50,7 +50,7 @@ npm -v
 
 NodeJS and NPM are installed, now we need to install `Gulp` globally. To do that, run the following command
 ```bash
-# For MAC OS X; run the following command with supper user
+# For MAC OS X; run the following command with super user
 sudo npm install --global gulp
 
 # For Linux; run the following command
@@ -58,10 +58,10 @@ npm install --global gulp
 ```
 
 ### → STEP #4: Installing Node Dependencies
-We are in the root folder of our WordPress plugin or WordPress theme at the moment, let's install the Node Dependencies. In the terminal run this command and wait for it to download all the NodeJS dependencies. It's a one time process and can take about 5 mins depending upon the internet speed of your connection.
+We are in the root folder of our WordPress plugin or WordPress theme at the moment, let's install the Node Dependencies. In the terminal run this command and wait for it to download all the NodeJS dependencies. It's a one time process and can take about 5 mins depending on the internet speed of your connection.
 
 ```bash
-# For MAC OS X run the following command with supper user
+# For MAC OS X run the following command with super user
 sudo npm install
 
 # For Linux run the following command
@@ -88,10 +88,10 @@ gulp translate
 ```
 
 ## How to Update?
-1. Delete old files and download the latest [`gulpfile.js`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js), [`pacakage.json`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json), and [`.gitignore`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore) files in the root of your WP project.
+1. Delete old files and download the latest [`gulpfile.js`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js), [`package.json`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json), and [`.gitignore`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore) files in the root of your WP project.
 2. Open your WordPress project (plugin/theme) root folder in the terminal and run
 ```bash
-# For MAC OS X run the following command with supper user
+# For MAC OS X run the following command with super user
 sudo npm install
 # For Linux run the following command
 npm install
@@ -113,24 +113,24 @@ It's hard to maintain a FOSS free and open source software project on my own. Wh
 - [x] Write an introductory blog post about WPGulp ✔︎
 - [x] Improve documentation with more easy to follow details ✔︎
 - [ ] Find sponsorship to produce free of cost video tutorials for WPGulp ⓦ
-- [ ] Write about the new WPGulp tasks, `gulp images` to optimize images and   `gulp translate` to generate WP POT translation file.
+- [ ] Write about the new WPGulp tasks, `gulp images` to optimize images and `gulp translate` to generate WP POT translation file.
 
 ## Contribute
 I am looking for WordPress ⓦ developers to contribute. I am open to all kinds of new NodeJS packages and workflows. I can always host custom, opioniated workflows in form of a separate branch and WPGulp. Just make sure you follow the WordPress Coding Standards. 
 
 ## Changelog
 
-###Version 1.0.3
+### Version 1.0.3
 - FIX: Required `gulp-wp-pot`
 - FIX: Required `gulp-sort`
 - IMPROVEMENT: Better docs for Translation variables
 
-###Version 1.0.2 
+### Version 1.0.2 
 - NEW: Documentation update `README.md` 
 - TASK: Image optimization `gulp images`
 - TASK: WP POT Translation file generation `gulp translate`
 
-###Version 1.0.1 
+### Version 1.0.1 
 - BrowserSync
 - LineEndings
 
