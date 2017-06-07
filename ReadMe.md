@@ -31,7 +31,7 @@ curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json 
 ```
 
 ### → STEP #2: Editing the Project Variables
-Configure the project variables E.g. paths, translation data, etc in `gulpfile.js`. Project variables can be found between the following two comments
+Configure the project variables E.g. paths, translation data, etc. in `gulpfile.js`. Project variables can be found in the following two comments
 ```JS
 // START Editing Project Variables.
 {PROJECT VARIABLES}
@@ -39,7 +39,7 @@ Configure the project variables E.g. paths, translation data, etc in `gulpfile.j
 ```
 
 ### → STEP #3: Installing NodeJS, NPM and Gulp
-You need to have NodeJS & NPM installed. If it is installed, skip to installing Gulp. Otherwise download [NodeJS](https://nodejs.org/en/download/) and install it. After installing NodeJS you can verify the install of both NodeJS and Node Package Manager by typing the following commands. This step needs to be followed only once, if you don't have NodeJS installed. No need to repeat it ever again.
+You need to have NodeJS & NPM installed. If it is installed, skip to installing Gulp. Otherwise, download [NodeJS](https://nodejs.org/en/download/) and install it. After installing NodeJS, you can verify the install of both NodeJS and Node Package Manager by typing the following commands. This step needs to be followed only once if you don't have NodeJS installed. No need to repeat it ever again.
 ```bash
 node -v
 # Results into v4.2.6
@@ -68,7 +68,7 @@ sudo npm install
 npm install
 ```
 
-### → STEP #5: Just run `Gulp`
+### → STEP #5: Just run `Gulp.`
 Once the NodeJS dependencies are downloaded just run the following command to get up and running with WPGulp
 ```bash
 # To start gulp
@@ -78,7 +78,7 @@ gulp
 ```
 
 ### → Optional Step #6: Images and Translation
-To optiomize images and generate WP POT translation file, you can run the following commands
+To optimize images and generate WP POT translation file, you can run the following commands
 ```bash
 # To optimize images
 gulp images
@@ -105,10 +105,10 @@ Once the download is complete type `gulp` and boom!
 - You must have [Git](https://git-scm.com/) and [NodeJS](https://nodejs.org/en/download/), and [Gulp](http://gulpjs.com/) installed globally. 
 
 ### WPGulpTheme
-Checkout a basic WordPress theme implementation with WPGulp called [WPGulpTheme](https://github.com/ahmadawais/WPGulpTheme). This theme demonstrates the architecture followed by default within WPGulp, which is most definitely optional.
+Check out a basic WordPress theme implementation with WPGulp called [WPGulpTheme](https://github.com/ahmadawais/WPGulpTheme). This theme demonstrates the architecture followed by default within WPGulp, which is most definitely optional.
 
 ## To do 
-It's hard to maintain a FOSS free and open source software project on my own. Which is why there's a backlog and an incomplete to-do list.
+It's hard to maintain a FOSS free and open source software project on my own. Which is why there are a backlog and an incomplete to-do list.
 - [x] Build WPGulp ✔︎
 - [x] Write an introductory blog post about WPGulp ✔︎
 - [x] Improve documentation with more easy to follow details ✔︎
@@ -116,7 +116,7 @@ It's hard to maintain a FOSS free and open source software project on my own. Wh
 - [ ] Write about the new WPGulp tasks, `gulp images` to optimize images and `gulp translate` to generate WP POT translation file.
 
 ## Contribute
-I am looking for WordPress ⓦ developers to contribute. I am open to all kinds of new NodeJS packages and workflows. I can always host custom, opioniated workflows in form of a separate branch and WPGulp. Just make sure you follow the WordPress Coding Standards. 
+I am looking for WordPress ⓦ developers to contribute. I am open to all kinds of new NodeJS packages and workflows. I can always host custom, opinionated workflows in the form of a separate branch and WPGulp. Just make sure you follow the WordPress Coding Standards. 
 
 ## Changelog
 
