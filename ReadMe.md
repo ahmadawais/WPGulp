@@ -68,7 +68,7 @@ sudo npm install
 npm install
 ```
 
-### → STEP #5: Just run `Gulp.`
+### → STEP #5: Just run `Gulp`
 Once the NodeJS dependencies are downloaded just run the following command to get up and running with WPGulp
 ```bash
 # To start gulp
@@ -108,7 +108,7 @@ Once the download is complete type `gulp` and boom!
 Check out a basic WordPress theme implementation with WPGulp called [WPGulpTheme](https://github.com/ahmadawais/WPGulpTheme). This theme demonstrates the architecture followed by default within WPGulp, which is most definitely optional.
 
 ## To do 
-It's hard to maintain a FOSS free and open source software project on my own. Which is why there are a backlog and an incomplete to-do list.
+It's hard to maintain a FOSS free and open source software project on my own. Which is why there is a backlog and an incomplete to-do list.
 - [x] Build WPGulp ✔︎
 - [x] Write an introductory blog post about WPGulp ✔︎
 - [x] Improve documentation with more easy to follow details ✔︎
