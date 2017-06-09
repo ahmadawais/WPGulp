@@ -306,7 +306,7 @@ gulp.task( 'browser-sync', function() {
              lastTranslator: lastTranslator,
              team          : team
          } ))
-        .pipe(gulp.dest(translatePath))
+        .pipe(gulp.dest(destFile))
         .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) )
 
  });
