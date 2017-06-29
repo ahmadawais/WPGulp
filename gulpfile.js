@@ -91,7 +91,7 @@ const AUTOPREFIXER_BROWSERS = [
 /**
  * Load Plugins.
  *
- * Load gulp plugins and assing them semantic names.
+ * Load gulp plugins and passing them semantic names.
  */
 var gulp         = require('gulp'); // Gulp of-course
 
