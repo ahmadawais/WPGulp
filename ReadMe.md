@@ -2,14 +2,62 @@
 
 ---
 
-# WPGulp
+<table width='100%'>
+    <tr>
+        <td align='left' width='100%' colspan='2'>
+            <strong>WP Gulp</strong><br />
+            💯ⓦ → Use Gulp with WordPress. An advanced but portable Gulp front end to help you kickstart a build-workflow for your WordPress plugins and themes. Gulp WordPress!
+        </td>
+    </tr>
+    <tr>
+        <td>
+            A FOSS (Free & Open Source Software) project. Maintained by <a href='https://github.com/ahmadawais'>@AhmadAwais</a>.
+        </td>
+        <td align='center'>
+            <a href='https://AhmadAwais.com/'>
+                <img src='https://i.imgur.com/Asg4d3k.png' width='100' />
+            </a>
+        </td>
+    </tr>
+</table>
+
+# WPGulp — WordPress Gulp Workflow
 [![Project Supported by](https://img.shields.io/badge/Project_Supported_By-ES6.io%20Tutorials-brightgreen.svg?style=flat-square)](https://ahmda.ws/Learn_ES6) [![WPGulp](https://img.shields.io/badge/Built%20For%20WordPress-%E2%93%A6-lightgrey.svg?style=flat-square)](https://github.com/ahmadawais/WPGulp/) [![](https://img.shields.io/wordpress/v/akismet.svg?maxAge=2592000&style=flat-square&label=WordPress)](https://github.com/ahmadawais/WPGulp/) [![GitHub release](https://img.shields.io/github/release/ahmadawais/WPGulp.svg?maxAge=2592000&style=flat-square&label=Version)](https://github.com/ahmadawais/WPGulp/releases) [![](https://img.shields.io/github/stars/ahmadawais/WPGulp.svg?style=social&label=Star&maxAge=200&cache=buster)](https://github.com/ahmadawais/WPGulp/stargazers)
 
 Use Gulp with WordPress. An advanced but portable Gulp workflow for WordPress. Start using Gulp with your WordPress plugins and themes.
 
-![](https://i.imgur.com/zzoByRC.png)
+![wpgulp](https://i.imgur.com/zzoByRC.png)
 
 Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ahmadawais.com/introducing-wpgulp-an-easy-to-use-wordpress-gulp-boilerplate/)
+
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [WPGulp — WordPress Gulp Workflow](#wpgulp--wordpress-gulp-workflow)
+  - [ⓦ What Can WPGulp Do?](#%E2%93%A6-what-can-wpgulp-do)
+  - [🎗 Getting Started?](#%F0%9F%8E%97-getting-started)
+    - [→ Step #1. Download the Required Files](#%E2%86%92-step-1-download-the-required-files)
+    - [→ STEP #2: Editing the Project Variables](#%E2%86%92-step-2-editing-the-project-variables)
+    - [→ STEP #3: Installing NodeJS, NPM and Gulp](#%E2%86%92-step-3-installing-nodejs-npm-and-gulp)
+    - [→ STEP #4: Installing Node Dependencies](#%E2%86%92-step-4-installing-node-dependencies)
+    - [→ STEP #5: Just run `Gulp`](#%E2%86%92-step-5-just-run-gulp)
+    - [→ Optional Step #6: Images and Translation](#%E2%86%92-optional-step-6-images-and-translation)
+  - [How to Update?](#how-to-update)
+    - [Project Dependencies](#project-dependencies)
+    - [WPGulpTheme](#wpgulptheme)
+  - [To do](#to-do)
+  - [Contribute](#contribute)
+  - [Changelog](#changelog)
+    - [Version 1.0.3](#version-103)
+    - [Version 1.0.2](#version-102)
+    - [Version 1.0.1](#version-101)
+    - [Version 1.0.0](#version-100)
+  - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 ## ⓦ What Can WPGulp Do?
 1. Live reloads browser with BrowserSync
