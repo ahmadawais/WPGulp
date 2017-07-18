@@ -1,0 +1,15 @@
+{
+	"config": {
+	       "vendor-dir": "library/vendors/composer"
+	   },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.9",
+        "wp-coding-standards/wpcs": "^0.11",
+		"stevegrunwell/wp-enforcer": "^0.5"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "library/vendors/composer/bin/phpcs --config-set installed_paths library/vendors/composer/wp-coding-standards/wpcs/"
+        ]
+    }
+}
