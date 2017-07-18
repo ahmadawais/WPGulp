@@ -45,7 +45,7 @@ var translatePath           = './languages' // Where to save the translation fil
 // Style related.
 var styleSRC                = './assets/css/style.scss'; // Path to main .scss file.
 var styleDestination        = './'; // Path to place the compiled CSS file.
-// Defualt set to root folder.
+// Default set to root folder.
 
 // JS Vendor related.
 var jsVendorSRC             = './assets/js/vendor/*.js'; // Path to JS vendor folder.
