@@ -120,7 +120,10 @@ gulp.task( 'browser-sync', function() {
 
     // Project URL.
     proxy: projectURL,
-
+    https: {
+//        key: "path-to-custom.key",
+//        cert: "path-to-custom.crt"
+    },
     // `true` Automatically open the browser with BrowserSync live server.
     // `false` Stop the browser from automatically opening.
     open: true,
