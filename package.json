@@ -1,11 +1,19 @@
 {
-  "name": "9seedsGulp",
-  "author": "9seeds",
-  "version": "1.0.3",
-  "license": "GPL-2.0",
+  "name": "9sGulp",
+  "version": "0.0.3",
+  "description": "9seeds Gulp Starter",
+  "homepage": "https://github.com/9seeds/9sGulp",
+  "main": "gulpfile.js",
+  "license": "GPL-2.0+",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/9seeds/9seedsGulp"
+    "url": "https://github.com/9seeds/9sGulp"
+  },
+  "author": {
+    "name": "Jon Brown",
+    "email": "info@9seeds.com",
+    "url": "https://9seeds.com/"
   },
   "dependencies": {
     "gulp-cli": "^1.3.0",

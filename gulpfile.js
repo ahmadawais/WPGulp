@@ -29,14 +29,14 @@
 
 // START Editing Project Variables.
 // Project related.
-var project                 = '9seedsProj'; // Project Name.
-var projectURL              = '9seedsURL.dev'; // Project URL. Could be something like localhost:8888.
+var project                 = '9sGulp'; // Project Name.
+var projectURL              = '9sGulp.dev'; // Project URL. Could be something like localhost:8888.
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
 // Translation related.
-var text_domain             = '9seedsProj'; // Your textdomain here.
-var destFile                = '9seedsProj.pot'; // Name of the transalation file.
-var packageName             = '9seedsProj'; // Package name.
+var text_domain             = '9SGULP'; // Your textdomain here.
+var destFile                = '9SGULP.pot'; // Name of the transalation file.
+var packageName             = '9SGULP'; // Package name.
 var bugReport               = 'https://9seeds.com/contact/'; // Where can users report bugs.
 var lastTranslator          = '9seeds <info@9seeds.com>'; // Last translator Email ID.
 var team                    = '9seeds <info@9seeds.com>'; // Team's Email ID.
