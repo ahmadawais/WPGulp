@@ -60,12 +60,8 @@ var jsCustomFile            = 'custom'; // Compiled JS custom file name.
 // Default set to custom i.e. custom.js.
 
 // Images related.
-var imagesSource            = './assets/svg-src/**/*.{png,jpg,gif,svg}'; // Source folder of images which should be optimized.
-var imagesDestination       = './assets/svg/'; // Destination folder of optimized images. Must be different from the imagesSource folder.
-
-// SVG related.
-var SVGSource               = './assets/img-src/**/*.{png,jpg,gif,svg}'; // Source folder of SVG which should be optimized.
-var SVGDestination          = './assets/img/'; // Destination folder of optimized SVG. Must be different from the SVGSource folder.
+var imagesSource            = './assets/img-src/**/*.{png,jpg,gif,svg}'; // Source folder of images which should be optimized.
+var imagesDestination       = './assets/img/'; // Destination folder of optimized images. Must be different from the imagesSource folder.
 
 // Watch files paths.
 var styleWatchFiles         = './assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
