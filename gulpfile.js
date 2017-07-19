@@ -148,15 +148,15 @@ gulp.task( 'browser-sync', function() {
  *    1. Gets the source scss file
  *    2. Compiles Sass to CSS
  *    3. Writes Sourcemaps for it
- *    4. Autoprefixes it and generates style.css
- *    5. Renames the CSS file with suffix .min.css
- *    6. Minifies the CSS file and generates style.min.css
+ *    3. 
  *    7. Injects CSS or reloads the browser via browserSync
  */
  gulp.task('styles', function () {
     var plugins = [
+      require('autoprefixer'),
+        require('cssnano')
     ];
-    
+
     gulp.src( styleSource )
     .pipe( sourcemaps.init() )
     .pipe( sass( {
