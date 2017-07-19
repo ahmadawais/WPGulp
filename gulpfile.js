@@ -69,23 +69,6 @@ var vendorJSWatchFiles      = './assets/js/vendor/*.js'; // Path to all vendor J
 var customJSWatchFiles      = './assets/js/custom/*.js'; // Path to all custom JS files.
 var projectPHPWatchFiles    = './**/*.php'; // Path to all PHP files.
 
-
-// Browsers you care about for autoprefixing.
-// Browserlist https        ://github.com/ai/browserslist
-const AUTOPREFIXER_BROWSERS = [
-    'last 2 version',
-    '> 1%',
-    'ie >= 9',
-    'ie_mob >= 10',
-    'ff >= 30',
-    'chrome >= 34',
-    'safari >= 7',
-    'opera >= 23',
-    'ios >= 7',
-    'android >= 4',
-    'bb >= 10'
-  ];
-
 // STOP Editing Project Variables.
 
 /**
@@ -169,7 +152,6 @@ gulp.task( 'browser-sync', function() {
  */
  gulp.task('styles', function () {
     var plugins = [
-      autoprefixer( AUTOPREFIXER_BROWSERS )
     ];
     
     gulp.src( styleSource )

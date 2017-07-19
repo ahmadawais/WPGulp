@@ -37,5 +37,18 @@
     "gulp-uglify": "^1.5.3",
     "gulp-sort": "^2.0.0",
     "gulp-wp-pot": "^1.2.2"
-  }
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "ie >= 9",
+    "ie_mob >= 10",
+    "ff >= 30",
+    "chrome >= 34",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4",
+    "bb >= 10"
+  ]
 }
