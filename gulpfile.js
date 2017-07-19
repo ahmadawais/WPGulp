@@ -29,39 +29,43 @@
 
 // START Editing Project Variables.
 // Project related.
-var project                 = 'WPGulpTheme'; // Project Name.
-var projectURL              = 'wpgulp.dev'; // Project URL. Could be something like localhost:8888.
+var project                 = '9seedsProj'; // Project Name.
+var projectURL              = '9seedsURL.dev'; // Project URL. Could be something like localhost:8888.
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
 // Translation related.
-var text_domain             = 'WPGULP'; // Your textdomain here.
-var destFile                = 'WPGULP.pot'; // Name of the transalation file.
-var packageName             = 'WPGULP'; // Package name.
-var bugReport               = 'https://AhmadAwais.com/contact/'; // Where can users report bugs.
-var lastTranslator          = 'Ahmad Awais <your_email@email.com>'; // Last translator Email ID.
-var team                    = 'WPTie <your_email@email.com>'; // Team's Email ID.
+var text_domain             = '9seedsProj'; // Your textdomain here.
+var destFile                = '9seedsProj.pot'; // Name of the transalation file.
+var packageName             = '9seedsProj'; // Package name.
+var bugReport               = 'https://9seeds.com/contact/'; // Where can users report bugs.
+var lastTranslator          = '9seeds <info@9seeds.com>'; // Last translator Email ID.
+var team                    = '9seeds <info@9seeds.com>'; // Team's Email ID.
 var translatePath           = './languages' // Where to save the translation files.
 
 // Style related.
-var styleSRC                = './assets/css/style.scss'; // Path to main .scss file.
+var styleSource             = './assets/sass/style.scss'; // Path to main .scss file.
 var styleDestination        = './'; // Path to place the compiled CSS file.
 // Defualt set to root folder.
 
 // JS Vendor related.
-var jsVendorSRC             = './assets/js/vendor/*.js'; // Path to JS vendor folder.
+var jsVendorSource          = './assets/js/vendor/*.js'; // Path to JS vendor folder.
 var jsVendorDestination     = './assets/js/'; // Path to place the compiled JS vendors file.
 var jsVendorFile            = 'vendors'; // Compiled JS vendors file name.
 // Default set to vendors i.e. vendors.js.
 
 // JS Custom related.
-var jsCustomSRC             = './assets/js/custom/*.js'; // Path to JS custom scripts folder.
+var jsCustomSource          = './assets/js/custom/*.js'; // Path to JS custom scripts folder.
 var jsCustomDestination     = './assets/js/'; // Path to place the compiled JS custom scripts file.
 var jsCustomFile            = 'custom'; // Compiled JS custom file name.
 // Default set to custom i.e. custom.js.
 
 // Images related.
-var imagesSRC               = './assets/img/raw/**/*.{png,jpg,gif,svg}'; // Source folder of images which should be optimized.
-var imagesDestination       = './assets/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
+var imagesSource            = './assets/svg-src/**/*.{png,jpg,gif,svg}'; // Source folder of images which should be optimized.
+var imagesDestination       = './assets/svg/'; // Destination folder of optimized images. Must be different from the imagesSource folder.
+
+// SVG related.
+var SVGSource               = './assets/img-src/**/*.{png,jpg,gif,svg}'; // Source folder of SVG which should be optimized.
+var SVGDestination          = './assets/img/'; // Destination folder of optimized SVG. Must be different from the SVGSource folder.
 
 // Watch files paths.
 var styleWatchFiles         = './assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
@@ -97,9 +101,9 @@ var gulp         = require('gulp'); // Gulp of-course
 
 // CSS related plugins.
 var sass         = require('gulp-sass'); // Gulp pluign for Sass compilation.
-var minifycss    = require('gulp-uglifycss'); // Minifies CSS files.
+var postcss      = require('gulp-postcss'); // Minifies CSS files.
 var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic.
-var mmq          = require('gulp-merge-media-queries'); // Combine matching media queries into one media query definition.
+var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
 
 // JS related plugins.
 var concat       = require('gulp-concat'); // Concatenates JS files
@@ -112,7 +116,6 @@ var imagemin     = require('gulp-imagemin'); // Minify PNG, JPEG, GIF and SVG im
 var rename       = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css
 var lineec       = require('gulp-line-ending-corrector'); // Consistent Line Endings for non UNIX systems. Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings)
 var filter       = require('gulp-filter'); // Enables you to work on a subset of the original files by filtering them using globbing.
-var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
 var notify       = require('gulp-notify'); // Sends message notification to you
 var browserSync  = require('browser-sync').create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
 var reload       = browserSync.reload; // For manual browser reload.
@@ -169,39 +172,33 @@ gulp.task( 'browser-sync', function() {
  *    7. Injects CSS or reloads the browser via browserSync
  */
  gulp.task('styles', function () {
-    gulp.src( styleSRC )
+    var plugins = [
+      autoprefixer( AUTOPREFIXER_BROWSERS )
+    ];
+    
+    gulp.src( styleSource )
     .pipe( sourcemaps.init() )
     .pipe( sass( {
       errLogToConsole: true,
-      outputStyle: 'compact',
-      //outputStyle: 'compressed',
-      // outputStyle: 'nested',
-      // outputStyle: 'expanded',
       precision: 10
     } ) )
     .on('error', console.error.bind(console))
+    .pipe( postcss( plugins ))
     .pipe( sourcemaps.write( { includeContent: false } ) )
-    .pipe( sourcemaps.init( { loadMaps: true } ) )
-    .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
 
-    .pipe( sourcemaps.write ( styleDestination ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( styleDestination ) )
-
-    .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
-    .pipe( mmq( { log: true } ) ) // Merge Media Queries only for .min.css version.
 
     .pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
 
-    .pipe( rename( { suffix: '.min' } ) )
-    .pipe( minifycss( {
-      maxLineLen: 10
-    }))
-    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( styleDestination ) )
-
-    .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
-    .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
+/** 
+ * Option to create .min.css
+ */
+//    .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+//    .pipe( gulp.dest( styleDestination ) )
+//
+//    .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
+//    .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
     .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
  });
 
@@ -218,7 +215,7 @@ gulp.task( 'browser-sync', function() {
   *     4. Uglifes/Minifies the JS file and generates vendors.min.js
   */
  gulp.task( 'vendorsJs', function() {
-  gulp.src( jsVendorSRC )
+  gulp.src( jsVendorSource )
     .pipe( concat( jsVendorFile + '.js' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( jsVendorDestination ) )
@@ -245,7 +242,7 @@ gulp.task( 'browser-sync', function() {
   *     4. Uglifes/Minifies the JS file and generates custom.min.js
   */
  gulp.task( 'customJS', function() {
-    gulp.src( jsCustomSRC )
+    gulp.src( jsCustomSource )
     .pipe( concat( jsCustomFile + '.js' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( jsCustomDestination ) )
@@ -274,7 +271,7 @@ gulp.task( 'browser-sync', function() {
   * again, do it with the command `gulp images`.
   */
  gulp.task( 'images', function() {
-  gulp.src( imagesSRC )
+  gulp.src( imagesSource )
     .pipe( imagemin( {
           progressive: true,
           optimizationLevel: 3, // 0-7 low-high
