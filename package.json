@@ -16,10 +16,10 @@
     "url": "https://9seeds.com/"
   },
   "dependencies": {
+    "bourbon": "^4.3.4",
+    "bourbon-neat": "^1.9.0",
     "gulp-cli": "^1.3.0",
-    "node-sass": "^4.5.3",
-    "bourbon": "^4.3.3",
-    "bourbon-neat": "^1.9.0"
+    "node-sass": "^4.5.3"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
