@@ -35,12 +35,12 @@ var productURL              = './'; // Theme/Plugin URL. Leave it like it is, si
 
 // Translation related.
 var text_domain             = 'WPGULP'; // Your textdomain here.
-var destFile                = 'WPGULP.pot'; // Name of the transalation file.
+var translationFile         = 'WPGULP.pot'; // Name of the transalation file.
+var translationDestination  = './languages' // Where to save the translation files.
 var packageName             = 'WPGULP'; // Package name.
 var bugReport               = 'https://AhmadAwais.com/contact/'; // Where can users report bugs.
 var lastTranslator          = 'Ahmad Awais <your_email@email.com>'; // Last translator Email ID.
 var team                    = 'WPTie <your_email@email.com>'; // Team's Email ID.
-var translatePath           = './languages' // Where to save the translation files.
 
 // Style related.
 var styleSRC                = './assets/css/style.scss'; // Path to main .scss file.
@@ -300,13 +300,13 @@ gulp.task( 'browser-sync', function() {
          .pipe(sort())
          .pipe(wpPot( {
              domain        : text_domain,
-             destFile      : destFile,
+             destFile      : translationFile,
              package       : packageName,
              bugReport     : bugReport,
              lastTranslator: lastTranslator,
              team          : team
          } ))
-        .pipe(gulp.dest(destFile))
+        .pipe(gulp.dest(translationDestination))
         .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) )
 
  });
