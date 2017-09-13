@@ -6,7 +6,7 @@
     <tr>
         <td align='left' width='100%' colspan='2'>
             <strong>WP Gulp</strong><br />
-            💯ⓦ → Use Gulp with WordPress. An advanced but portable Gulp front end to help you kickstart a build-workflow for your WordPress plugins and themes. Gulp WordPress!
+            🎯 Use Gulp with WordPress. An advanced & heavily documented Gulp WordPress boilerplate to help you kick start a build-workflow for your WordPress plugins and themes. Gulp WordPress!
         </td>
     </tr>
     <tr>
