@@ -97,9 +97,8 @@ var gulp         = require('gulp'); // Gulp of-course
 
 // CSS related plugins.
 var sass         = require('gulp-sass'); // Gulp pluign for Sass compilation.
-var minifycss    = require('gulp-uglifycss'); // Minifies CSS files.
 var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic.
-var mmq          = require('gulp-merge-media-queries'); // Combine matching media queries into one media query definition.
+var cleanCSS     = require('gulp-clean-css'); // Minify CSS and merge combine matching media queries into one media query definition.
 
 // JS related plugins.
 var concat       = require('gulp-concat'); // Concatenates JS files
@@ -189,14 +188,24 @@ gulp.task( 'browser-sync', function() {
     .pipe( gulp.dest( styleDestination ) )
 
     .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
-    .pipe( mmq( { log: true } ) ) // Merge Media Queries only for .min.css version.
+    .pipe( cleanCSS( {
+      level: {
+        1: {
+          all: false // sets all default values to 'false'
+        },
+        2: {
+          all: false, // sets all default values to 'false'
+          mergeMedia: true // combine only media queries
+        }
+      }
+    } ) ) // Merge Media Queries only for .min.css version.
 
     .pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
 
     .pipe( rename( { suffix: '.min' } ) )
-    .pipe( minifycss( {
-      maxLineLen: 10
-    }))
+    .pipe( cleanCSS( {
+      level: 2 // full minification
+    } ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( styleDestination ) )
 
