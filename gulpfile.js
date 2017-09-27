@@ -36,7 +36,7 @@ var productURL              = './'; // Theme/Plugin URL. Leave it like it is, si
 // Translation related.
 var text_domain             = 'WPGULP'; // Your textdomain here.
 var translationFile         = 'WPGULP.pot'; // Name of the transalation file.
-var translationDestination  = './languages' // Where to save the translation files.
+var translationDestination  = './languages'; // Where to save the translation files.
 var packageName             = 'WPGULP'; // Package name.
 var bugReport               = 'https://AhmadAwais.com/contact/'; // Where can users report bugs.
 var lastTranslator          = 'Ahmad Awais <your_email@email.com>'; // Last translator Email ID.
