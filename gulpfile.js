@@ -184,7 +184,7 @@ gulp.task( 'browser-sync', function() {
     .pipe( sourcemaps.init( { loadMaps: true } ) )
     .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
 
-    .pipe( sourcemaps.write ( styleDestination ) )
+//    .pipe( sourcemaps.write ( styleDestination ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( styleDestination ) )
 
