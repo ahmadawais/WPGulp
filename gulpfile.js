@@ -107,6 +107,7 @@ var uglify       = require('gulp-uglify'); // Minifies JS files
 
 // Image realted plugins.
 var imagemin     = require('gulp-imagemin'); // Minify PNG, JPEG, GIF and SVG images with imagemin.
+var cache        = require('gulp-cache'); // Cache already optimized images to skip them within the next optimization progress
 
 // Utility related plugins.
 var rename       = require('gulp-rename'); // Renames files E.g. style.css -> style.min.css
@@ -269,21 +270,33 @@ gulp.task( 'browser-sync', function() {
   *     1. Gets the source of images raw folder
   *     2. Minifies PNG, JPEG, GIF and SVG images
   *     3. Generates and saves the optimized images
+  *     4. Caches optimized images to skip them in the next 
   *
   * This task will run only once, if you want to run it
   * again, do it with the command `gulp images`.
   */
  gulp.task( 'images', function() {
   gulp.src( imagesSRC )
-    .pipe( imagemin( {
+    .pipe( cache(imagemin( {
           progressive: true,
           optimizationLevel: 3, // 0-7 low-high
           interlaced: true,
           svgoPlugins: [{removeViewBox: false}]
-        } ) )
+        } )) )
     .pipe(gulp.dest( imagesDestination ))
     .pipe( notify( { message: 'TASK: "images" Completed! 💯', onLast: true } ) );
  });
+
+
+ /**
+  * Task: `clear-images-cache`.
+  *
+  * Deletes the images cache. By running the next "images" task,
+  * each image will be regenerated.
+  */
+gulp.task('clear-images-cache', function (done) {
+  return cache.clearAll(done);
+});
 
 
  /**
