@@ -106,7 +106,7 @@ npm install --global gulp
 ```
 
 ### → STEP #4: Installing Node Dependencies
-We are in the root folder of our WordPress plugin or WordPress theme at the moment, let's install the Node Dependencies. In the terminal run this command and wait for it to download all the NodeJS dependencies. It's a one time process and can take about 5 mins depending on the internet speed of your connection.
+We are in the root folder of our WordPress plugin or WordPress theme at the moment, let's install the Node Dependencies. In the terminal run this command and wait for it to download all the NodeJS dependencies. It's a one-time process and can take about 5 minutes depending on the internet speed of your connection.
 
 ```bash
 # For MAC OS X run the following command with super user.
