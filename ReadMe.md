@@ -1,6 +1,5 @@
-🙌 — If 500 people [signup here](http://eepurl.com/cLwjeH), I will build a video series for WPGulp.
-
----
+### WPGulp v2.0.0 (WIP)
+This is the WIP branch of WPGulp for the new version 2.0.0.
 
 <table width='100%'>
     <tr>
@@ -35,26 +34,28 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [WPGulp — WordPress Gulp Workflow](#wpgulp--wordpress-gulp-workflow)
-  - [ⓦ What Can WPGulp Do?](#%E2%93%A6-what-can-wpgulp-do)
-  - [🎗 Getting Started?](#-getting-started)
-    - [→ Step #1. Download the Required Files](#-step-1-download-the-required-files)
-    - [→ STEP #2: Editing the Project Variables](#-step-2-editing-the-project-variables)
-    - [→ STEP #3: Installing NodeJS, NPM and Gulp](#-step-3-installing-nodejs-npm-and-gulp)
-    - [→ STEP #4: Installing Node Dependencies](#-step-4-installing-node-dependencies)
-    - [→ STEP #5: Just run `Gulp`](#-step-5-just-run-gulp)
-    - [→ Optional Step #6: Images and Translation](#-optional-step-6-images-and-translation)
-  - [How to Update?](#how-to-update)
-    - [Project Dependencies](#project-dependencies)
-    - [WPGulpTheme](#wpgulptheme)
-  - [To do](#to-do)
-  - [Contribute](#contribute)
-  - [Changelog](#changelog)
-    - [Version 1.0.3](#version-103)
-    - [Version 1.0.2](#version-102)
-    - [Version 1.0.1](#version-101)
-    - [Version 1.0.0](#version-100)
-  - [License](#license)
+        - [WPGulp v2.0.0 (WIP)](#wpgulp-v200-wip)
+- [WPGulp — WordPress Gulp Workflow](#wpgulp-%E2%80%94-wordpress-gulp-workflow)
+    - [ⓦ What Can WPGulp Do?](#%E2%93%A6-what-can-wpgulp-do)
+    - [🎗 Getting Started?](#%F0%9F%8E%97-getting-started)
+        - [→ Step #1. Download the Required Files](#%E2%86%92-step-1-download-the-required-files)
+        - [→ STEP #2: Editing the Project Variables](#%E2%86%92-step-2-editing-the-project-variables)
+        - [→ STEP #3: Installing NodeJS, NPM and Gulp](#%E2%86%92-step-3-installing-nodejs-npm-and-gulp)
+        - [→ STEP #4: Installing Node Dependencies](#%E2%86%92-step-4-installing-node-dependencies)
+        - [→ STEP #5: Just run `Gulp`](#%E2%86%92-step-5-just-run-gulp)
+        - [→ Optional Step #6: Images and Translation](#%E2%86%92-optional-step-6-images-and-translation)
+    - [How to Update?](#how-to-update)
+        - [Project Dependencies](#project-dependencies)
+        - [WPGulpTheme](#wpgulptheme)
+    - [To do](#to-do)
+    - [Contribute](#contribute)
+    - [Changelog](#changelog)
+        - [Version 1.0.3](#version-103)
+        - [Version 1.0.2](#version-102)
+        - [Version 1.0.1](#version-101)
+        - [Version 1.0.0](#version-100)
+    - [License](#license)
+        - [🙌 [WPCOUPLE PARTNERS](https://WPCouple.com/partners):](#%F0%9F%99%8C-wpcouple-partnershttpswpcouplecompartners)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -69,7 +70,7 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
 7. Corrects the line endings
 8. InjectCSS instead of browser page reload
 9. Generates .pot file for i18n and l10n
- 
+
 ## 🎗 Getting Started?
 ### → Step #1. Download the Required Files
 - Download [`gulpfile.js`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js), [`package.json`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json), and [`.gitignore`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore) files inside the root folder of your WordPress plugin or WordPress theme
@@ -144,18 +145,18 @@ sudo npm install
 # For Linux run the following command.
 npm install
 ```
- 
+
 Wait for the new dependencies to be downloaded.
 Once the download is complete type `gulp` and boom!
 
 ### Project Dependencies
 - Built with `Mac OS X` but tested and works well with `Linux` as well as `Windows`.
-- You must have [Git](https://git-scm.com/) and [NodeJS](https://nodejs.org/en/download/), and [Gulp](http://gulpjs.com/) installed globally. 
+- You must have [Git](https://git-scm.com/) and [NodeJS](https://nodejs.org/en/download/), and [Gulp](http://gulpjs.com/) installed globally.
 
 ### WPGulpTheme
 Check out a basic WordPress theme implementation with WPGulp called [WPGulpTheme](https://github.com/ahmadawais/WPGulpTheme). This theme demonstrates the architecture followed by default within WPGulp, which is most definitely optional.
 
-## To do 
+## To do
 It's hard to maintain a FOSS free and open source software project on my own. Which is why there is a backlog and an incomplete to-do list.
 - [x] Build WPGulp ✔︎
 - [x] Write an introductory blog post about WPGulp ✔︎
@@ -164,7 +165,7 @@ It's hard to maintain a FOSS free and open source software project on my own. Wh
 - [ ] Write about the new WPGulp tasks, `gulp images` to optimize images and `gulp translate` to generate WP POT translation file.
 
 ## Contribute
-I am looking for WordPress ⓦ developers to contribute. I am open to all kinds of new NodeJS packages and workflows. I can always host custom, opinionated workflows in the form of a separate branch and WPGulp. Just make sure you follow the WordPress Coding Standards. 
+I am looking for WordPress ⓦ developers to contribute. I am open to all kinds of new NodeJS packages and workflows. I can always host custom, opinionated workflows in the form of a separate branch and WPGulp. Just make sure you follow the WordPress Coding Standards.
 
 ## Changelog
 
@@ -173,16 +174,16 @@ I am looking for WordPress ⓦ developers to contribute. I am open to all kinds 
 - FIX: Required `gulp-sort`
 - IMPROVEMENT: Better docs for Translation variables
 
-### Version 1.0.2 
-- NEW: Documentation update `README.md` 
+### Version 1.0.2
+- NEW: Documentation update `README.md`
 - TASK: Image optimization `gulp images`
 - TASK: WP POT Translation file generation `gulp translate`
 
-### Version 1.0.1 
+### Version 1.0.1
 - BrowserSync
 - LineEndings
 
-### Version 1.0.0 
+### Version 1.0.0
 - First version
 - CSS, JS, PHP and Watch Routines
 
