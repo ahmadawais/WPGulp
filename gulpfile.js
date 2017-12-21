@@ -274,7 +274,7 @@ gulp.task( 'browser-sync', function() {
   * again, do it with the command `gulp images`.
   */
  gulp.task( 'images', function() {
-  gulp.src( imagesSRC )
+  return gulp.src( imagesSRC )
     .pipe( imagemin( {
           progressive: true,
           optimizationLevel: 3, // 0-7 low-high
