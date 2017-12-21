@@ -118,6 +118,9 @@ var browserSync  = require('browser-sync').create(); // Reloads browser and inje
 var reload       = browserSync.reload; // For manual browser reload.
 var wpPot        = require('gulp-wp-pot'); // For generating the .pot file.
 var sort         = require('gulp-sort'); // Recommended to prevent unnecessary changes in pot-file.
+var cached 		 = require('gulp-cached'); // Cache files in stream for later use
+var remember 	 = require('gulp-remember'); // Restore files from stream cache
+
 
 /**
  * Task: `browser-sync`.
@@ -218,7 +221,7 @@ gulp.task( 'browser-sync', function() {
   *     4. Uglifes/Minifies the JS file and generates vendors.min.js
   */
  gulp.task( 'vendorsJs', function() {
-  return gulp.src( jsVendorSRC )
+  return gulp.src( jsVendorSRC, { since: gulp.lastRun('vendorsJs') } )
     .pipe( concat( jsVendorFile + '.js' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( jsVendorDestination ) )
