@@ -317,9 +317,9 @@ gulp.task( 'browser-sync', function() {
   *
   * Watches for file changes and runs specific tasks.
   */
- gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
+ gulp.task( 'default', gulp.parallel('styles', 'vendorsJs', 'customJS', 'images', 'browser-sync', function () {
   gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
-  gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
-  gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ] ); // Reload on vendorsJs file changes.
-  gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
- });
+  gulp.watch( styleWatchFiles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
+  gulp.watch( vendorJSWatchFiles, gulp.parallel( 'vendorsJs', reload ) ); // Reload on vendorsJs file changes.
+  gulp.watch( customJSWatchFiles, gulp.parallel( 'customJS', reload ) ); // Reload on customJS file changes.
+ }));
