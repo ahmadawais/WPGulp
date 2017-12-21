@@ -245,7 +245,7 @@ gulp.task( 'browser-sync', function() {
   *     4. Uglifes/Minifies the JS file and generates custom.min.js
   */
  gulp.task( 'customJS', function() {
-    gulp.src( jsCustomSRC )
+   return gulp.src( jsCustomSRC )
     .pipe( concat( jsCustomFile + '.js' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( jsCustomDestination ) )
