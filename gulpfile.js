@@ -169,7 +169,7 @@ gulp.task( 'browser-sync', function() {
  *    7. Injects CSS or reloads the browser via browserSync
  */
  gulp.task('styles', function () {
-    gulp.src( styleSRC )
+  return gulp.src( styleSRC )
     .pipe( sourcemaps.init() )
     .pipe( sass( {
       errLogToConsole: true,
@@ -204,7 +204,7 @@ gulp.task( 'browser-sync', function() {
     .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
     .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
  });
-
+ 
 
  /**
   * Task: `vendorJS`.
@@ -218,7 +218,7 @@ gulp.task( 'browser-sync', function() {
   *     4. Uglifes/Minifies the JS file and generates vendors.min.js
   */
  gulp.task( 'vendorsJs', function() {
-  gulp.src( jsVendorSRC )
+  return gulp.src( jsVendorSRC )
     .pipe( concat( jsVendorFile + '.js' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( jsVendorDestination ) )
