@@ -132,7 +132,7 @@ var remember 	 = require('gulp-remember'); // Restore files from stream cache
  *    3. You may define a custom port
  *    4. You may want to stop the browser from openning automatically
  */
-gulp.task( 'browser-sync', function() {
+function browsersync() {
   browserSync.init( {
 
     // For more options
@@ -153,7 +153,7 @@ gulp.task( 'browser-sync', function() {
     // port: 7000,
 
   } );
-});
+};
 
 // Helper function to allow browser reload with Gulp 4
 function reload(done) {
@@ -325,7 +325,7 @@ function reload(done) {
   *
   * Watches for file changes and runs specific tasks.
   */
- gulp.task( 'default', gulp.parallel('styles', 'vendorsJs', 'customJS', 'images', 'browser-sync', function () {
+ gulp.task( 'default', gulp.parallel('styles', 'vendorsJs', 'customJS', 'images', browsersync, function () {
   gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
   gulp.watch( styleWatchFiles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
   gulp.watch( vendorJSWatchFiles, gulp.series( 'vendorsJs', reload ) ) // Reload on vendorsJs file changes.
