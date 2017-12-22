@@ -30,7 +30,7 @@
 // START Editing Project Variables.
 // Project related.
 var project                 = 'WPGulpTheme'; // Project Name.
-var projectURL              = 'wpgulp.dev'; // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
+var projectURL              = 'localhost:8888'; // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
 // Translation related.
@@ -115,7 +115,6 @@ var filter       = require('gulp-filter'); // Enables you to work on a subset of
 var sourcemaps   = require('gulp-sourcemaps'); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
 var notify       = require('gulp-notify'); // Sends message notification to you
 var browserSync  = require('browser-sync').create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
-var reload       = browserSync.reload; // For manual browser reload.
 var wpPot        = require('gulp-wp-pot'); // For generating the .pot file.
 var sort         = require('gulp-sort'); // Recommended to prevent unnecessary changes in pot-file.
 var cached 		 = require('gulp-cached'); // Cache files in stream for later use
@@ -155,6 +154,12 @@ gulp.task( 'browser-sync', function() {
 
   } );
 });
+
+// Helper function to allow browser reload with Gulp 4
+function reload(done) {
+  browserSync.reload();
+  done();
+}
 
 
 /**
@@ -221,7 +226,7 @@ gulp.task( 'browser-sync', function() {
   *     4. Uglifes/Minifies the JS file and generates vendors.min.js
   */
  gulp.task( 'vendorsJs', function() {
-  return gulp.src( jsVendorSRC, { since: gulp.lastRun('vendorsJs') } )
+  return gulp.src( jsVendorSRC )
     .pipe( concat( jsVendorFile + '.js' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( jsVendorDestination ) )
@@ -323,6 +328,6 @@ gulp.task( 'browser-sync', function() {
  gulp.task( 'default', gulp.parallel('styles', 'vendorsJs', 'customJS', 'images', 'browser-sync', function () {
   gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
   gulp.watch( styleWatchFiles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
-  gulp.watch( vendorJSWatchFiles, gulp.parallel( 'vendorsJs', reload ) ); // Reload on vendorsJs file changes.
-  gulp.watch( customJSWatchFiles, gulp.parallel( 'customJS', reload ) ); // Reload on customJS file changes.
+  gulp.watch( vendorJSWatchFiles, gulp.series( 'vendorsJs', reload ) ) // Reload on vendorsJs file changes.
+  gulp.watch( customJSWatchFiles, gulp.series( 'customJS', reload ) ); // Reload on customJS file changes.
  }));
