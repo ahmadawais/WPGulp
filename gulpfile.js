@@ -20,73 +20,11 @@
  */
 
 /**
- * Configuration.
+ * Load Config.
  *
- * Project Configuration for gulp tasks.
- *
- * In paths you can add <<glob or array of globs>>. Edit the variables as per your project requirements.
+ * Customize your project in the config.js file
  */
-
-// START Editing Project Variables.
-// Project related.
-var project                 = 'WPGulpTheme'; // Project Name.
-var projectURL              = 'wpgulp.local'; // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
-var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
-
-// Translation related.
-var text_domain             = 'WPGULP'; // Your textdomain here.
-var translationFile         = 'WPGULP.pot'; // Name of the transalation file.
-var translationDestination  = './languages'; // Where to save the translation files.
-var packageName             = 'WPGULP'; // Package name.
-var bugReport               = 'https://AhmadAwais.com/contact/'; // Where can users report bugs.
-var lastTranslator          = 'Ahmad Awais <your_email@email.com>'; // Last translator Email ID.
-var team                    = 'WPTie <your_email@email.com>'; // Team's Email ID.
-
-// Style related.
-var styleSRC                = './assets/css/style.scss'; // Path to main .scss file.
-var styleDestination        = './'; // Path to place the compiled CSS file.
-// Default set to root folder.
-
-// JS Vendor related.
-var jsVendorSRC             = './assets/js/vendor/*.js'; // Path to JS vendor folder.
-var jsVendorDestination     = './assets/js/'; // Path to place the compiled JS vendors file.
-var jsVendorFile            = 'vendors'; // Compiled JS vendors file name.
-// Default set to vendors i.e. vendors.js.
-
-// JS Custom related.
-var jsCustomSRC             = './assets/js/custom/*.js'; // Path to JS custom scripts folder.
-var jsCustomDestination     = './assets/js/'; // Path to place the compiled JS custom scripts file.
-var jsCustomFile            = 'custom'; // Compiled JS custom file name.
-// Default set to custom i.e. custom.js.
-
-// Images related.
-var imagesSRC               = './assets/img/raw/**/*.{png,jpg,gif,svg}'; // Source folder of images which should be optimized.
-var imagesDestination       = './assets/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
-
-// Watch files paths.
-var styleWatchFiles         = './assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
-var vendorJSWatchFiles      = './assets/js/vendor/*.js'; // Path to all vendor JS files.
-var customJSWatchFiles      = './assets/js/custom/*.js'; // Path to all custom JS files.
-var projectPHPWatchFiles    = './**/*.php'; // Path to all PHP files.
-
-
-// Browsers you care about for autoprefixing.
-// Browserlist https        ://github.com/ai/browserslist
-const AUTOPREFIXER_BROWSERS = [
-    'last 2 version',
-    '> 1%',
-    'ie >= 9',
-    'ie_mob >= 10',
-    'ff >= 30',
-    'chrome >= 34',
-    'safari >= 7',
-    'opera >= 23',
-    'ios >= 7',
-    'android >= 4',
-    'bb >= 10'
-  ];
-
-// STOP Editing Project Variables.
+const CONFIG = require('./config.js');
 
 /**
  * Load Plugins.
@@ -139,7 +77,7 @@ function browsersync() {
     // @link http://www.browsersync.io/docs/options/
 
     // Project URL.
-    proxy: projectURL,
+    proxy: config.projectURL,
 
     // `true` Automatically open the browser with BrowserSync live server.
     // `false` Stop the browser from automatically opening.
@@ -177,7 +115,7 @@ function reload(done) {
  *    7. Injects CSS or reloads the browser via browserSync
  */
  gulp.task('styles', function () {
-  return gulp.src( styleSRC )
+  return gulp.src( config.styleSRC )
     .pipe( sourcemaps.init() )
     .pipe( sass( {
       errLogToConsole: true,
@@ -190,11 +128,11 @@ function reload(done) {
     .on('error', console.error.bind(console))
     .pipe( sourcemaps.write( { includeContent: false } ) )
     .pipe( sourcemaps.init( { loadMaps: true } ) )
-    .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
+    .pipe( autoprefixer( config.AUTOPREFIXER_BROWSERS ) )
 
     .pipe( sourcemaps.write ( './' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( styleDestination ) )
+    .pipe( gulp.dest( config.styleDestination ) )
 
     .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
     .pipe( mmq( { log: true } ) ) // Merge Media Queries only for .min.css version.
@@ -206,7 +144,7 @@ function reload(done) {
       maxLineLen: 10
     }))
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( styleDestination ) )
+    .pipe( gulp.dest( config.styleDestination ) )
 
     .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
     .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
@@ -226,17 +164,17 @@ function reload(done) {
   *     4. Uglifes/Minifies the JS file and generates vendors.min.js
   */
  gulp.task( 'vendorsJs', function() {
-  return gulp.src( jsVendorSRC )
-    .pipe( concat( jsVendorFile + '.js' ) )
+  return gulp.src( config.jsVendorSRC )
+    .pipe( concat( config.jsVendorFile + '.js' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsVendorDestination ) )
+    .pipe( gulp.dest( config.jsVendorDestination ) )
     .pipe( rename( {
-      basename: jsVendorFile,
+      basename: config.jsVendorFile,
       suffix: '.min'
     }))
     .pipe( uglify() )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsVendorDestination ) )
+    .pipe( gulp.dest( config.jsVendorDestination ) )
     .pipe( notify( { message: 'TASK: "vendorsJs" Completed! 💯', onLast: true } ) );
  });
 
