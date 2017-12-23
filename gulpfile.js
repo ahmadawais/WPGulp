@@ -191,17 +191,17 @@ function reload(done) {
   *     4. Uglifes/Minifies the JS file and generates custom.min.js
   */
  gulp.task( 'customJS', function() {
-   return gulp.src( jsCustomSRC )
-    .pipe( concat( jsCustomFile + '.js' ) )
+   return gulp.src( config.jsCustomSRC )
+    .pipe( concat( config.jsCustomFile + '.js' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsCustomDestination ) )
+    .pipe( gulp.dest( config.jsCustomDestination ) )
     .pipe( rename( {
-      basename: jsCustomFile,
+      basename: config.jsCustomFile,
       suffix: '.min'
     }))
     .pipe( uglify() )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-    .pipe( gulp.dest( jsCustomDestination ) )
+    .pipe( gulp.dest( config.jsCustomDestination ) )
     .pipe( notify( { message: 'TASK: "customJs" Completed! 💯', onLast: true } ) );
  });
 
@@ -220,14 +220,14 @@ function reload(done) {
   * again, do it with the command `gulp images`.
   */
  gulp.task( 'images', function() {
-  return gulp.src( imagesSRC )
+  return gulp.src( config.imagesSRC )
     .pipe( imagemin( {
           progressive: true,
           optimizationLevel: 3, // 0-7 low-high
           interlaced: true,
           svgoPlugins: [{removeViewBox: false}]
         } ) )
-    .pipe(gulp.dest( imagesDestination ))
+    .pipe(gulp.dest( config.imagesDestination ))
     .pipe( notify( { message: 'TASK: "images" Completed! 💯', onLast: true } ) );
  });
 
@@ -242,17 +242,17 @@ function reload(done) {
   *     4. Generate a .pot file of i18n that can be used for l10n to build .mo file
   */
  gulp.task( 'translate', function () {
-     return gulp.src( projectPHPWatchFiles )
+     return gulp.src( config.projectPHPWatchFiles )
          .pipe(sort())
          .pipe(wpPot( {
-             domain        : text_domain,
-             destFile      : translationFile,
-             package       : packageName,
-             bugReport     : bugReport,
-             lastTranslator: lastTranslator,
-             team          : team
+             domain        : config.text_domain,
+             destFile      : config.translationFile,
+             package       : config.packageName,
+             bugReport     : config.bugReport,
+             lastTranslator: config.lastTranslator,
+             team          : config.team
          } ))
-        .pipe(gulp.dest(translationDestination))
+        .pipe(gulp.dest(config.translationDestination))
         .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) )
 
  });
@@ -264,8 +264,8 @@ function reload(done) {
   * Watches for file changes and runs specific tasks.
   */
  gulp.task( 'default', gulp.parallel('styles', 'vendorsJs', 'customJS', 'images', browsersync, function () {
-  gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
-  gulp.watch( styleWatchFiles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
-  gulp.watch( vendorJSWatchFiles, gulp.series( 'vendorsJs', reload ) ) // Reload on vendorsJs file changes.
-  gulp.watch( customJSWatchFiles, gulp.series( 'customJS', reload ) ); // Reload on customJS file changes.
+  gulp.watch( config.projectPHPWatchFiles, reload ); // Reload on PHP file changes.
+  gulp.watch( config.styleWatchFiles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
+  gulp.watch( config.vendorJSWatchFiles, gulp.series( 'vendorsJs', reload ) ) // Reload on vendorsJs file changes.
+  gulp.watch( config.customJSWatchFiles, gulp.series( 'customJS', reload ) ); // Reload on customJS file changes.
  }));
