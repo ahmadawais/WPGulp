@@ -24,7 +24,7 @@
  *
  * Customize your project in the config.js file
  */
-const CONFIG = require('./config.js');
+const config = require('./config.js');
 
 /**
  * Load Plugins.
