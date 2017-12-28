@@ -170,6 +170,7 @@ I am looking for WordPress ⓦ developers to contribute. I am open to all kinds 
 
 ### Version 1.0.4
 - NEW: Added .eslintrc and .babelrc
+- NEW: Added gulp-babel
 - IMPROVEMENT: Rewrite WPGulp in ES6
 
 ### Version 1.0.3

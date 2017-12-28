@@ -2,6 +2,7 @@
 
 ### Version 1.0.4
 - NEW: Added .eslintrc and .babelrc
+- NEW: Added gulp-babel
 - IMPROVEMENT: Rewrite WPGulp in ES6
 
 ### Version 1.0.3

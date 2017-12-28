@@ -105,6 +105,7 @@ const autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic.
 const mmq = require('gulp-merge-media-queries'); // Combine matching media queries into one media query definition.
 
 // JS related plugins.
+const babel = require('gulp-babel'); // Enable usage of ES6 in your JS files.
 const concat = require('gulp-concat'); // Concatenates JS files
 const uglify = require('gulp-uglify'); // Minifies JS files
 
@@ -221,6 +222,7 @@ gulp.task('styles', () => {
  */
 gulp.task('vendorsJs', () => {
   gulp.src(paths.jsVendorSRC)
+    .pipe(babel())
     .pipe(concat(`${paths.jsVendorFile}.js`))
     .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
     .pipe(gulp.dest(paths.jsVendorDestination))
