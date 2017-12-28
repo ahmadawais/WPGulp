@@ -222,7 +222,6 @@ gulp.task('styles', () => {
  */
 gulp.task('vendorsJs', () => {
   gulp.src(paths.jsVendorSRC)
-    .pipe(babel())
     .pipe(concat(`${paths.jsVendorFile}.js`))
     .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
     .pipe(gulp.dest(paths.jsVendorDestination))
@@ -250,6 +249,7 @@ gulp.task('vendorsJs', () => {
 gulp.task('customJS', () => {
   gulp.src(paths.jsCustomSRC)
     .pipe(concat(`${paths.jsCustomFile}.js`))
+    .pipe(babel())
     .pipe(lineec()) // Consistent Line Endings for non UNIX systems.
     .pipe(gulp.dest(paths.jsCustomDestination))
     .pipe(rename({
