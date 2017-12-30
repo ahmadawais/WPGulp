@@ -1,7 +1,7 @@
 {
   "name": "WPGulp",
   "author": "ahmadawais",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "GPL-2.0",
   "repository": {
     "type": "git",
@@ -9,9 +9,14 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.1.2",
+    "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.11.1",
+    "eslint": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^7.0.0",
     "gulp-concat": "^2.5.2",
     "gulp-filter": "^4.0.0",
     "gulp-imagemin": "^2.4.0",
@@ -20,10 +25,10 @@
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^2.2.0",
+    "gulp-sort": "^2.0.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.5.3",
     "gulp-uglifycss": "^1.0.6",
-    "gulp-sort": "^2.0.0",
     "gulp-wp-pot": "^1.2.2"
   }
 }

@@ -69,17 +69,17 @@ Read: [Introducing WPGulp: An Easy to Use WordPress Gulp Boilerplate](https://ah
 7. Corrects the line endings
 8. InjectCSS instead of browser page reload
 9. Generates .pot file for i18n and l10n
- 
+
 ## 🎗 Getting Started?
 ### → Step #1. Download the Required Files
-- Download [`gulpfile.js`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js), [`package.json`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json), and [`.gitignore`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore) files inside the root folder of your WordPress plugin or WordPress theme
+- Download [`gulpfile.babel.js`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.babel.js), [`package.json`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json), and [`.gitignore`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore) files inside the root folder of your WordPress plugin or WordPress theme
 - If you have cURL installed then you can run the following command to download all three files in one go (just make sure you open the root folder of your WordPress plugin or WordPress theme and download these files in the root):
 ```bash
-curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json && curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js && curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore
+curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json && curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.babel.js && curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore
 ```
 
 ### → STEP #2: Editing the Project Variables
-Configure the project variables E.g. paths, translation data, etc. in `gulpfile.js`. Project variables can be found in the following two comments
+Configure the project variables E.g. paths, translation data, etc. in `gulpfile.babel.js`. Project variables can be found in the following two comments
 ```JS
 // START Editing Project Variables.
 {PROJECT VARIABLES}
@@ -136,7 +136,7 @@ gulp translate
 ```
 
 ## How to Update?
-1. Delete old files and download the latest [`gulpfile.js`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js), [`package.json`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json), and [`.gitignore`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore) files in the root of your WP project.
+1. Delete old files and download the latest [`gulpfile.babel.js`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.babel.js), [`package.json`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json), and [`.gitignore`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore) files in the root of your WP project.
 2. Open your WordPress project (plugin/theme) root folder in the terminal and run
 ```bash
 # For MAC OS X run the following command with super user.
@@ -144,18 +144,18 @@ sudo npm install
 # For Linux run the following command.
 npm install
 ```
- 
+
 Wait for the new dependencies to be downloaded.
 Once the download is complete type `gulp` and boom!
 
 ### Project Dependencies
 - Built with `Mac OS X` but tested and works well with `Linux` as well as `Windows`.
-- You must have [Git](https://git-scm.com/) and [NodeJS](https://nodejs.org/en/download/), and [Gulp](http://gulpjs.com/) installed globally. 
+- You must have [Git](https://git-scm.com/) and [NodeJS](https://nodejs.org/en/download/), and [Gulp](http://gulpjs.com/) installed globally.
 
 ### WPGulpTheme
 Check out a basic WordPress theme implementation with WPGulp called [WPGulpTheme](https://github.com/ahmadawais/WPGulpTheme). This theme demonstrates the architecture followed by default within WPGulp, which is most definitely optional.
 
-## To do 
+## To do
 It's hard to maintain a FOSS free and open source software project on my own. Which is why there is a backlog and an incomplete to-do list.
 - [x] Build WPGulp ✔︎
 - [x] Write an introductory blog post about WPGulp ✔︎
@@ -164,25 +164,30 @@ It's hard to maintain a FOSS free and open source software project on my own. Wh
 - [ ] Write about the new WPGulp tasks, `gulp images` to optimize images and `gulp translate` to generate WP POT translation file.
 
 ## Contribute
-I am looking for WordPress ⓦ developers to contribute. I am open to all kinds of new NodeJS packages and workflows. I can always host custom, opinionated workflows in the form of a separate branch and WPGulp. Just make sure you follow the WordPress Coding Standards. 
+I am looking for WordPress ⓦ developers to contribute. I am open to all kinds of new NodeJS packages and workflows. I can always host custom, opinionated workflows in the form of a separate branch and WPGulp. Just make sure you follow the WordPress Coding Standards.
 
 ## Changelog
+
+### Version 1.0.4
+- NEW: Added .eslintrc and .babelrc
+- NEW: Added gulp-babel
+- IMPROVEMENT: Rewrite WPGulp in ES6
 
 ### Version 1.0.3
 - FIX: Required `gulp-wp-pot`
 - FIX: Required `gulp-sort`
 - IMPROVEMENT: Better docs for Translation variables
 
-### Version 1.0.2 
-- NEW: Documentation update `README.md` 
+### Version 1.0.2
+- NEW: Documentation update `README.md`
 - TASK: Image optimization `gulp images`
 - TASK: WP POT Translation file generation `gulp translate`
 
-### Version 1.0.1 
+### Version 1.0.1
 - BrowserSync
 - LineEndings
 
-### Version 1.0.0 
+### Version 1.0.0
 - First version
 - CSS, JS, PHP and Watch Routines
 
