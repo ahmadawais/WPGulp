@@ -103,7 +103,7 @@ var mmq          = require('gulp-merge-media-queries'); // Combine matching medi
 
 // JS related plugins.
 var concat       = require('gulp-concat'); // Concatenates JS files
-var uglify       = require('gulp-uglify'); // Minifies JS files
+var uglify       = require('gulp-uglify-es').default; // Minifies JS files
 
 // Image realted plugins.
 var imagemin     = require('gulp-imagemin'); // Minify PNG, JPEG, GIF and SVG images with imagemin.
