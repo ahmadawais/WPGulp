@@ -1,4 +1,4 @@
-# Contribute to WPGulp
+# 🔥 Contribute to WPGulp
 
 WPGulp is the most successful WordPress Gulp based tooling project. Your contributions are more than welcomed. 
 
