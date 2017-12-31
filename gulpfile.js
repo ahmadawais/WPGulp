@@ -15,8 +15,9 @@
  *      8. InjectCSS instead of browser page reload.
  *      9. Generates .pot file for i18n and l10n.
  *
- * @author Ahmad Awais (@ahmadawais)
- * @version 1.0.3
+ * @author Ahmad Awais (https://github.com/ahmadawais)
+ *         Contributors: https://AhmdA.ws/WPGContributors
+ * @version 1.9.3
  */
 
 /**
@@ -55,8 +56,7 @@ var notify = require( 'gulp-notify' ); // Sends message notification to you
 var browserSync = require( 'browser-sync' ).create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
 var wpPot = require( 'gulp-wp-pot' ); // For generating the .pot file.
 var sort = require( 'gulp-sort' ); // Recommended to prevent unnecessary changes in pot-file.
-var cached = require( 'gulp-cached' ); // Cache files in stream for later use
-var remember = require( 'gulp-remember' ); // Restore files from stream cache
+var cache = require( 'gulp-cache' ); // Cache files in stream for later use
 
 /**
  * Task: `browser-sync`.
@@ -80,15 +80,15 @@ function browsersync() {
 
 		// `true` Automatically open the browser with BrowserSync live server.
 		// `false` Stop the browser from automatically opening.
-		open: true,
+		open: config.browserAutoOpen,
 
 		// Inject CSS changes.
 		// Commnet it to reload browser for every CSS change.
-		injectChanges: true
-
-		// Use a specific port (instead of the one auto-detected by Browsersync).
-		// port: 7000,
+		injectChanges: config.injectChanges
 	});
+
+	// Use a specific port (instead of the one auto-detected by Browsersync).
+	// port: 7000,
 }
 
 // Helper function to allow browser reload with Gulp 4
@@ -112,7 +112,7 @@ function reload( done ) {
  *    7. Injects CSS or reloads the browser via browserSync
  */
 gulp.task( 'styles', function() {
-	return gulp
+	return ( gulp
 		.src( config.styleSRC )
 		.pipe( sourcemaps.init() )
 		.pipe(
@@ -126,7 +126,8 @@ gulp.task( 'styles', function() {
 				precision: 10
 			})
 		)
-		.on( 'error', console.error.bind( console ) )
+
+	// .on( 'error', console.error.bind( console ) )
 		.pipe( sourcemaps.write({ includeContent: false }) )
 		.pipe( sourcemaps.init({ loadMaps: true }) )
 		.pipe( autoprefixer( config.AUTOPREFIXER_BROWSERS ) )
@@ -151,7 +152,9 @@ gulp.task( 'styles', function() {
 
 		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
 		.pipe( browserSync.stream() ) // Reloads style.min.css if that is enqueued.
-		.pipe( notify({ message: 'TASK: "styles" Completed! 💯', onLast: true }) );
+		.pipe(
+			notify({ message: 'TASK: "styles" Completed! 💯', onLast: true })
+		) );
 });
 
 /**
@@ -224,19 +227,26 @@ gulp.task( 'customJS', function() {
  *
  * This task will run only once, if you want to run it
  * again, do it with the command `gulp images`.
+ *
+ * Read the following to change these options.
+ * @link https://github.com/sindresorhus/gulp-imagemin
  */
 gulp.task( 'images', function() {
 	return gulp
-		.src( config.imagesSRC )
+		.src( config.imgSRC )
 		.pipe(
-			imagemin({
-				progressive: true,
-				optimizationLevel: 3, // 0-7 low-high
-				interlaced: true,
-				svgoPlugins: [ { removeViewBox: false } ]
-			})
+			cache(
+				imagemin([
+					imagemin.gifsicle({ interlaced: true }),
+					imagemin.jpegtran({ progressive: true }),
+					imagemin.optipng({ optimizationLevel: 3 }), // 0-7 low-high.
+					imagemin.svgo({
+						plugins: [ { removeViewBox: true }, { cleanupIDs: false } ]
+					})
+				])
+			)
 		)
-		.pipe( gulp.dest( config.imagesDestination ) )
+		.pipe( gulp.dest( config.imgDST ) )
 		.pipe( notify({ message: 'TASK: "images" Completed! 💯', onLast: true }) );
 });
 
@@ -274,6 +284,16 @@ gulp.task( 'translate', function() {
 });
 
 /**
+ * Task: `clear-images-cache`.
+ *
+ * Deletes the images cache. By running the next "images" task,
+ * each image will be regenerated.
+ */
+gulp.task( 'clearCache', function( done ) {
+	return cache.clearAll( done );
+});
+
+/**
  * Watch Tasks.
  *
  * Watches for file changes and runs specific tasks.
@@ -291,6 +311,7 @@ gulp.task(
 			gulp.watch( config.styleWatchFiles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
 			gulp.watch( config.vendorJSWatchFiles, gulp.series( 'vendorsJs', reload ) ); // Reload on vendorsJs file changes.
 			gulp.watch( config.customJSWatchFiles, gulp.series( 'customJS', reload ) ); // Reload on customJS file changes.
+			gulp.watch( config.imgSRC, gulp.series( 'images', reload ) ); // Reload on customJS file changes.
 		}
 	)
 );

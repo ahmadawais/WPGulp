@@ -13,6 +13,8 @@ module.exports = {
 	project: 'WPGulpTheme', // Project Name.
 	projectURL: 'wpgulp.dev', // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
 	productURL: './', // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
+	browserAutoOpen: false,
+	injectChanges: true,
 
 	// Translation related.
 	textDomain: 'WPGULP', // Your textdomain here.
@@ -41,8 +43,9 @@ module.exports = {
 	// Default set to custom i.e. custom.js.
 
 	// Images related.
-	imagesSRC: './assets/img/raw/**/*.{png,jpg,gif,svg}', // Source folder of images which should be optimized.
-	imagesDestination: './assets/img/', // Destination folder of optimized images. Must be different from the imagesSRC folder.
+	// imagesSRC: './assets/img/raw/**.{png,jpg,gif,svg}', // Source folder of images which should be optimized.
+	imgSRC: './assets/img/raw/*', // Source folder of images which should be optimized.
+	imgDST: './assets/img/', // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
 	// Watch files paths.
 	styleWatchFiles: './assets/css/**/*.scss', // Path to all *.scss files inside css folder and inside them.
