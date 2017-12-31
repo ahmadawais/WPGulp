@@ -9,40 +9,31 @@
 module.exports = {
 
 	// START Editing Project Variables.
-	// Project related.
+	// Project options.
 	project: 'WPGulpTheme', // Project Name.
 	projectURL: 'wpgulp.dev', // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
 	productURL: './', // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 	browserAutoOpen: false,
 	injectChanges: true,
 
-	// Translation related.
-	textDomain: 'WPGULP', // Your textdomain here.
-	translationFile: 'WPGULP.pot', // Name of the transalation file.
-	translationDestination: './languages', // Where to save the translation files.
-	packageName: 'WPGULP', // Package name.
-	bugReport: 'https://AhmadAwais.com/contact/', // Where can users report bugs.
-	lastTranslator: 'Ahmad Awais <your_email@email.com>', // Last translator Email ID.
-	team: 'WPTie <your_email@email.com>', // Team's Email ID.
-
-	// Style related.
+	// Style options.
 	styleSRC: './assets/css/style.scss', // Path to main .scss file.
-	styleDestination: './', // Path to place the compiled CSS file.
-	// Default set to root folder.
+	styleDestination: './', // Path to place the compiled CSS file. Default set to root folder.
+	outputStyle: 'compact', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
+	errLogToConsole: true,
+	precision: 10,
 
-	// JS Vendor related.
+	// JS Vendor options.
 	jsVendorSRC: './assets/js/vendor/*.js', // Path to JS vendor folder.
 	jsVendorDestination: './assets/js/', // Path to place the compiled JS vendors file.
-	jsVendorFile: 'vendors', // Compiled JS vendors file name.
-	// Default set to vendors i.e. vendors.js.
+	jsVendorFile: 'vendors', // Compiled JS vendors file name. Default set to vendors i.e. vendors.js.
 
-	// JS Custom related.
+	// JS Custom options.
 	jsCustomSRC: './assets/js/custom/*.js', // Path to JS custom scripts folder.
 	jsCustomDestination: './assets/js/', // Path to place the compiled JS custom scripts file.
-	jsCustomFile: 'custom', // Compiled JS custom file name.
-	// Default set to custom i.e. custom.js.
+	jsCustomFile: 'custom', // Compiled JS custom file name. Default set to custom i.e. custom.js.
 
-	// Images related.
+	// Images options.
 	// imagesSRC: './assets/img/raw/**.{png,jpg,gif,svg}', // Source folder of images which should be optimized.
 	imgSRC: './assets/img/raw/*', // Source folder of images which should be optimized and watched.
 	imgDST: './assets/img/', // Destination folder of optimized images. Must be different from the imagesSRC folder.
@@ -53,9 +44,17 @@ module.exports = {
 	customJSWatchFiles: './assets/js/custom/*.js', // Path to all custom JS files.
 	projectPHPWatchFiles: './**/*.php', // Path to all PHP files.
 
-	// Browsers you care about for autoprefixing.
-	// Browserlist https        ://github.com/ai/browserslist
-	AUTOPREFIXER_BROWSERS: [
+	// Translation options.
+	textDomain: 'WPGULP', // Your textdomain here.
+	translationFile: 'WPGULP.pot', // Name of the transalation file.
+	translationDestination: './languages', // Where to save the translation files.
+	packageName: 'WPGULP', // Package name.
+	bugReport: 'https://AhmadAwais.com/contact/', // Where can users report bugs.
+	lastTranslator: 'Ahmad Awais <your_email@email.com>', // Last translator Email ID.
+	team: 'WPTie <your_email@email.com>', // Team's Email ID.
+
+	// Browsers you care about for autoprefixing. Browserlist https://github.com/ai/browserslist
+	BROWSERS_LIST: [
 		'last 2 version',
 		'> 1%',
 		'ie >= 9',
