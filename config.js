@@ -44,7 +44,7 @@ module.exports = {
 
 	// Images related.
 	// imagesSRC: './assets/img/raw/**.{png,jpg,gif,svg}', // Source folder of images which should be optimized.
-	imgSRC: './assets/img/raw/*', // Source folder of images which should be optimized.
+	imgSRC: './assets/img/raw/*', // Source folder of images which should be optimized and watched.
 	imgDST: './assets/img/', // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
 	// Watch files paths.
