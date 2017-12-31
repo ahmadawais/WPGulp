@@ -112,49 +112,33 @@ function reload( done ) {
  *    7. Injects CSS or reloads the browser via browserSync
  */
 gulp.task( 'styles', function() {
-	return ( gulp
+	return gulp
 		.src( config.styleSRC )
 		.pipe( sourcemaps.init() )
 		.pipe(
 			sass({
-				errLogToConsole: true,
-				outputStyle: 'compact',
-
-				// outputStyle: 'compressed',
-				// outputStyle: 'nested',
-				// outputStyle: 'expanded',
-				precision: 10
+				errLogToConsole: config.errLogToConsole,
+				outputStyle: config.outputStyle,
+				precision: config.precision
 			})
 		)
-
-	// .on( 'error', console.error.bind( console ) )
+		.on( 'error', sass.logError )
 		.pipe( sourcemaps.write({ includeContent: false }) )
 		.pipe( sourcemaps.init({ loadMaps: true }) )
-		.pipe( autoprefixer( config.AUTOPREFIXER_BROWSERS ) )
-
+		.pipe( autoprefixer( config.BROWSERS_LIST ) )
 		.pipe( sourcemaps.write( './' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.styleDestination ) )
-
 		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
 		.pipe( mmq({ log: true }) ) // Merge Media Queries only for .min.css version.
-
 		.pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
-
 		.pipe( rename({ suffix: '.min' }) )
-		.pipe(
-			minifycss({
-				maxLineLen: 10
-			})
-		)
+		.pipe( minifycss({ maxLineLen: 10 }) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.styleDestination ) )
-
 		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
 		.pipe( browserSync.stream() ) // Reloads style.min.css if that is enqueued.
-		.pipe(
-			notify({ message: 'TASK: "styles" Completed! 💯', onLast: true })
-		) );
+		.pipe( notify({ message: 'TASK: "styles" Completed! 💯', onLast: true }) );
 });
 
 /**
