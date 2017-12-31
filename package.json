@@ -7,9 +7,12 @@
     "type": "git",
     "url": "https://github.com/ahmadawais/WPGulp"
   },
-  "dependencies": {},
+  "dependencies": {
+    "eslint-config-wordpress": "^2.0.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.11.1",
+    "eslint": "^4.14.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cached": "^1.1.1",
