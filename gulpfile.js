@@ -300,13 +300,12 @@ gulp.task( 'browser-sync', function() {
          .pipe(sort())
          .pipe(wpPot( {
              domain        : text_domain,
-             destFile      : translationFile,
              package       : packageName,
              bugReport     : bugReport,
              lastTranslator: lastTranslator,
              team          : team
          } ))
-        .pipe(gulp.dest(translationDestination))
+        .pipe(gulp.dest(translationDestination + '/' + translationFile ))
         .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) )
 
  });
