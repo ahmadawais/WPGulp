@@ -151,7 +151,6 @@ gulp.task( 'browser-sync', function() {
     // Use a specific port (instead of the one auto-detected by Browsersync).
     // port: 7000,
 
-
   } );
 });
 
