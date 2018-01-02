@@ -64,11 +64,10 @@ var imagesSRC               = './assets/img/raw/**/*.{png,jpg,gif,svg}'; // Sour
 var imagesDestination       = './assets/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
 // Watch files paths.
-var styleWatchFiles         = 'assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
-var vendorJSWatchFiles      = 'assets/js/vendor/*.js'; // Path to all vendor JS files.
-var customJSWatchFiles      = 'assets/js/custom/*.js'; // Path to all custom JS files.
+var styleWatchFiles         = './assets/css/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
+var vendorJSWatchFiles      = './assets/js/vendor/*.js'; // Path to all vendor JS files.
+var customJSWatchFiles      = './assets/js/custom/*.js'; // Path to all custom JS files.
 var projectPHPWatchFiles    = './**/*.php'; // Path to all PHP files.
-var projectHTMLWatchFiles    = './**/*.html'; // Path to all HTML files.
 
 
 // Browsers you care about for autoprefixing.
@@ -326,7 +325,6 @@ gulp.task( 'browser-sync', function() {
   */
  gulp.task( 'default', ['styles', 'vendorsJs', 'customJS', 'images', 'browser-sync'], function () {
   gulp.watch( projectPHPWatchFiles, reload ); // Reload on PHP file changes.
-  gulp.watch( projectHTMLWatchFiles, reload ); // Reload on PHP file changes.
   gulp.watch( styleWatchFiles, [ 'styles' ] ); // Reload on SCSS file changes.
   gulp.watch( vendorJSWatchFiles, [ 'vendorsJs', reload ] ); // Reload on vendorsJs file changes.
   gulp.watch( customJSWatchFiles, [ 'customJS', reload ] ); // Reload on customJS file changes.
