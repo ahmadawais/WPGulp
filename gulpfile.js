@@ -142,7 +142,7 @@ gulp.task( 'styles', function() {
 });
 
 /**
- * Task: `vendorJS`.
+ * Task: `vendorsJS`.
  *
  * Concatenate and uglify vendor JS scripts.
  *
@@ -152,7 +152,7 @@ gulp.task( 'styles', function() {
  *     3. Renames the JS file with suffix .min.js
  *     4. Uglifes/Minifies the JS file and generates vendors.min.js
  */
-gulp.task( 'vendorsJs', function() {
+gulp.task( 'vendorsJS', function() {
 	return gulp
 		.src( config.jsVendorSRC )
 		.pipe( concat( config.jsVendorFile + '.js' ) )
@@ -167,11 +167,11 @@ gulp.task( 'vendorsJs', function() {
 		.pipe( uglify() )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsVendorDestination ) )
-		.pipe( notify({ message: 'TASK: "vendorsJs" Completed! 💯', onLast: true }) );
+		.pipe( notify({ message: 'TASK: "vendorsJS" Completed! 💯', onLast: true }) );
 });
 
 /**
- * Task: `customJs`.
+ * Task: `customJS`.
  *
  * Concatenate and uglify custom JS scripts.
  *
@@ -181,7 +181,7 @@ gulp.task( 'vendorsJs', function() {
  *     3. Renames the JS file with suffix .min.js
  *     4. Uglifes/Minifies the JS file and generates custom.min.js
  */
-gulp.task( 'customJs', function() {
+gulp.task( 'customJS', function() {
 	return gulp
 		.src( config.jsCustomSRC )
 		.pipe( concat( config.jsCustomFile + '.js' ) )
@@ -196,7 +196,7 @@ gulp.task( 'customJs', function() {
 		.pipe( uglify() )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsCustomDestination ) )
-		.pipe( notify({ message: 'TASK: "customJs" Completed! 💯', onLast: true }) );
+		.pipe( notify({ message: 'TASK: "customJS" Completed! 💯', onLast: true }) );
 });
 
 /**
@@ -286,16 +286,16 @@ gulp.task(
 	'default',
 	gulp.parallel(
 		'styles',
-		'vendorsJs',
-		'customJs',
+		'vendorsJS',
+		'customJS',
 		'images',
 		browsersync,
 		function() {
 			gulp.watch( config.projectPHPWatchFiles, reload ); // Reload on PHP file changes.
 			gulp.watch( config.styleWatchFiles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
-			gulp.watch( config.vendorJSWatchFiles, gulp.series( 'vendorsJs', reload ) ); // Reload on vendorsJs file changes.
-			gulp.watch( config.customJSWatchFiles, gulp.series( 'customJs', reload ) ); // Reload on customJs file changes.
-			gulp.watch( config.imgSRC, gulp.series( 'images', reload ) ); // Reload on customJs file changes.
+			gulp.watch( config.vendorJSWatchFiles, gulp.series( 'vendorsJS', reload ) ); // Reload on vendorsJS file changes.
+			gulp.watch( config.customJSWatchFiles, gulp.series( 'customJS', reload ) ); // Reload on customJS file changes.
+			gulp.watch( config.imgSRC, gulp.series( 'images', reload ) ); // Reload on customJS file changes.
 		}
 	)
 );
