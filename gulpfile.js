@@ -154,7 +154,7 @@ gulp.task( 'styles', function() {
  */
 gulp.task( 'vendorsJs', function() {
 	return gulp
-		.src( config.jsVendorSRC, since: { gulp.lastRun( 'vendorsJS' ) } )
+		.src( config.jsVendorSRC )
 		.pipe( concat( config.jsVendorFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsVendorDestination ) )
