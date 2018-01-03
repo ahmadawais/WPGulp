@@ -103,6 +103,7 @@ var mmq          = require('gulp-merge-media-queries'); // Combine matching medi
 
 // JS related plugins.
 var concat       = require('gulp-concat'); // Concatenates JS files
+var babel        = require('gulp-babel');
 var uglify       = require('gulp-uglify'); // Minifies JS files
 
 // Image realted plugins.
@@ -219,6 +220,7 @@ gulp.task( 'browser-sync', function() {
   */
  gulp.task( 'vendorsJs', function() {
   gulp.src( jsVendorSRC )
+    .pipe(babel({ presets: ['env'] }))
     .pipe( concat( jsVendorFile + '.js' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( jsVendorDestination ) )
@@ -246,6 +248,7 @@ gulp.task( 'browser-sync', function() {
   */
  gulp.task( 'customJS', function() {
     gulp.src( jsCustomSRC )
+    .pipe(babel({ presets: ['env'] }))
     .pipe( concat( jsCustomFile + '.js' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( jsCustomDestination ) )

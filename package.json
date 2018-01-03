@@ -9,9 +9,11 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.11.1",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.5.2",
     "gulp-filter": "^4.0.0",
     "gulp-imagemin": "^2.4.0",
@@ -19,11 +21,11 @@
     "gulp-merge-media-queries": "^0.2.1",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^2.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sort": "^2.0.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.5.3",
     "gulp-uglifycss": "^1.0.6",
-    "gulp-sort": "^2.0.0",
     "gulp-wp-pot": "^1.2.2"
   }
 }
