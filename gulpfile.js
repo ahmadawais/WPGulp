@@ -60,7 +60,6 @@ var cache = require( 'gulp-cache' ); // Cache files in stream for later use
 var cached = require( 'gulp-cached' ); // Cache files in stream for later use
 var remember = require( 'gulp-remember' ); // Adds all the files it has ever seen back into the stream
 
-var eslint = require( 'gulp-eslint' ); // Lint JS files for errors and proper formatting. *Used to test JS caching. Can be removed before this branch goes live*
 
 /**
  * Task: `browser-sync`.
@@ -156,7 +155,13 @@ gulp.task( 'styles', function() {
  *     4. Uglifes/Minifies the JS file and generates vendors.min.js
  */
 gulp.task( 'vendorsJS', function() {
-	return gulp.src( config.jsVendorSRC )
+	return gulp.src( config.jsVendorSRC, { since: gulp.lastRun( 'vendorsJS' ) } ) // Select all files that have changed since last ran - contains all files on first run
+		.pipe( cached( 'vendorsJS' ) ) // We store those files in our cache.
+		
+			// Tasks here will only be ran on changed files
+			// Use this for items such as testing/linting
+			
+		.pipe( remember( 'vendorsJS' ) ) // Restore files from cache
 		.pipe( concat( config.jsVendorFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsVendorDestination ) )
