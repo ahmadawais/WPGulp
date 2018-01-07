@@ -57,6 +57,10 @@ var browserSync = require( 'browser-sync' ).create(); // Reloads browser and inj
 var wpPot = require( 'gulp-wp-pot' ); // For generating the .pot file.
 var sort = require( 'gulp-sort' ); // Recommended to prevent unnecessary changes in pot-file.
 var cache = require( 'gulp-cache' ); // Cache files in stream for later use
+var cached = require( 'gulp-cached' ); // Cache files in stream for later use
+var remember = require( 'gulp-remember' ); // Adds all the files it has ever seen back into the stream
+
+var eslint = require( 'gulp-eslint' ); // Lint JS files for errors and proper formatting. *Used to test JS caching. Can be removed before this branch goes live*
 
 /**
  * Task: `browser-sync`.
