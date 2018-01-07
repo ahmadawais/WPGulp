@@ -112,8 +112,7 @@ function reload( done ) {
  *    7. Injects CSS or reloads the browser via browserSync
  */
 gulp.task( 'styles', function() {
-	return gulp
-		.src( config.styleSRC )
+	return gulp.src( config.styleSRC )
 		.pipe( sourcemaps.init() )
 		.pipe(
 			sass({
@@ -153,8 +152,7 @@ gulp.task( 'styles', function() {
  *     4. Uglifes/Minifies the JS file and generates vendors.min.js
  */
 gulp.task( 'vendorsJS', function() {
-	return gulp
-		.src( config.jsVendorSRC )
+	return gulp.src( config.jsVendorSRC )
 		.pipe( concat( config.jsVendorFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsVendorDestination ) )
@@ -182,8 +180,7 @@ gulp.task( 'vendorsJS', function() {
  *     4. Uglifes/Minifies the JS file and generates custom.min.js
  */
 gulp.task( 'customJS', function() {
-	return gulp
-		.src( config.jsCustomSRC )
+	return gulp.src( config.jsCustomSRC )
 		.pipe( concat( config.jsCustomFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsCustomDestination ) )
@@ -216,8 +213,7 @@ gulp.task( 'customJS', function() {
  * @link https://github.com/sindresorhus/gulp-imagemin
  */
 gulp.task( 'images', function() {
-	return gulp
-		.src( config.imgSRC )
+	return gulp.src( config.imgSRC )
 		.pipe(
 			cache(
 				imagemin([
@@ -244,8 +240,7 @@ gulp.task( 'images', function() {
  *     4. Generate a .pot file of i18n that can be used for l10n to build .mo file
  */
 gulp.task( 'translate', function() {
-	return gulp
-		.src( config.projectPHPWatchFiles )
+	return gulp.src( config.projectPHPWatchFiles )
 		.pipe( sort() )
 		.pipe(
 			wpPot({
