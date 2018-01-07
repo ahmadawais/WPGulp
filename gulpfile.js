@@ -189,7 +189,13 @@ gulp.task( 'vendorsJS', function() {
  *     4. Uglifes/Minifies the JS file and generates custom.min.js
  */
 gulp.task( 'customJS', function() {
-	return gulp.src( config.jsCustomSRC )
+	return gulp.src( config.jsCustomSRC, { since: gulp.lastRun( 'customJS' ) } ) // Select all files that have changed since last ran - contains all files on first run
+		.pipe( cached( 'customJS' ) ) // We store those files in our cache.
+		
+			// Tasks here will only be ran on changed files
+			// Use this for items such as testing/linting
+			
+		.pipe( remember( 'customJS' ) ) // Restore files from cache
 		.pipe( concat( config.jsCustomFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsCustomDestination ) )
