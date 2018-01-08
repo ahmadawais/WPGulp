@@ -83,7 +83,7 @@ function browsersync() {
 		open: config.browserAutoOpen,
 
 		// Inject CSS changes.
-		// Commnet it to reload browser for every CSS change.
+		// Comment it to reload browser for every CSS change.
 		injectChanges: config.injectChanges
 	});
 
