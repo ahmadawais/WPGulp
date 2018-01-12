@@ -182,12 +182,12 @@ gulp.task( 'vendorsJS', function() {
  */
 gulp.task( 'customJS', function() {
 	return gulp.src( config.jsCustomSRC )
-	.pipe(
-	  babel({
+		.pipe(
+	 		babel({
 				presets: [
 					[ 'env', // Preset which compiles ES6 to ES5.
 						{
-							'targets': { 'browsers': config.BROWSERS_LIST }, // Target browser list to support.
+						'targets': { 'browsers': config.BROWSERS_LIST }, // Target browser list to support.
 						}
 					]
 				]
