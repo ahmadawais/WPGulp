@@ -154,6 +154,17 @@ gulp.task( 'styles', function() {
  */
 gulp.task( 'vendorsJS', function() {
 	return gulp.src( config.jsVendorSRC )
+		.pipe(
+			babel({
+				presets: [
+					[ 'env', // Preset which compiles ES6 to ES5.
+						{
+						'targets': { 'browsers': config.BROWSERS_LIST }, // Target browser list to support.
+						}
+					]
+				]
+			})
+		)
 		.pipe( concat( config.jsVendorFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsVendorDestination ) )
