@@ -11,10 +11,13 @@
     "eslint-config-wordpress": "^2.0.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.11.1",
     "eslint": "^4.14.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^7.0.0",
     "gulp-cache": "^1.0.2",
     "gulp-concat": "^2.5.2",
     "gulp-filter": "^5.1.0",

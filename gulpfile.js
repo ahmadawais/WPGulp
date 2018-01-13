@@ -43,6 +43,7 @@ var mmq = require( 'gulp-merge-media-queries' ); // Combine matching media queri
 // JS related plugins.
 var concat = require( 'gulp-concat' ); // Concatenates JS files
 var uglify = require( 'gulp-uglify' ); // Minifies JS files
+var babel = require( 'gulp-babel' ); // Compiles ESNext to browser compatible JS.
 
 // Image realted plugins.
 var imagemin = require( 'gulp-imagemin' ); // Minify PNG, JPEG, GIF and SVG images with imagemin.
@@ -153,6 +154,17 @@ gulp.task( 'styles', function() {
  */
 gulp.task( 'vendorsJS', function() {
 	return gulp.src( config.jsVendorSRC )
+		.pipe(
+			babel({
+				presets: [
+					[ 'env', // Preset which compiles ES6 to ES5.
+						{
+						'targets': { 'browsers': config.BROWSERS_LIST }, // Target browser list to support.
+						}
+					]
+				]
+			})
+		)
 		.pipe( concat( config.jsVendorFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsVendorDestination ) )
@@ -181,6 +193,17 @@ gulp.task( 'vendorsJS', function() {
  */
 gulp.task( 'customJS', function() {
 	return gulp.src( config.jsCustomSRC )
+		.pipe(
+	 		babel({
+				presets: [
+					[ 'env', // Preset which compiles ES6 to ES5.
+						{
+						'targets': { 'browsers': config.BROWSERS_LIST }, // Target browser list to support.
+						}
+					]
+				]
+			})
+		)
 		.pipe( concat( config.jsCustomFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsCustomDestination ) )
