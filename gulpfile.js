@@ -254,6 +254,16 @@ gulp.task( 'images', function() {
 });
 
 /**
+ * Task: `clear-images-cache`.
+ *
+ * Deletes the images cache. By running the next "images" task,
+ * each image will be regenerated.
+ */
+gulp.task( 'clearCache', function( done ) {
+	return cache.clearAll( done );
+});
+
+/**
  * WP POT Translation File Generator.
  *
  * * This task does the following:
@@ -283,16 +293,6 @@ gulp.task( 'translate', function() {
 				onLast: true
 			})
 		);
-});
-
-/**
- * Task: `clear-images-cache`.
- *
- * Deletes the images cache. By running the next "images" task,
- * each image will be regenerated.
- */
-gulp.task( 'clearCache', function( done ) {
-	return cache.clearAll( done );
 });
 
 /**
