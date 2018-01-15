@@ -58,6 +58,7 @@ var browserSync = require( 'browser-sync' ).create(); // Reloads browser and inj
 var wpPot = require( 'gulp-wp-pot' ); // For generating the .pot file.
 var sort = require( 'gulp-sort' ); // Recommended to prevent unnecessary changes in pot-file.
 var cache = require( 'gulp-cache' ); // Cache files in stream for later use
+var remember = require( 'gulp-remember' ); //  Adds all the files it has ever seen back into the stream
 
 /**
  * Task: `browser-sync`.
@@ -153,7 +154,7 @@ gulp.task( 'styles', function() {
  *     4. Uglifes/Minifies the JS file and generates vendors.min.js
  */
 gulp.task( 'vendorsJS', function() {
-	return gulp.src( config.jsVendorSRC )
+	return gulp.src( config.jsVendorSRC, {since: gulp.lastRun( 'vendorsJS' ) } ) // Only run on changed files.
 		.pipe(
 			babel({
 				presets: [
@@ -165,6 +166,7 @@ gulp.task( 'vendorsJS', function() {
 				]
 			})
 		)
+		.pipe( remember( 'vendorsJS' ) ) // Bring all files back to stream
 		.pipe( concat( config.jsVendorFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsVendorDestination ) )
@@ -192,7 +194,7 @@ gulp.task( 'vendorsJS', function() {
  *     4. Uglifes/Minifies the JS file and generates custom.min.js
  */
 gulp.task( 'customJS', function() {
-	return gulp.src( config.jsCustomSRC )
+	return gulp.src( config.jsCustomSRC, {since: gulp.lastRun( 'customJS' ) } ) // Only run on changed files.
 		.pipe(
 	 		babel({
 				presets: [
@@ -204,6 +206,7 @@ gulp.task( 'customJS', function() {
 				]
 			})
 		)
+		.pipe( remember( 'customJS' ) ) // Bring all files back to stream
 		.pipe( concat( config.jsCustomFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsCustomDestination ) )
