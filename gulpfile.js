@@ -311,7 +311,7 @@ gulp.task(
 		'customJS',
 		'images',
 		browsersync,
-		function() {
+		function watchFiles() {
 			gulp.watch( config.projectPHPWatchFiles, reload ); // Reload on PHP file changes.
 			gulp.watch( config.styleWatchFiles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
 			gulp.watch( config.vendorJSWatchFiles, gulp.series( 'vendorsJS', reload ) ); // Reload on vendorsJS file changes.
