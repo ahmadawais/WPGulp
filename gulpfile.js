@@ -154,7 +154,7 @@ gulp.task( 'styles', function() {
  *     4. Uglifes/Minifies the JS file and generates vendors.min.js
  */
 gulp.task( 'vendorsJS', function() {
-	return gulp.src( config.jsVendorSRC, {since: gulp.lastRun( 'vendorsJS' ) } ) // Only run on changed files
+	return gulp.src( config.jsVendorSRC, {since: gulp.lastRun( 'vendorsJS' ) } ) // Only run on changed files.
 		.pipe(
 			babel({
 				presets: [
@@ -194,7 +194,7 @@ gulp.task( 'vendorsJS', function() {
  *     4. Uglifes/Minifies the JS file and generates custom.min.js
  */
 gulp.task( 'customJS', function() {
-	return gulp.src( config.jsCustomSRC, {since: gulp.lastRun( 'customJS' ) } ) // Only run on changed files
+	return gulp.src( config.jsCustomSRC, {since: gulp.lastRun( 'customJS' ) } ) // Only run on changed files.
 		.pipe(
 	 		babel({
 				presets: [
