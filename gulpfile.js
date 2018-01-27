@@ -59,6 +59,8 @@ var wpPot = require( 'gulp-wp-pot' ); // For generating the .pot file.
 var sort = require( 'gulp-sort' ); // Recommended to prevent unnecessary changes in pot-file.
 var cache = require( 'gulp-cache' ); // Cache files in stream for later use
 var remember = require( 'gulp-remember' ); //  Adds all the files it has ever seen back into the stream
+var plumber = require('gulp-plumber'); // Prevent pipe breaking caused by errors from gulp plugins
+
 
 /**
  * Task: `browser-sync`.
@@ -155,6 +157,10 @@ gulp.task( 'styles', function() {
  */
 gulp.task( 'vendorsJS', function() {
 	return gulp.src( config.jsVendorSRC, {since: gulp.lastRun( 'vendorsJS' ) } ) // Only run on changed files.
+	    .pipe(plumber({ errorHandler: function(err) {
+            notify.onError("Error: <%= error.message %>")(err);
+            this.emit('end'); // End stream if error is found
+        }}))
 		.pipe(
 			babel({
 				presets: [
@@ -194,7 +200,11 @@ gulp.task( 'vendorsJS', function() {
  *     4. Uglifes/Minifies the JS file and generates custom.min.js
  */
 gulp.task( 'customJS', function() {
-	return gulp.src( config.jsCustomSRC, {since: gulp.lastRun( 'customJS' ) } ) // Only run on changed files.
+	return gulp.src( config.jsCustomSRC, {since: gulp.lastRun( 'customJS' ) } ) // Only run on changed files.        
+        .pipe(plumber({ errorHandler: function(err) {
+            notify.onError("Error: <%= error.message %>")(err);
+            this.emit('end'); // End stream if error is found
+        }}))
 		.pipe(
 	 		babel({
 				presets: [
