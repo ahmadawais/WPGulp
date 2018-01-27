@@ -201,10 +201,10 @@ gulp.task( 'vendorsJS', function() {
  */
 gulp.task( 'customJS', function() {
 	return gulp.src( config.jsCustomSRC, {since: gulp.lastRun( 'customJS' ) } ) // Only run on changed files.        
-        .pipe(plumber({ errorHandler: function(err) {
-            notify.onError("Error: <%= error.message %>")(err);
-            this.emit('end'); // End stream if error is found
-        }}))
+        .pipe( plumber( { errorHandler: function( err ) {
+            notify.onError( 'Error: <%= error.message %>' )( err );
+            this.emit( 'end' ); // End stream if error is found
+        } } ) )
 		.pipe(
 	 		babel({
 				presets: [
