@@ -1,5 +1,8 @@
 # Changelog
 
+### Version 1.0.4
+- FIX: Upgrade `gulp-sass` min version for 64 bit Linux compatibility
+
 ### Version 1.0.3
 - FIX: Required `gulp-wp-pot`.
 - FIX: Required `gulp-sort`.

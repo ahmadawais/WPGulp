@@ -1,7 +1,7 @@
 {
   "name": "WPGulp",
   "author": "ahmadawais",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "GPL-2.0",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
     "gulp-merge-media-queries": "^0.2.1",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^2.2.0",
+    "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.5.3",
     "gulp-uglifycss": "^1.0.6",
