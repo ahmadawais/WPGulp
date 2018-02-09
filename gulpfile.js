@@ -188,7 +188,7 @@ gulp.task( 'browser-sync', function() {
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( styleDestination ) )
 
-    .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
+    .pipe( filter( styleDestination + '**/*.css' ) ) // Filtering stream to only css files
     .pipe( mmq( { log: true } ) ) // Merge Media Queries only for .min.css version.
 
     .pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
