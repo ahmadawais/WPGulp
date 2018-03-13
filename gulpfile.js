@@ -299,13 +299,14 @@ gulp.task( 'browser-sync', function() {
      return gulp.src( projectPHPWatchFiles )
          .pipe(sort())
          .pipe(wpPot( {
+             destFile      : translationFile,
              domain        : text_domain,
              package       : packageName,
              bugReport     : bugReport,
              lastTranslator: lastTranslator,
              team          : team
          } ))
-        .pipe(gulp.dest(translationDestination + '/' + translationFile ))
+        .pipe(gulp.dest(translationDestination  ))
         .pipe( notify( { message: 'TASK: "translate" Completed! 💯', onLast: true } ) )
 
  });
