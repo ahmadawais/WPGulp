@@ -59,8 +59,7 @@ var wpPot = require( 'gulp-wp-pot' ); // For generating the .pot file.
 var sort = require( 'gulp-sort' ); // Recommended to prevent unnecessary changes in pot-file.
 var cache = require( 'gulp-cache' ); // Cache files in stream for later use
 var remember = require( 'gulp-remember' ); //  Adds all the files it has ever seen back into the stream
-var plumber = require('gulp-plumber'); // Prevent pipe breaking caused by errors from gulp plugins
-
+var plumber = require( 'gulp-plumber' ); // Prevent pipe breaking caused by errors from gulp plugins
 
 /**
  * Task: `browser-sync`.
@@ -116,7 +115,8 @@ function reload( done ) {
  *    7. Injects CSS or reloads the browser via browserSync
  */
 gulp.task( 'styles', function() {
-	return gulp.src( config.styleSRC )
+	return gulp
+		.src( config.styleSRC )
 		.pipe( sourcemaps.init() )
 		.pipe(
 			sass({
@@ -156,17 +156,23 @@ gulp.task( 'styles', function() {
  *     4. Uglifes/Minifies the JS file and generates vendors.min.js
  */
 gulp.task( 'vendorsJS', function() {
-	return gulp.src( config.jsVendorSRC, {since: gulp.lastRun( 'vendorsJS' ) } ) // Only run on changed files.
-	    .pipe(plumber({ errorHandler: function(err) {
-            notify.onError("Error: <%= error.message %>")(err);
-            this.emit('end'); // End stream if error is found
-        }}))
+	return gulp
+		.src( config.jsVendorSRC, { since: gulp.lastRun( 'vendorsJS' ) }) // Only run on changed files.
+		.pipe(
+			plumber({
+				errorHandler: function( err ) {
+					notify.onError( 'Error: <%= error.message %>' )( err );
+					this.emit( 'end' ); // End stream if error is found
+				}
+			})
+		)
 		.pipe(
 			babel({
 				presets: [
-					[ 'env', // Preset which compiles ES6 to ES5.
+					[
+						'env', // Preset which compiles ES6 to ES5.
 						{
-						'targets': { 'browsers': config.BROWSERS_LIST }, // Target browser list to support.
+							targets: { browsers: config.BROWSERS_LIST } // Target browser list to support.
 						}
 					]
 				]
@@ -200,17 +206,23 @@ gulp.task( 'vendorsJS', function() {
  *     4. Uglifes/Minifies the JS file and generates custom.min.js
  */
 gulp.task( 'customJS', function() {
-	return gulp.src( config.jsCustomSRC, {since: gulp.lastRun( 'customJS' ) } ) // Only run on changed files.        
-        .pipe( plumber( { errorHandler: function( err ) {
-            notify.onError( 'Error: <%= error.message %>' )( err );
-            this.emit( 'end' ); // End stream if error is found
-        } } ) )
+	return gulp
+		.src( config.jsCustomSRC, { since: gulp.lastRun( 'customJS' ) }) // Only run on changed files.
 		.pipe(
-	 		babel({
+			plumber({
+				errorHandler: function( err ) {
+					notify.onError( 'Error: <%= error.message %>' )( err );
+					this.emit( 'end' ); // End stream if error is found
+				}
+			})
+		)
+		.pipe(
+			babel({
 				presets: [
-					[ 'env', // Preset which compiles ES6 to ES5.
+					[
+						'env', // Preset which compiles ES6 to ES5.
 						{
-						'targets': { 'browsers': config.BROWSERS_LIST }, // Target browser list to support.
+							targets: { browsers: config.BROWSERS_LIST } // Target browser list to support.
 						}
 					]
 				]
@@ -249,7 +261,8 @@ gulp.task( 'customJS', function() {
  * @link https://github.com/sindresorhus/gulp-imagemin
  */
 gulp.task( 'images', function() {
-	return gulp.src( config.imgSRC )
+	return gulp
+		.src( config.imgSRC )
 		.pipe(
 			cache(
 				imagemin([
@@ -286,7 +299,8 @@ gulp.task( 'clearCache', function( done ) {
  *     4. Generate a .pot file of i18n that can be used for l10n to build .mo file
  */
 gulp.task( 'translate', function() {
-	return gulp.src( config.projectPHPWatchFiles )
+	return gulp
+		.src( config.projectPHPWatchFiles )
 		.pipe( sort() )
 		.pipe(
 			wpPot({
