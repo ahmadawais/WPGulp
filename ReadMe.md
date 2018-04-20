@@ -134,6 +134,9 @@ gulp images
 
 # To generate WP POT translation file.
 gulp translate
+
+# To generate RTL stylesheets and Sourcemap.
+gulp stylesRTL
 ```
 
 ## How to Update?
