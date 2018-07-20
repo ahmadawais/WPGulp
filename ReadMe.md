@@ -90,10 +90,10 @@ Configure the project variables E.g. paths, translation data, etc. in `gulpfile.
 You need to have NodeJS & NPM installed. If it is installed, skip to installing Gulp. Otherwise, download [NodeJS](https://nodejs.org/en/download/) and install it. After installing NodeJS, you can verify the install of both NodeJS and Node Package Manager by typing the following commands. This step needs to be followed only once if you don't have NodeJS installed. No need to repeat it ever again.
 ```bash
 node -v
-# Results into v4.2.6
+# Results into v7.10.0
 
 npm -v
-# Results into 3.9.0
+# Results into 5.6.0
 ```
 
 NodeJS and NPM are installed, now we need to install `Gulp` globally. To do that, run the following command
