@@ -80,7 +80,7 @@ curl -O https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json 
 ```
 
 ### → STEP #2: Editing the Project Variables
-Configure the project variables E.g. paths, translation data, etc. in `gulpfile.js`. Project variables can be found in the following two comments
+Configure the project variables E.g. paths, translation data, etc. in `config.js`. Project variables can be found in the following two comments
 ```JS
 // START Editing Project Variables.
 {PROJECT VARIABLES}
