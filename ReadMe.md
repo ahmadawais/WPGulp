@@ -1,4 +1,6 @@
-🙌 — If 1000 developers [signup here](http://eepurl.com/cLwjeH), I will build a video series for WPGulp.
+🙌 — [WPGulp v2.0](https://github.com/ahmadawais/WPGulp/issues/61) is almost ready. [Try it out → ](https://github.com/ahmadawais/WPGulp/tree/v2.0.0)
+
+🎯 — If 1,000 developers [signup here](http://eepurl.com/cLwjeH), I will build a video series for WPGulp.
 
 ---
 
