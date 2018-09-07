@@ -27,22 +27,16 @@
     </tr>
 </table>
 
-
-
-- [WPGulp — WordPress Gulp Workflow](#wpgulp--wordpress-gulp-workflow)
-	- [ⓦ WPGulp Can Do `THAT™`](#%E2%93%A6-wpgulp-can-do-that%E2%84%A2)
-	- [🎗 Getting Started](#%F0%9F%8E%97-getting-started)
-		- [→ Step #1. Download the Required Files](#%E2%86%92-step-1-download-the-required-files)
-		- [→ STEP #2: Editing the Project Variables](#%E2%86%92-step-2-editing-the-project-variables)
-		- [→ STEP #3: Installing NodeJS, NPM and Gulp](#%E2%86%92-step-3-installing-nodejs-npm-and-gulp)
-		- [→ STEP #4: Installing Node Dependencies](#%E2%86%92-step-4-installing-node-dependencies)
-		- [→ STEP #5: Just run `Gulp`](#%E2%86%92-step-5-just-run-gulp)
-		- [→ Optional Step #6: Images and Translation](#%E2%86%92-optional-step-6-images-and-translation)
-	- [How to Update?](#how-to-update)
-		- [Project Dependencies](#project-dependencies)
-		- [WPGulpTheme](#wpgulptheme)
-	- [License](#license)
-		- [🙌 WPCOUPLE PARTNERS](#%F0%9F%99%8C-wpcouple-partners)
+- [ⓦ WPGulp Can Do `THAT™`](#%E2%93%A6-wpgulp-can-do-that%E2%84%A2)
+- [🎗 Getting Started](#%F0%9F%8E%97-getting-started)
+	- [→ Step #1. Download the Required Files](#%E2%86%92-step-1-download-the-required-files)
+	- [→ STEP #2: Editing the Project Variables](#%E2%86%92-step-2-editing-the-project-variables)
+	- [→ STEP #3: Installing Node Dependencies](#%E2%86%92-step-3-installing-node-dependencies)
+	- [→ STEP #5: Start your project](#%E2%86%92-step-5-start-your-project)
+	- [→ Optional Step #6: More Scripts/Tasks](#%E2%86%92-optional-step-6-more-scriptstasks)
+- [How to Update?](#how-to-update)
+- [License](#license)
+	- [🙌 WPCOUPLE PARTNERS](#%F0%9F%99%8C-wpcouple-partners)
 
 ## ⓦ WPGulp Can Do `THAT™`
 
