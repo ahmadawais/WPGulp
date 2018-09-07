@@ -14,6 +14,11 @@ All notable changes in this project are documented in this file.
 
 ![NEW](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
 
+> 📦 npm pkgs [`7b1b79f`](https://github.com/ahmadawais/WPGulp/commit/7b1b79fee507943684092ac3303a77bd127d0264) <br>
+> 📦 Merge v2.0.0 branch [`5dd711f`](https://github.com/ahmadawais/WPGulp/commit/5dd711f8ef3ec6d00a9a6c5a60a0e39e7156c96e) <br>
+> 📦 Merge v2.0.0 branch [`bbce59c`](https://github.com/ahmadawais/WPGulp/commit/bbce59c09a298c5ff3c65687bd1d5e8664f71f71) <br>
+> 📦  Babel Register [`f1f9a2f`](https://github.com/ahmadawais/WPGulp/commit/f1f9a2f469ec301a08359427b7c5b790cf45fcbc) <br>
+> 📦 allowEmpty for css [`505b883`](https://github.com/ahmadawais/WPGulp/commit/505b88391c4051eadaeccb8c774557437349ea4e) <br>
 > 📦 Icons thanks to Icons8.com [`4be6141`](https://github.com/ahmadawais/WPGulp/commit/4be6141db099638606e42924c87be162441d56b6) <br>
 > 📦 TOC [`9889bb2`](https://github.com/ahmadawais/WPGulp/commit/9889bb26d2fd5db6dc2e2ab8882c107ce0cedfbf) <br>
 > 📦 Shields [`189afe3`](https://github.com/ahmadawais/WPGulp/commit/189afe327ddc3d7ee6ecdeb534194d36b3b75ecb) <br>
@@ -21,6 +26,8 @@ All notable changes in this project are documented in this file.
 > 📦 demo pkg file [`0fc85a6`](https://github.com/ahmadawais/WPGulp/commit/0fc85a6eecdc4472383228726626ed67d6904854) <br>
 > 📦 Markdown Lint [`f966b6d`](https://github.com/ahmadawais/WPGulp/commit/f966b6d32b7ab86d1c392db0031510188c78bcc5) <br>
 > 📦 Spelling Check [`c17e54a`](https://github.com/ahmadawais/WPGulp/commit/c17e54aea9d319015b23fdc565454373a3eb34a9) <br>
+> 📦 Spelling Check [`6139d25`](https://github.com/ahmadawais/WPGulp/commit/6139d25c20b12485d9ea77aac33915b167852c4b) <br>
+> 📦 Issue Templates [`bcaf18a`](https://github.com/ahmadawais/WPGulp/commit/bcaf18a8445f3f2e04aa930c7f7281ed947e1a61) <br>
 > Add gulp-plumber to JS tasks to avoid stream crashing on errors [`7f2482c`](https://github.com/ahmadawais/WPGulp/commit/7f2482c58cb6086d92901adf5870e8e701bf13cb) <br>
 > Add gulp-plumber package as dependency [`ea9ab03`](https://github.com/ahmadawais/WPGulp/commit/ea9ab03106ac8c271d1e6fd92b9b0c8817c704af) <br>
 > 📦 Add Caching to JS Tasks [`db9b03f`](https://github.com/ahmadawais/WPGulp/commit/db9b03ff3cc26e03a9b5e137211b6d139aa7e8fb) <br>
@@ -30,12 +37,17 @@ All notable changes in this project are documented in this file.
 > Add nom scripts to remove global Gulp dependency [`f8a0e1d`](https://github.com/ahmadawais/WPGulp/commit/f8a0e1db1579e9030f8b1de0e9334ff002942fef) <br>
 > 📦 Add ES6 support to WPGulp using gulp-babel — Merge PR #80  [`5f038f8`](https://github.com/ahmadawais/WPGulp/commit/5f038f8f81a880cf573d1d61c7c4d0f908e757f4) <br>
 > Add ES6 support for vendor scripts using gulp-babel 💯 [`8a1bc78`](https://github.com/ahmadawais/WPGulp/commit/8a1bc780b437dbf5a618765907e8ddfd1a20807d) <br>
+> Issue + PR Templates 💯 [`3f63938`](https://github.com/ahmadawais/WPGulp/commit/3f639387b82e3122c3805ae3c50894cdac07b3bc) <br>
 > Contribution guidelines 💯 [`c536bf2`](https://github.com/ahmadawais/WPGulp/commit/c536bf2870c7702fdba522b321c982a58728c7c9) <br>
 > Start: WPGulp v2.0.0 💯 [`369b429`](https://github.com/ahmadawais/WPGulp/commit/369b429a7e2a1c97934c58d7040444694f0d9e75) <br>
 
 ![IMPROVEMENT](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
 
-> 👌 Shields [`09c889c`](https://github.com/ahmadawais/WPGulp/commit/09c889cba387bbe33cc40ca4b0639032a11a9306) <br>
+> 👌 File name [`a528e12`](https://github.com/ahmadawais/WPGulp/commit/a528e12503cb88a165ab63f416027d246a9103a3) <br>
+> 👌 File name [`6bee209`](https://github.com/ahmadawais/WPGulp/commit/6bee209de81d0edbb7fce8cee99959467a8b6075) <br>
+> 👌 Contribution guide [`17951f0`](https://github.com/ahmadawais/WPGulp/commit/17951f0140073a5a500b3d30fc78ffe2f6158240) <br>
+> 👌 br [`8de57e3`](https://github.com/ahmadawais/WPGulp/commit/8de57e31abf65c0cfdb8ae7765c3fe14cb57e239) <br>
+> 👌 Sheilds [`09c889c`](https://github.com/ahmadawais/WPGulp/commit/09c889cba387bbe33cc40ca4b0639032a11a9306) <br>
 > 👌 file name [`99a151c`](https://github.com/ahmadawais/WPGulp/commit/99a151cfddd5d4a1957ec21be3dcd29a21ea188f) <br>
 > 👌 file name [`1ef08c1`](https://github.com/ahmadawais/WPGulp/commit/1ef08c123522c8327180796eb8f7300ff21c631a) <br>
 > 👌 color [`bddd599`](https://github.com/ahmadawais/WPGulp/commit/bddd5991cf51bd4b3ecd173e85d994b954b37151) <br>
@@ -61,6 +73,7 @@ All notable changes in this project are documented in this file.
 > 📚 Improved Image Caching 💯 [`53f103d`](https://github.com/ahmadawais/WPGulp/commit/53f103d3ffe1d8bbf6aaf6365c7148d2e7a704dd) <br>
 > Add ESLint Integration [`252ca86`](https://github.com/ahmadawais/WPGulp/commit/252ca8688d8b70d30b8725eeed4d4f8f05d98b82) <br>
 > Add Editor Config [`58529bb`](https://github.com/ahmadawais/WPGulp/commit/58529bb37bb03c03dc01ae729db5a13d556c62eb) <br>
+> Formatting [`12a9737`](https://github.com/ahmadawais/WPGulp/commit/12a973761d7eedca5373eef4a7f291800730a0df) <br>
 
 ![FIX](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
@@ -68,6 +81,8 @@ All notable changes in this project are documented in this file.
 > 🐛 Lock file [`63437ae`](https://github.com/ahmadawais/WPGulp/commit/63437aeab5450c47380d3b1843a4b2d5171c8656) <br>
 > 🐛 SSL [`1251b30`](https://github.com/ahmadawais/WPGulp/commit/1251b3079031dbaa0d11d25b4eb8f4a979bde6cc) <br>
 > 🐛 Spellings [`11bd868`](https://github.com/ahmadawais/WPGulp/commit/11bd868059dc12d3a07789c0602c40f548132eb2) <br>
+> 🐛 Spelling Check [`009df9e`](https://github.com/ahmadawais/WPGulp/commit/009df9e67b2a59ddcfd7801050a5139932f27ac5) <br>
+> 🐛 SSL [`b25c97b`](https://github.com/ahmadawais/WPGulp/commit/b25c97b75f765363b800ec1d5e599b5f57946e38) <br>
 > Fix formatting to match rest of project [`3f88307`](https://github.com/ahmadawais/WPGulp/commit/3f88307db96a478be4a863021e0bd05bf7239dbc) <br>
 > Remove stray scss file [`99054a6`](https://github.com/ahmadawais/WPGulp/commit/99054a61ad79ce0e3fa229b905add016a87c193b) <br>
 > Add periods to end of comments [`1319fb0`](https://github.com/ahmadawais/WPGulp/commit/1319fb0d749ffc127049f14b663fc2f9d2ef4640) <br>
@@ -82,6 +97,10 @@ All notable changes in this project are documented in this file.
 
 ![DOCS](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
+> 📖 Gif or didn&#x27;t happen [`53ce728`](https://github.com/ahmadawais/WPGulp/commit/53ce72816d6c58cea6c545d95b1a7e38033c1ace) <br>
+> 📖 Gif or didn&#x27;t happen [`179889d`](https://github.com/ahmadawais/WPGulp/commit/179889d24d5b1477a3b6e223477df2b17c33e84d) <br>
+> 📖 Quick overview [`d820f4d`](https://github.com/ahmadawais/WPGulp/commit/d820f4df29abdee68811bdf4952c56668d6af434) <br>
+>  📖 Update the changelog [`396b9bc`](https://github.com/ahmadawais/WPGulp/commit/396b9bcd6cb6fae924e4104c82758a77f0a5db6c) <br>
 > 📖 small ticker [`1352077`](https://github.com/ahmadawais/WPGulp/commit/1352077facf177bb32a338398d1c15f84ae4f00b) <br>
 > 📖 Top list [`c780a24`](https://github.com/ahmadawais/WPGulp/commit/c780a2452348b5fa1683ee7ffe99acb7a37b4d37) <br>
 > 📖 Definition [`b615d53`](https://github.com/ahmadawais/WPGulp/commit/b615d533ff1c32d19ea4baea31cc5cbf602fd862) <br>
@@ -91,11 +110,14 @@ All notable changes in this project are documented in this file.
 > 📖 New Installion Method [`82f8abe`](https://github.com/ahmadawais/WPGulp/commit/82f8abe04f962879bf38d1aeeb819b9e22f41243) <br>
 >  📖 WPGulp Can Do That [`5e9cf1a`](https://github.com/ahmadawais/WPGulp/commit/5e9cf1a6d517f38e35918a55f7065bd45e0a3f44) <br>
 >  📖 TOC Update [`28d842d`](https://github.com/ahmadawais/WPGulp/commit/28d842d0fc1922692cc3b4b6d4d802acf2b56981) <br>
+>  📖 Remove link of a bully [`faa76a2`](https://github.com/ahmadawais/WPGulp/commit/faa76a20207ea5675986b16cfdfde945bb949a18) <br>
 > 📖 Alignment [`517f1da`](https://github.com/ahmadawais/WPGulp/commit/517f1daf53e158d52b578d13fa2412783f36f7a0) <br>
 > 📖 new installation steps [`e9eaf29`](https://github.com/ahmadawais/WPGulp/commit/e9eaf29cb0974771182831122a534534b4aa4f1e) <br>
 >  📖 New shield [`370f588`](https://github.com/ahmadawais/WPGulp/commit/370f588c22c3d595baa8ec9a4220aac0818c90b9) <br>
 >  📖 Improve WPGulp Can Do That [`8c489b7`](https://github.com/ahmadawais/WPGulp/commit/8c489b743a134eb9c13020731804d8e1b88234d4) <br>
 >  📖 TOC [`6afc64a`](https://github.com/ahmadawais/WPGulp/commit/6afc64af2008f9f7a117694a4aa2e0fa854c6e17) <br>
 >  📖 Introduction [`5db0b0b`](https://github.com/ahmadawais/WPGulp/commit/5db0b0b9741d8283f8d2247279d7dddfa4fe53fa) <br>
+>  📖 WPGulp v2 notice [`0dd03af`](https://github.com/ahmadawais/WPGulp/commit/0dd03afaeb3fd94e8b9f4ea17a6c80d6074d2ea1) <br>
+>  📖 Format [`e04d732`](https://github.com/ahmadawais/WPGulp/commit/e04d7320f4e2973e0ac511c86ae7dd7e69cf54d5) <br>
 
 <br>
