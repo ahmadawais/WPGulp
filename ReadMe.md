@@ -41,38 +41,37 @@
 
 💻 **DEV ENVIRONMENT**
 
->- Live reload browser with BrowserSync
->- Hotloading styles with CSS Injection
+>- _Live reload browser with BrowserSync_
+>- _Hotloading styles with CSS Injection_
 
 🎨 **STYLES**
 
->- Sass to CSS conversion
->- Merging media queries
->- Error handling
->- Auto-prefixing
->- Minification
->- Sourcemaps
+>- _Sass to CSS conversion_
+>- _Merging media queries_
+>- _Error handling_
+>- _Auto-prefixing_
+>- _Minification_
+>- _Sourcemaps_
 
 🌋 **JavaScript**
 
-
->- Concatenation,
->- Minification/uglification,
->- Separate vendor and custom JS files handling
+>- _Concatenation,_
+>- _Minification/uglification,_
+>- _Separate vendor and custom JS files handling_
 
 🌁 **IMAGES**
 
->- Minification/optimization of images
->- File types: _`.png`, `.jpg`, `.jpeg`, `.gif`, `.svg`_
+>- _Minification/optimization of images_
+>- _File types: `.png`, `.jpg`, `.jpeg`, `.gif`, `.svg`_
 
 💯 **TRANSLATION**
 
->- Generates `.pot` translation file for i18n and l10n
+>- _Generates `.pot` translation file for i18n and l10n_
 
 👀 **WATCHING**
 
->- For changes in files to recompile
->- File types: _`.css`, `.html`, `.php`, `.js`_
+>- _For changes in files to recompile_
+>- _File types: `.css`, `.html`, `.php`, `.js`_
 
 <br><br>
 
