@@ -167,40 +167,9 @@ Once the download is complete type `gulp` and boom!
 ### WPGulpTheme
 Check out a basic WordPress theme implementation with WPGulp called [WPGulpTheme](https://github.com/ahmadawais/WPGulpTheme). This theme demonstrates the architecture followed by default within WPGulp, which is most definitely optional.
 
-## To do
-It's hard to maintain a FOSS free and open source software project on my own. Which is why there is a backlog and an incomplete to-do list.
-- [x] Build WPGulp ✔︎
-- [x] Write an introductory blog post about WPGulp ✔︎
-- [x] Improve documentation with more easy to follow details ✔︎
-- [ ] Find sponsorship to produce free of cost video tutorials for WPGulp ⓦ
-- [ ] Write about the new WPGulp tasks, `gulp images` to optimize images and `gulp translate` to generate WP POT translation file.
-
-## Contribute
-I am looking for WordPress ⓦ developers to contribute. I am open to all kinds of new NodeJS packages and workflows. I can always host custom, opinionated workflows in the form of a separate branch and WPGulp. Just make sure you follow the WordPress Coding Standards.
-
-## Changelog
-
-### Version 1.0.3
-- FIX: Required `gulp-wp-pot`
-- FIX: Required `gulp-sort`
-- IMPROVEMENT: Better docs for Translation variables
-
-### Version 1.0.2
-- NEW: Documentation update `README.md`
-- TASK: Image optimization `gulp images`
-- TASK: WP POT Translation file generation `gulp translate`
-
-### Version 1.0.1
-- BrowserSync
-- LineEndings
-
-### Version 1.0.0
-- First version
-- CSS, JS, PHP and Watch Routines
-
 ## License
-Released under GNU GPLv2.0 or later license.
-Copyright [Ahmad Awais](https://AhmadAwais.com/)
+
+Licensed under `MIT` — Copyright [Ahmad Awais](https://AhmadAwais.com/)
 
 ---
 
