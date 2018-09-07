@@ -35,7 +35,7 @@ const config = require( './config.js' );
 var gulp = require( 'gulp' ); // Gulp of-course
 
 // CSS related plugins.
-var sass = require( 'gulp-sass' ); // Gulp pluign for Sass compilation.
+var sass = require( 'gulp-sass' ); // Gulp plugin for Sass compilation.
 var minifycss = require( 'gulp-uglifycss' ); // Minifies CSS files.
 var autoprefixer = require( 'gulp-autoprefixer' ); // Autoprefixing magic.
 var mmq = require( 'gulp-merge-media-queries' ); // Combine matching media queries into one media query definition.
@@ -52,10 +52,10 @@ var imagemin = require( 'gulp-imagemin' ); // Minify PNG, JPEG, GIF and SVG imag
 // Utility related plugins.
 var rename = require( 'gulp-rename' ); // Renames files E.g. style.css -> style.min.css
 var lineec = require( 'gulp-line-ending-corrector' ); // Consistent Line Endings for non UNIX systems. Gulp Plugin for Line Ending Corrector (A utility that makes sure your files have consistent line endings)
-var filter = require( 'gulp-filter' ); // Enables you to work on a subset of the original files by filtering them using globbing.
+var filter = require( 'gulp-filter' ); // Enables you to work on a subset of the original files by filtering them using a glob.
 var sourcemaps = require( 'gulp-sourcemaps' ); // Maps code in a compressed file (E.g. style.css) back to it’s original position in a source file (E.g. structure.scss, which was later combined with other css files to generate style.css)
 var notify = require( 'gulp-notify' ); // Sends message notification to you
-var browserSync = require( 'browser-sync' ).create(); // Reloads browser and injects CSS. Time-saving synchronised browser testing.
+var browserSync = require( 'browser-sync' ).create(); // Reloads browser and injects CSS. Time-saving synchronized browser testing.
 var wpPot = require( 'gulp-wp-pot' ); // For generating the .pot file.
 var sort = require( 'gulp-sort' ); // Recommended to prevent unnecessary changes in pot-file.
 var cache = require( 'gulp-cache' ); // Cache files in stream for later use
@@ -71,7 +71,7 @@ var plumber = require( 'gulp-plumber' ); // Prevent pipe breaking caused by erro
  *    1. Sets the project URL
  *    2. Sets inject CSS
  *    3. You may define a custom port
- *    4. You may want to stop the browser from openning automatically
+ *    4. You may want to stop the browser from opening automatically
  */
 function browsersync() {
 	browserSync.init({
@@ -176,7 +176,7 @@ gulp.task( 'stylesRTL', function() {
 		.pipe( sourcemaps.init({ loadMaps: true }) )
 		.pipe( autoprefixer( config.BROWSERS_LIST ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( rename( { suffix: '-rtl' } ) ) // Append "-rtl" to the filename.
+		.pipe( rename({ suffix: '-rtl' }) ) // Append "-rtl" to the filename.
 		.pipe( rtlcss() ) // Convert to RTL.
 		.pipe( sourcemaps.write( './' ) ) // Output sourcemap for style-rtl.css
 		.pipe( gulp.dest( config.styleDestination ) )
@@ -359,9 +359,7 @@ gulp.task( 'translate', function() {
 				team: config.team
 			})
 		)
-		.pipe(
-			gulp.dest( config.translationDestination + '/' + config.translationFile )
-		)
+		.pipe( gulp.dest( config.translationDestination + '/' + config.translationFile ) )
 		.pipe(
 			notify({
 				message: 'TASK: "translate" Completed! 💯',
@@ -377,18 +375,11 @@ gulp.task( 'translate', function() {
  */
 gulp.task(
 	'default',
-	gulp.parallel(
-		'styles',
-		'vendorsJS',
-		'customJS',
-		'images',
-		browsersync,
-		function watchFiles() {
-			gulp.watch( config.projectPHPWatchFiles, reload ); // Reload on PHP file changes.
-			gulp.watch( config.styleWatchFiles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
-			gulp.watch( config.vendorJSWatchFiles, gulp.series( 'vendorsJS', reload ) ); // Reload on vendorsJS file changes.
-			gulp.watch( config.customJSWatchFiles, gulp.series( 'customJS', reload ) ); // Reload on customJS file changes.
-			gulp.watch( config.imgSRC, gulp.series( 'images', reload ) ); // Reload on customJS file changes.
-		}
-	)
+	gulp.parallel( 'styles', 'vendorsJS', 'customJS', 'images', browsersync, function watchFiles() {
+		gulp.watch( config.projectPHPWatchFiles, reload ); // Reload on PHP file changes.
+		gulp.watch( config.styleWatchFiles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
+		gulp.watch( config.vendorJSWatchFiles, gulp.series( 'vendorsJS', reload ) ); // Reload on vendorsJS file changes.
+		gulp.watch( config.customJSWatchFiles, gulp.series( 'customJS', reload ) ); // Reload on customJS file changes.
+		gulp.watch( config.imgSRC, gulp.series( 'images', reload ) ); // Reload on customJS file changes.
+	})
 );

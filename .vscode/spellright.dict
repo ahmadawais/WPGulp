@@ -16,3 +16,7 @@ img
 svg
 uglifycss
 Browsersync
+Autoprefixes
+rename
+rtl
+sourcemap
