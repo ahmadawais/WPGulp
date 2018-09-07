@@ -1,9 +1,12 @@
-# WPGulp — WordPress Gulp Workflow
 
-[![WPGulp](https://img.shields.io/badge/%F0%9F%94%A5%20Support%20WPGULP-%E2%93%A6-brightgreen.svg?style=flat-square)](https://pay.paddle.com/checkout/515568)
+<h1 align="center">
+  <img src="https://on.ahmda.ws/cf1298feadee/c" alt="WPGulp WordPress Gulp" />
+
+  WPGulp — WordPress Gulp Workflow
+</h1>
+
 [![GitHub](https://img.shields.io/wordpress/v/akismet.svg?maxAge=2592000&style=flat-square&label=WordPress)](https://github.com/ahmadawais/WPGulp/)
-[![GitHub release](https://img.shields.io/github/release/ahmadawais/WPGulp.svg?maxAge=2592000&style=flat-square&label=Version)](https://github.com/ahmadawais/WPGulp/releases)
-[![Stars](https://img.shields.io/github/stars/ahmadawais/WPGulp.svg?style=social&label=Star&maxAge=200&cache=buster)](https://github.com/ahmadawais/WPGulp/stargazers)
+[![emoji-log](https://cdn.rawgit.com/ahmadawais/stuff/ca97874/emoji-log/flat.svg)](https://github.com/ahmadawais/Emoji-Log/) [![Tweet for help](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/) [![GitHub stars](https://img.shields.io/github/stars/ahmadawais/WPGulp.svg?style=social&label=Stars)](https://github.com/ahmadawais/WPGulp/stargazers) [![GitHub followers](https://img.shields.io/github/followers/ahmadawais.svg?style=social&label=Follow)](https://github.com/ahmadawais?tab=followers)
 
 <table width='100%'>
     <tr>
@@ -23,7 +26,8 @@
         </td>
     </tr>
 </table>
-![wpgulp](https://on.ahmda.ws/cf1298feadee/c)
+
+
 
 - [WPGulp — WordPress Gulp Workflow](#wpgulp--wordpress-gulp-workflow)
 	- [ⓦ WPGulp Can Do `THAT™`](#%E2%93%A6-wpgulp-can-do-that%E2%84%A2)
