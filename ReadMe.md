@@ -41,23 +41,45 @@
 		- [Project Dependencies](#project-dependencies)
 		- [WPGulpTheme](#wpgulptheme)
 	- [License](#license)
-        - [🙌 [WPCOUPLE PARTNERS](https://WPCouple.com/partners):](#%F0%9F%99%8C-wpcouple-partnershttpswpcouplecompartners)
+		- [🙌 WPCOUPLE PARTNERS](#%F0%9F%99%8C-wpcouple-partners)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+## ⓦ WPGulp Can Do `THAT™`
+
+💻 **DEV ENVIRONMENT**
+
+>- Live reload browser with BrowserSync
+>- Hotloading styles with CSS Injection
+
+🎨 **STYLES**
+
+>- Sass to CSS conversion
+>- Merging media queries
+>- Error handling
+>- Auto-prefixing
+>- Minification
+>- Sourcemaps
+
+🌋 **JavaScript**
 
 
-## ⓦ What Can WPGulp Do?
-1. Live reloads browser with BrowserSync
-2. CSS: Sass to CSS conversion, error catching, Autoprefixing, Sourcemaps, CSS minification, and Merging Media Queries
-3. JS: Concatenates & uglifies Vendor and Custom JS files
-4. Images: Minifies PNG, JPEG, GIF and SVG images
-5. Watches files for changes in CSS or JS
-6. Watches files for changes in PHP
-7. Corrects the line endings
-8. InjectCSS instead of browser page reload
-9. Generates .pot file for i18n and l10n
+>- Concatenation,
+>- Minification/uglification,
+>- Separate vendor and custom JS files handling
 
-## 🎗 Getting Started?
+🌁 **IMAGES**
+
+>- Minification/optimization of images
+>- File types: _`.png`, `.jpg`, `.jpeg`, `.gif`, `.svg`_
+
+💯 **TRANSLATION**
+
+>- Generates `.pot` translation file for i18n and l10n
+
+👀 **WATCHING**
+
+>- For changes in files to recompile
+>- File types: _`.css`, `.html`, `.php`, `.js`_
+
 ### → Step #1. Download the Required Files
 - Download [`gulpfile.js`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/gulpfile.js), [`package.json`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/package.json), and [`.gitignore`](https://raw.githubusercontent.com/ahmadawais/WPGulp/master/.gitignore) files inside the root folder of your WordPress plugin or WordPress theme
 - If you have cURL installed then you can run the following command to download all three files in one go (just make sure you open the root folder of your WordPress plugin or WordPress theme and download these files in the root):
