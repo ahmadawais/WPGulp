@@ -33,11 +33,13 @@
 
 ## 📦 WPGulp Can Do `THAT™`
 
-`WPGulp` is a WordPress + Gulp workflow that is:
+`WPGulp` is an advanced & extensively documented `Gulp.js` + `WordPress` workflow. It can help you kick start a build-workflow for your WordPress plugins and themes with `Gulp.js`, save you a lot of grunt work time, follow the DRY (Don't Repeat Yourself) principle, and `#0CJS` Zero-config JavaScript startup but still configurable via `wpgulp.config.js` file. It is:
 
 - 🥞 Versioned ✓
 - 🤠 Updatable ✓
 - 🗃 Set of sane-defaults ✓
+
+<br>
 
 💻 **DEV ENVIRONMENT**
 
