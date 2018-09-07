@@ -10,8 +10,8 @@
             A FOSS (Free & Open Source Software) project. Maintained by <a href='https://github.com/ahmadawais'>@AhmadAwais</a>.
         </td>
         <td align='center'>
-            <a href='https://AhmadAwais.com/'>
-                <img src='https://i.imgur.com/Asg4d3k.png' width='100' />
+            <a href='https://twitter.com/MrAhmadAwais/'>
+                <img src='https://img.shields.io/badge/AHMAD-AWAIS-gray.svg?colorB=5734F5&style=flat' width='100' />
             </a>
         </td>
     </tr>
