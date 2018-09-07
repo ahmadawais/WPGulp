@@ -26,7 +26,7 @@
 
 🎯 An advanced & extensively documented Gulp WordPress workflow. Kick start a build-workflow for your WordPress plugins and themes with Gulp.
 
-![wpgulp](https://i.imgur.com/zzoByRC.png)
+![wpgulp](https://on.ahmda.ws/cf1298feadee/c)
 
 - [WPGulp — WordPress Gulp Workflow](#wpgulp--wordpress-gulp-workflow)
 	- [ⓦ WPGulp Can Do `THAT™`](#%E2%93%A6-wpgulp-can-do-that%E2%84%A2)
