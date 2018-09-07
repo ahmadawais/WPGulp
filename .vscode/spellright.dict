@@ -26,3 +26,7 @@ linebreak
 eslint
 wordpress
 beepbeep
+autoprefixer
+rtlcss
+imagemin
+npm

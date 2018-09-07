@@ -78,9 +78,9 @@ const errorHandler = r => {
  * Task: `browser-sync`.
  *
  * Live Reloads, CSS injections, Localhost tunneling.
+ * @link http://www.browsersync.io/docs/options/
  *
  * @param {Mixed} done Done.
- * @link http://www.browsersync.io/docs/options/
  */
 const browsersync = done => {
 	browserSync.init({
