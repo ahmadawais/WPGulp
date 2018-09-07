@@ -1,20 +1,18 @@
 {
-  "name": "WPGulp",
-  "author": "ahmadawais",
-  "version": "1.0.3",
-  "license": "GPL-2.0",
+  "name": "wpgulp",
+  "version": "2.0.0",
+  "author": "Ahmad Awais (https://twitter.com/MrAhmadAwais/)",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/ahmadawais/WPGulp"
-  },
-  "dependencies": {
-    "eslint-config-wordpress": "^2.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.11.1",
     "eslint": "^4.14.0",
+    "eslint-config-wordpress": "^2.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-babel": "^7.0.0",
@@ -37,7 +35,6 @@
     "gulp-wp-pot": "^2.0.7"
   },
   "scripts": {
-    "postinstall": "npm run start",
     "start": "gulp",
     "styles": "gulp styles",
     "stylesRTL": "gulp stylesRTL",
