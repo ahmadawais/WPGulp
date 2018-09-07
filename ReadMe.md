@@ -36,8 +36,10 @@
 	- [→ STEP #3: Start your project](#%E2%86%92-step-3-start-your-project)
 	- [→ Optional Step #6: More Scripts/Tasks](#%E2%86%92-optional-step-6-more-scriptstasks)
 - [How to Update?](#how-to-update)
-- [License](#license)
+		- [**Hello, we're the Dev Couple**!](#hello-were-the-dev-couple)
+		- [**Support our Open Source Projects!** 🎩](#support-our-open-source-projects-%F0%9F%8E%A9)
 	- [🙌 WPCOUPLE PARTNERS](#%F0%9F%99%8C-wpcouple-partners)
+- [License & Attribution](#license--attribution)
 
 ## ⓦ WPGulp Can Do `THAT™`
 
@@ -75,7 +77,9 @@
 >- _For changes in files to recompile_
 >- _File types: `.css`, `.html`, `.php`, `.js`_
 
-<br><br>
+<br>
+
+![Start](https://on.ahmda.ws/83f7dd38eb83/c)
 
 ## 🎗 Getting Started
 
@@ -140,16 +144,32 @@ gulp translate
 gulp stylesRTL
 ```
 
+<br>
+
+![Update](https://on.ahmda.ws/d0b586da13cc/c)
+
 ## How to Update?
 
 1. Download all the latest files in the [WPGulp/src](/src) folder inside the root folder of your WordPress plugin/theme by running `npx install-wpgulp` it will overwrite all the wpgulp files.
 2. Open terminal and Install WPGulp's node dependencies by running the `npm install` commands in the root folder of your WordPress plugin/theme.
 
-## License
+<br>
 
-Licensed under `MIT` — Copyright [Ahmad Awais](https://AhmadAwais.com/)
+![Hello](https://on.ahmda.ws/os6O/c)
 
----
+#### **Hello, we're the [Dev Couple](https://WPCouple.com)**!
+
+I ([Ahmad Awais](https://twitter.com/mrahmadawais/)) am a OSS developer advocate, Full Stack Web Developer and a regular core contributor at WordPress. My significant other ([Maedah Batool](https://twitter.com/MaedahBatool/)) is a Technical Project Manager, and she's also a WordPress Core Contributor. Together with our [team](https://WPCouple.com/team), we run the [WPCouple.com](https://WPCouple.com/).
+
+If you'd like to get insights into our love for open source software, professional full stack development, WordPress community, the growth of JavaScript or growing a family, building, and bootstrapping a business, then subscribe to our premium newsletter called ↣ [The WordPress Takeaway](https://WPTakeaway.club)!
+
+#### [**Support our Open Source Projects!**](https://pay.paddle.com/checkout/515568) 🎩
+
+If you'd like us to keep producing professional free and open source software (FOSS). Consider [paying for an hour of my dev-time](https://pay.paddle.com/checkout/515568). We'll spend two hours on open source for each contribution. Yeah, that's right, you pay for one hour and get both of us to spend an hour as a thank you.
+
+- 🚀  $99.99 — [Support for one hour or more →](https://pay.paddle.com/checkout/515568)
+- 🔰  $49.99 — [Support half an hour maintenance →](https://pay.paddle.com/checkout/527253)
+- ☕️  $9.99 — [Buy us lunch or coffee to keep us trucking #OpenSource →](https://pay.paddle.com/checkout/527254)
 
 ### 🙌 [WPCOUPLE PARTNERS](https://WPCouple.com/partners)
 
@@ -182,3 +202,15 @@ This open source project is maintained by the help of awesome businesses listed 
         <td width='333.33'><a target='_blank' href='https://WPCouple.com/contact?utm_source=WPCouple&utm_medium=Partner'><img src='https://on.ahmda.ws/mu3F/c' /></a></td>
     </tr>
 </table>
+
+<br>
+
+![Update](https://on.ahmda.ws/d0b586da13cc/c)
+
+## License & Attribution
+
+MIT © [Ahmad Awais](https://twitter.com/MrAhmadAwais/).
+
+This project is inspired by the work of many awesome developers especially those who contribute to this project, Gulp.js, Babel, and many other dependencies as listed in the `package.json` file. FOSS (Free & Open Source Software) for the win.
+
+_Follow me 👋 on Twitter for more updates and questions_ →  [![Tweet to say Hi](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
