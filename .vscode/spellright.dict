@@ -30,3 +30,4 @@ autoprefixer
 rtlcss
 imagemin
 npm
+npx
