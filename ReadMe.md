@@ -1,16 +1,17 @@
 🎯 — If 1,000 developers [signup here](http://eepurl.com/cLwjeH), I will make a video course for WPGulp.
 
 ---
-<h1 align="center">
+<div align="center">
   <img src="https://on.ahmda.ws/cf1298feadee/c" alt="WPGulp WordPress Gulp" />
 
-  WPGulp — WordPress Gulp Workflow
-</h1>
+  <h1><code>WordPress Gulp Workflow</code></h1>
 
 [![GitHub](https://img.shields.io/wordpress/v/akismet.svg?maxAge=2592000&style=flat-square&label=WordPress)](https://github.com/ahmadawais/WPGulp/)
-[![emoji-log](https://cdn.rawgit.com/ahmadawais/stuff/ca97874/emoji-log/flat.svg)](https://github.com/ahmadawais/Emoji-Log/) [![Tweet for help](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/) [![GitHub stars](https://img.shields.io/github/stars/ahmadawais/WPGulp.svg?style=social&label=Stars)](https://github.com/ahmadawais/WPGulp/stargazers) [![GitHub followers](https://img.shields.io/github/followers/ahmadawais.svg?style=social&label=Follow)](https://github.com/ahmadawais?tab=followers)
+[![emoji-log](https://cdn.rawgit.com/ahmadawais/stuff/ca97874/emoji-log/flat.svg)](https://github.com/ahmadawais/Emoji-Log/)[![GitHub stars](https://img.shields.io/github/stars/ahmadawais/WPGulp.svg?style=social&label=Stars)](https://github.com/ahmadawais/WPGulp/stargazers) [![GitHub followers](https://img.shields.io/github/followers/ahmadawais.svg?style=social&label=Follow)](https://github.com/ahmadawais?tab=followers)  [![Tweet for help](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
 
-<table width='100%'>
+</div>
+
+<table width='100%' align="center">
     <tr>
         <td align='left' width='100%' colspan='2'>
             <strong>WPGulp (WordPress Gulp)</strong><br />
@@ -29,7 +30,15 @@
     </tr>
 </table>
 
-## ⓦ WPGulp Can Do `THAT™`
+<br>
+
+## 📦 WPGulp Can Do `THAT™`
+
+`WPGulp` is a WordPress + Gulp workflow that is:
+
+- 🥞 Versioned ✓
+- 🤠 Updatable ✓
+- 🗃 Set of sane-defaults ✓
 
 💻 **DEV ENVIRONMENT**
 
