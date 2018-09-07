@@ -1,4 +1,3 @@
-
 <h1 align="center">
   <img src="https://on.ahmda.ws/cf1298feadee/c" alt="WPGulp WordPress Gulp" />
 
@@ -96,33 +95,24 @@ npm -v
 
 ### → Step #1. Download the Required Files
 
-Download all the files in the [WPGulp/src](/src) folder inside the root folder of your WordPress plugin/theme
+1. In the terminal go to the root folder of your WordPress plugin/theme
+2. Run the following command to download all the files in the [WPGulp/src](/src) folder
 
-> ⚠️  I'm assuming that there are no previously present similar files in the root of your folder. Otherwise, you need to merge these very carefully. E.g. You can include the `scripts`, `devDependencies` in your current `pacakge.json` file and so on for other files.
-
-🤖 _**AUTOMATION:** You can also download these files via terminal and `curl`._
+_It'll take a couple of minutes to install._
 
 ```sh
-curl -L https://git.io/wpggiv2 -o ".gitignore" && curl -L https://git.io/wpgfiv2 -o "gulpfile.babel.js" && curl -L https://git.io/wpgpkgv2 -o "package.json" && curl -L https://git.io/wpgcfgv2 -o "wpgulp.config.js" && curl -L https://git.io/wpgrecv2 -o ".editorconfig" && curl -L https://git.io/wpgresv2 -o ".eslintrc.js" && curl -L https://git.io/wpgresiv2 -o ".eslintignore"
+npx install-wpgulp
 ```
+
+([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/ahmadawais/e4c69b22561c7079c9d99faba90e3b23))
+
+> ⚠️  I'm assuming that there are no previously present similar files in the root of your folder. Otherwise, you need to merge these very carefully. E.g. You can include the `scripts`, `devDependencies` in your current `pacakge.json` file and so on for other files. If you run the above command all similar files will be overwritten.
 
 ### → STEP #2: Editing the Project Variables
 
-Configure the project paths and other variables inside the `wpgulp.config.js` file.
+Configure the project paths and other variables inside the `wpgulp.config.js` file. This is a compulsory step.
 
-### → STEP #3: Installing Node Dependencies
-
-Open terminal and Install WPGulp's node dependencies by running the following commands in the root folder of your WordPress plugin/theme.
-
-```sh
-# Install npm dependencies.
-npm install
-
-# Or use sudo if you get any errors.
-sudo npm install
-```
-
-### → STEP #5: Start your project
+### → STEP #3: Start your project
 
 Once the installation is done, you can open your project (WordPress plugin/theme) folder and run the start script.
 
@@ -149,16 +139,8 @@ gulp stylesRTL
 
 ## How to Update?
 
-1. Download all the latest files in the [WPGulp/src](/src) folder inside the root folder of your WordPress plugin/theme
-2. Open terminal and Install WPGulp's node dependencies by running the following commands in the root folder of your WordPress plugin/theme.
-
-```sh
-# Install npm dependencies.
-npm install
-
-# Or use sudo if you get any errors.
-sudo npm install
-```
+1. Download all the latest files in the [WPGulp/src](/src) folder inside the root folder of your WordPress plugin/theme by running `npx install-wpgulp` it will overwrite all the wpgulp files.
+2. Open terminal and Install WPGulp's node dependencies by running the `npm install` commands in the root folder of your WordPress plugin/theme.
 
 ## License
 
