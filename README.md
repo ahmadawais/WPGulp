@@ -82,6 +82,22 @@
 
 ## Getting Started
 
+#### ⚡️ Quick Overview
+
+Run step `#1`, `#2`, and `#3` quickly in one go — Run inside local WP install's theme/plugin folder E.g. `/wp.local/wp-content/plugins/your-plugin` or `/wp.local/wp-content/themes/your-theme` directory.
+
+```sh
+# 1— Install WPGulp in your WordPress theme/plugin.
+npx install-wpgulp
+# 2— Now configure variables inside the `wpgulp.config.js` file.
+# 3— Start your npm build workflow.
+npm start
+```
+
+([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/ahmadawais/e4c69b22561c7079c9d99faba90e3b23))
+
+> 🎛   _If you want to study the detailed installation of step `#1` , `#2`,  and `#3` — then take a look at the steps below_.
+
 <details>
  <summary><strong><code>STEP #0</code></strong> — Don't have <code>Node.js</code> + <code>npm</code> installed? Read this. (CLICK TO EXPAND!)</summary>
 
