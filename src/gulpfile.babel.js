@@ -333,7 +333,7 @@ gulp.task( 'clearCache', function( done ) {
  */
 gulp.task( 'translate', () => {
 	return gulp
-		.src( config.projectPHPWatchFiles )
+		.src( config.watchPhp )
 		.pipe( sort() )
 		.pipe(
 			wpPot({
