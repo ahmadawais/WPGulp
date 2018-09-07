@@ -10,10 +10,11 @@ All notable changes in this project are documented in this file.
 
 <br>
 
-### RELEASE: 2.0.0
+### RELEASE: 3.0.0
 
 ![NEW](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
 
+> 📦 release-it [`2a778ba`](https://github.com/ahmadawais/WPGulp/commit/2a778ba919b65f6ccc5460985436f976868886eb) <br>
 > 📦 npm pkgs [`7b1b79f`](https://github.com/ahmadawais/WPGulp/commit/7b1b79fee507943684092ac3303a77bd127d0264) <br>
 > 📦 Merge v2.0.0 branch [`5dd711f`](https://github.com/ahmadawais/WPGulp/commit/5dd711f8ef3ec6d00a9a6c5a60a0e39e7156c96e) <br>
 > 📦 Merge v2.0.0 branch [`bbce59c`](https://github.com/ahmadawais/WPGulp/commit/bbce59c09a298c5ff3c65687bd1d5e8664f71f71) <br>
@@ -97,6 +98,7 @@ All notable changes in this project are documented in this file.
 
 ![DOCS](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
+>  📖 Update the changelog [`42b638d`](https://github.com/ahmadawais/WPGulp/commit/42b638d243309b26e843a000d0a2277ef53eccb8) <br>
 > 📖 Gif or didn&#x27;t happen [`53ce728`](https://github.com/ahmadawais/WPGulp/commit/53ce72816d6c58cea6c545d95b1a7e38033c1ace) <br>
 > 📖 Gif or didn&#x27;t happen [`179889d`](https://github.com/ahmadawais/WPGulp/commit/179889d24d5b1477a3b6e223477df2b17c33e84d) <br>
 > 📖 Quick overview [`d820f4d`](https://github.com/ahmadawais/WPGulp/commit/d820f4df29abdee68811bdf4952c56668d6af434) <br>
