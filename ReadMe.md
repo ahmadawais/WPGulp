@@ -1,11 +1,8 @@
-### WPGulp v2.0.0 (WIP)
-This is the WIP branch of WPGulp for the new version 2.0.0.
-
 <table width='100%'>
     <tr>
         <td align='left' width='100%' colspan='2'>
-            <strong>WP Gulp</strong><br />
-            🎯 Use Gulp with WordPress. An advanced & heavily documented Gulp WordPress boilerplate to help you kick start a build-workflow for your WordPress plugins and themes. Gulp WordPress!
+            <strong>WPGulp (WordPress Gulp)</strong><br />
+            🎯 An advanced & extensively documented Gulp WordPress workflow. Kick start a build-workflow for your WordPress plugins and themes with Gulp.
         </td>
     </tr>
     <tr>
@@ -21,9 +18,13 @@ This is the WIP branch of WPGulp for the new version 2.0.0.
 </table>
 
 # WPGulp — WordPress Gulp Workflow
-[![Project Supported by](https://img.shields.io/badge/Project_Supported_By-ES6.io%20Tutorials-brightgreen.svg?style=flat-square)](https://ahmda.ws/Learn_ES6) [![WPGulp](https://img.shields.io/badge/%F0%9F%94%A5%20Support%20WPGULP-%E2%93%A6-brightgreen.svg?style=flat-square)](https://pay.paddle.com/checkout/515568) [![](https://img.shields.io/wordpress/v/akismet.svg?maxAge=2592000&style=flat-square&label=WordPress)](https://github.com/ahmadawais/WPGulp/) [![GitHub release](https://img.shields.io/github/release/ahmadawais/WPGulp.svg?maxAge=2592000&style=flat-square&label=Version)](https://github.com/ahmadawais/WPGulp/releases) [![](https://img.shields.io/github/stars/ahmadawais/WPGulp.svg?style=social&label=Star&maxAge=200&cache=buster)](https://github.com/ahmadawais/WPGulp/stargazers)
 
-Use Gulp with WordPress. An advanced but portable Gulp workflow for WordPress. Start using Gulp with your WordPress plugins and themes.
+[![WPGulp](https://img.shields.io/badge/%F0%9F%94%A5%20Support%20WPGULP-%E2%93%A6-brightgreen.svg?style=flat-square)](https://pay.paddle.com/checkout/515568)
+[![GitHub](https://img.shields.io/wordpress/v/akismet.svg?maxAge=2592000&style=flat-square&label=WordPress)](https://github.com/ahmadawais/WPGulp/)
+[![GitHub release](https://img.shields.io/github/release/ahmadawais/WPGulp.svg?maxAge=2592000&style=flat-square&label=Version)](https://github.com/ahmadawais/WPGulp/releases)
+[![Stars](https://img.shields.io/github/stars/ahmadawais/WPGulp.svg?style=social&label=Star&maxAge=200&cache=buster)](https://github.com/ahmadawais/WPGulp/stargazers)
+
+🎯 An advanced & extensively documented Gulp WordPress workflow. Kick start a build-workflow for your WordPress plugins and themes with Gulp.
 
 ![wpgulp](https://i.imgur.com/zzoByRC.png)
 
