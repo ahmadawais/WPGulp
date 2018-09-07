@@ -137,7 +137,7 @@ npx install-wpgulp
 
 Configure the project paths and other variables inside the `wpgulp.config.js` file. This is a compulsory step.
 
-![wpgulp config](https://on.ahmda.ws/98b402cc0233/c)
+![wpgulp config](https://on.ahmda.ws/f2ca9bb4a740/c)
 
 
 ### → `STEP #3` — Start your project
