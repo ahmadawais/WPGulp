@@ -6,5 +6,29 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ahmadawais/WPGulp"
+  },
+  "devDependencies": {
+    "auto-changelog": "^1.8.0",
+    "eslint": "^5.5.0",
+    "eslint-config-wordpress": "^2.0.0",
+    "release-it": "^7.6.1"
+  },
+  "scripts": {
+    "log": "auto-changelog && git add . && git ci -m ' 📖 DOC: Update the changelog' && git push",
+    "release": "release-it",
+    "release-major": "release-it major",
+    "release-dry": "release-it --dry-run"
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": ".vscode/clTemplate.hbs",
+    "commitLimit": false,
+    "package": true,
+    "replaceText": {
+      "FIX: ": "",
+      "NEW: ": "",
+      "IMPROVE: ": "",
+      "DOC: ": ""
+    }
   }
 }
