@@ -129,11 +129,16 @@ npx install-wpgulp
 
 ([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/ahmadawais/e4c69b22561c7079c9d99faba90e3b23))
 
+![wpgulp install gif](https://on.ahmda.ws/e177e70294ca/c)
+
 > ⚠️  I'm assuming that there are no previously present similar files in the root of your folder. Otherwise, you need to merge these very carefully. E.g. You can include the `scripts`, `devDependencies` in your current `pacakge.json` file and so on for other files. If you run the above command all similar files will be overwritten.
 
 ### → `STEP #2` — Editing the Project Variables
 
 Configure the project paths and other variables inside the `wpgulp.config.js` file. This is a compulsory step.
+
+![wpgulp config](https://on.ahmda.ws/98b402cc0233/c)
+
 
 ### → `STEP #3` — Start your project
 
@@ -144,6 +149,8 @@ npm start
 
 # To stop press CTRL (⌃) + C
 ```
+
+![wpgulp start](https://on.ahmda.ws/d64abd87de1f/c)
 
 ### → `OPTIONAL STEP #4` — More Scripts/Tasks
 
