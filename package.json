@@ -1,29 +1,34 @@
 {
-  "name": "WPGulp",
-  "author": "ahmadawais",
-  "version": "1.0.4",
-  "license": "GPL-2.0",
+  "name": "wpgulp",
+  "version": "2.0.0",
+  "author": "Ahmad Awais (https://twitter.com/MrAhmadAwais/)",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/ahmadawais/WPGulp"
   },
-  "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.11.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-concat": "^2.5.2",
-    "gulp-filter": "^4.0.0",
-    "gulp-imagemin": "^2.4.0",
-    "gulp-line-ending-corrector": "^1.0.1",
-    "gulp-merge-media-queries": "^0.2.1",
-    "gulp-notify": "^2.2.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-uglify": "^1.5.3",
-    "gulp-uglifycss": "^1.0.6",
-    "gulp-sort": "^2.0.0",
-    "gulp-wp-pot": "^1.2.2"
+    "auto-changelog": "^1.8.0",
+    "eslint": "^5.5.0",
+    "eslint-config-wordpress": "^2.0.0",
+    "release-it": "^7.6.1"
+  },
+  "scripts": {
+    "log": "auto-changelog && git add . && git ci -m ' 📖 DOC: Update the changelog' && git push",
+    "release": "release-it",
+    "release-major": "release-it major",
+    "release-dry": "release-it --dry-run"
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": ".vscode/clTemplate.hbs",
+    "commitLimit": false,
+    "package": true,
+    "replaceText": {
+      "FIX: ": "",
+      "NEW: ": "",
+      "IMPROVE: ": "",
+      "DOC: ": ""
+    }
   }
 }
