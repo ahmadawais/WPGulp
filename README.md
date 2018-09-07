@@ -1,6 +1,6 @@
 <div align="center">
 
->_🎯 — If 1,000 developers [signup here](http://eepurl.com/cLwjeH), I will make a video course for WPGulp._
+  <small><p><em><g-emoji class="g-emoji" alias="dart" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f3af.png" title=":dart:">🎯</g-emoji> — If 1,000 developers <a href="http://eepurl.com/cLwjeH" rel="nofollow">signup here</a>, I will make a video course for WPGulp.</em></p></small>
 
   <img src="https://on.ahmda.ws/cf1298feadee/c" alt="WPGulp WordPress Gulp" />
 
