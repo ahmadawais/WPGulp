@@ -29,18 +29,6 @@
     </tr>
 </table>
 
-- [ⓦ WPGulp Can Do `THAT™`](#%E2%93%A6-wpgulp-can-do-that%E2%84%A2)
-- [🎗 Getting Started](#%F0%9F%8E%97-getting-started)
-	- [→ Step #1. Download the Required Files](#%E2%86%92-step-1-download-the-required-files)
-	- [→ STEP #2: Editing the Project Variables](#%E2%86%92-step-2-editing-the-project-variables)
-	- [→ STEP #3: Start your project](#%E2%86%92-step-3-start-your-project)
-	- [→ Optional Step #6: More Scripts/Tasks](#%E2%86%92-optional-step-6-more-scriptstasks)
-- [How to Update?](#how-to-update)
-		- [**Hello, we're the Dev Couple**!](#hello-were-the-dev-couple)
-		- [**Support our Open Source Projects!** 🎩](#support-our-open-source-projects-%F0%9F%8E%A9)
-	- [🙌 WPCOUPLE PARTNERS](#%F0%9F%99%8C-wpcouple-partners)
-- [License & Attribution](#license--attribution)
-
 ## ⓦ WPGulp Can Do `THAT™`
 
 💻 **DEV ENVIRONMENT**
@@ -81,10 +69,10 @@
 
 ![Start](https://on.ahmda.ws/83f7dd38eb83/c)
 
-## 🎗 Getting Started
+## Getting Started
 
 <details>
- <summary><strong> STEP #0</strong> — Don't have <code>Node.js</code> + <code>npm</code> installed? Read this. (CLICK TO EXPAND!)</summary>
+ <summary><strong><code>STEP #0</code></strong> — Don't have <code>Node.js</code> + <code>npm</code> installed? Read this. (CLICK TO EXPAND!)</summary>
 
 In case you are an absolute beginner to the world of `Node.js`, JavaScript, and `npm` packages — all you need to do is go to the Node's site [download + install](https://nodejs.org/en/download/) Node on your system. This will install both `Node.js` and `npm`, i.e., node package manager — the command line interface of Node.js.
 
@@ -100,7 +88,7 @@ npm -v
 
 </details>
 
-### → Step #1. Download the Required Files
+### → `STEP #1` — Download the Required Files
 
 1. In the terminal go to the root folder of your WordPress plugin/theme
 2. Run the following command to download all the files in the [WPGulp/src](/src) folder
@@ -115,11 +103,11 @@ npx install-wpgulp
 
 > ⚠️  I'm assuming that there are no previously present similar files in the root of your folder. Otherwise, you need to merge these very carefully. E.g. You can include the `scripts`, `devDependencies` in your current `pacakge.json` file and so on for other files. If you run the above command all similar files will be overwritten.
 
-### → STEP #2: Editing the Project Variables
+### → `STEP #2` — Editing the Project Variables
 
 Configure the project paths and other variables inside the `wpgulp.config.js` file. This is a compulsory step.
 
-### → STEP #3: Start your project
+### → `STEP #3` — Start your project
 
 Once the installation is done, you can open your project (WordPress plugin/theme) folder and run the start script.
 
@@ -129,7 +117,7 @@ npm start
 # To stop press CTRL (⌃) + C
 ```
 
-### → Optional Step #6: More Scripts/Tasks
+### → `OPTIONAL STEP #4` — More Scripts/Tasks
 
 To optimize images and generate WP POT translation file, or generate a RTL stylesheet you can run the following commands
 
@@ -153,9 +141,33 @@ gulp stylesRTL
 1. Download all the latest files in the [WPGulp/src](/src) folder inside the root folder of your WordPress plugin/theme by running `npx install-wpgulp` it will overwrite all the wpgulp files.
 2. Open terminal and Install WPGulp's node dependencies by running the `npm install` commands in the root folder of your WordPress plugin/theme.
 
+
 <br>
 
-![Hello](https://on.ahmda.ws/os6O/c)
+![Log](https://on.ahmda.ws/61b20ca44b08/c)
+
+## Changelog
+
+Read what's 📦 new, 👌 improved, 🐛 fixed, and if 📖 docs got updated.
+
+👉 Go read the entire changelog at this link — [WPGulp Changelog →](/CHANGELOG.md)
+
+Nothing's ever complete, so bear with us while we keep iterating towards a better future.
+
+> ```html
+> 'Coz every night I lie in bed
+> The brightest colors fill my head
+> A million dreams are keeping me awake
+> I think of what the world could be
+> A vision of the one I see
+> A million dreams is all it's gonna take
+> A million dreams for the world we're gonna make ...
+> ```
+> ... _listen to → [A million dreams!](https://www.youtube.com/watch?v=pSQk-4fddDI)_
+
+<br>
+
+![Hello](https://on.ahmda.ws/5cb79028dc04/c)
 
 #### **Hello, we're the [Dev Couple](https://WPCouple.com)**!
 
@@ -170,6 +182,10 @@ If you'd like us to keep producing professional free and open source software (F
 - 🚀  $99.99 — [Support for one hour or more →](https://pay.paddle.com/checkout/515568)
 - 🔰  $49.99 — [Support half an hour maintenance →](https://pay.paddle.com/checkout/527253)
 - ☕️  $9.99 — [Buy us lunch or coffee to keep us trucking #OpenSource →](https://pay.paddle.com/checkout/527254)
+
+<br>
+
+![Hello](https://on.ahmda.ws/3dea3a3b1de3/c)
 
 ### 🙌 [WPCOUPLE PARTNERS](https://WPCouple.com/partners)
 
@@ -205,7 +221,7 @@ This open source project is maintained by the help of awesome businesses listed 
 
 <br>
 
-![Update](https://on.ahmda.ws/d0b586da13cc/c)
+![Update](https://on.ahmda.ws/63be41c10343/c)
 
 ## License & Attribution
 
