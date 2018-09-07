@@ -1,3 +1,6 @@
+🎯 — If 1,000 developers [signup here](http://eepurl.com/cLwjeH), I will make a video course for WPGulp.
+
+---
 <h1 align="center">
   <img src="https://on.ahmda.ws/cf1298feadee/c" alt="WPGulp WordPress Gulp" />
 
