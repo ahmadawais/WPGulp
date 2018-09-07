@@ -1,3 +1,9 @@
+# NPM #
+##########
+# Ignore all directories called node_modules in current folder and any subfolders.
+node_modules/
+/node_modules/
+
 # Packages #
 ############
 *.7z
@@ -16,6 +22,7 @@
 ######################
 *.log
 *.sql
+*.env
 
 # OS generated files #
 ######################
@@ -37,10 +44,9 @@ Thumbs.db
 
 # Composer #
 ##########
-vendors/composer/
 !assets/js/vendor/
 wpcs/
-composer.lock
+/vendor/
 
 # Bower #
 ##########
@@ -52,20 +58,11 @@ assets/bower_components/*
 *.codekit
 **.codekit-cache/*
 
-# NPM #
-##########
-node_modules
-
 # Compiled Files and Build Dirs #
 ##########
 /README.html
-/build/
 
 # PhpStrom Project Files #
 .idea/
 library/vendors/composer
 assets/img/.DS_Store
-assets/sass/HTML
-assets/sass/Rails
-HTML
-Rails
