@@ -10,10 +10,11 @@ All notable changes in this project are documented in this file.
 
 <br>
 
-### RELEASE: 2.0.0
+### RELEASE: 2.1.0
 
 ![NEW](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
 
+> 📦 Release-it Settings [`8620edb`](https://github.com/ahmadawais/WPGulp/commit/8620edb64c3c3a1b3eb8db519c6c9d8c4bb02376) <br>
 > 📦 npm pkgs [`7b1b79f`](https://github.com/ahmadawais/WPGulp/commit/7b1b79fee507943684092ac3303a77bd127d0264) <br>
 > 📦 Merge v2.0.0 branch [`5dd711f`](https://github.com/ahmadawais/WPGulp/commit/5dd711f8ef3ec6d00a9a6c5a60a0e39e7156c96e) <br>
 > 📦 Merge v2.0.0 branch [`bbce59c`](https://github.com/ahmadawais/WPGulp/commit/bbce59c09a298c5ff3c65687bd1d5e8664f71f71) <br>
@@ -43,6 +44,8 @@ All notable changes in this project are documented in this file.
 
 ![IMPROVEMENT](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
 
+> 👌 babel @babel/preset-env [`ccc0694`](https://github.com/ahmadawais/WPGulp/commit/ccc06945d1ba323af1b61b4233ca7cc7aad22c5b) <br>
+> 👌 Babel Preset [`df420fb`](https://github.com/ahmadawais/WPGulp/commit/df420fb9c59625402aebcf42e41966994ca70ad0) <br>
 > 👌 files for v2 [`74bf61c`](https://github.com/ahmadawais/WPGulp/commit/74bf61c12dc43bf4c55e49a5bfc198a378bd9df3) <br>
 > 👌 File name [`6bee209`](https://github.com/ahmadawais/WPGulp/commit/6bee209de81d0edbb7fce8cee99959467a8b6075) <br>
 > 👌 Contribution guide [`17951f0`](https://github.com/ahmadawais/WPGulp/commit/17951f0140073a5a500b3d30fc78ffe2f6158240) <br>
@@ -77,6 +80,7 @@ All notable changes in this project are documented in this file.
 
 ![FIX](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
+> 🐛 Caching for remembered JS files [`dce1acb`](https://github.com/ahmadawais/WPGulp/commit/dce1acb7506b61eb31b5d71074c9f1253e960f75) <br>
 > 🐛 PHP Vars [`f535e38`](https://github.com/ahmadawais/WPGulp/commit/f535e38448ac32a51d7b068047a0a2efd47949bd) <br>
 > 🐛 Lock file [`63437ae`](https://github.com/ahmadawais/WPGulp/commit/63437aeab5450c47380d3b1843a4b2d5171c8656) <br>
 > 🐛 SSL [`1251b30`](https://github.com/ahmadawais/WPGulp/commit/1251b3079031dbaa0d11d25b4eb8f4a979bde6cc) <br>
@@ -97,6 +101,7 @@ All notable changes in this project are documented in this file.
 
 ![DOCS](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
+>  📖 Update the changelog [`0002f7e`](https://github.com/ahmadawais/WPGulp/commit/0002f7e80ca779ecf315e13dc26c32c7daa65f6c) <br>
 > 📖 Gif or didn&#x27;t happen [`53ce728`](https://github.com/ahmadawais/WPGulp/commit/53ce72816d6c58cea6c545d95b1a7e38033c1ace) <br>
 > 📖 Gif or didn&#x27;t happen [`179889d`](https://github.com/ahmadawais/WPGulp/commit/179889d24d5b1477a3b6e223477df2b17c33e84d) <br>
 > 📖 Quick overview [`d820f4d`](https://github.com/ahmadawais/WPGulp/commit/d820f4df29abdee68811bdf4952c56668d6af434) <br>
