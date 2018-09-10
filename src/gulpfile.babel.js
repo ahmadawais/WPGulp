@@ -218,7 +218,7 @@ gulp.task( 'vendorsJS', () => {
 				]
 			})
 		)
-		.pipe( remember( 'vendorsJS' ) ) // Bring all files back to stream.
+		.pipe( remember( config.jsVendorSRC ) ) // Bring all files back to stream.
 		.pipe( concat( config.jsVendorFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsVendorDestination ) )
@@ -261,7 +261,7 @@ gulp.task( 'customJS', () => {
 				]
 			})
 		)
-		.pipe( remember( 'customJS' ) ) // Bring all files back to stream.
+		.pipe( remember( config.jsCustomSRC ) ) // Bring all files back to stream.
 		.pipe( concat( config.jsCustomFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe( gulp.dest( config.jsCustomDestination ) )
