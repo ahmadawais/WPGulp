@@ -10,6 +10,22 @@ All notable changes in this project are documented in this file.
 
 <br>
 
+### RELEASE: [2.2.0](https://github.com/ahmadawais/WPGulp/compare/2.1.0...2.2.0)
+
+![NEW](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 WPGulp Installer [`9ca9ef4`](https://github.com/ahmadawais/WPGulp/commit/9ca9ef46b25e9037ab89696a62fe4dd17ccf0cad) <br>
+
+![IMPROVEMENT](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Gulp file header [`03900de`](https://github.com/ahmadawais/WPGulp/commit/03900de76c0e2455dc5e35b7e6f4b3c440d55424) <br>
+
+<br>
+
+![hr](https://on.ahmda.ws/t6N5/c)
+
+<br>
+
 ### RELEASE: 2.1.0
 
 ![NEW](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
