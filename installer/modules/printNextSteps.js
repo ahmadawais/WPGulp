@@ -37,9 +37,10 @@ console.log(
 	`	${chalk.yellow( 'More ways to support →' )} https://AhmdA.ws/WPGSupport`
 );
 
-	// Get started.
-	console.log( '\n\n🎯 ', chalk.black.bgGreen( ' Get Started → \n' ) );
-	console.log( ' I suggest that you begin by: \n' );
-	console.log( ` ${chalk.dim( '1.' )} Editing the ${chalk.green( 'wpgulp.config.js' )} file` );
-	console.log( ` ${chalk.dim( '2.' )} Running ${chalk.green( 'npm' )} start`, '\n\n' );
-};
+// Get started.
+console.log( '\n\n🎯 ', chalk.black.bgGreen( ' Get Started → \n' ) );
+console.log( ' I suggest that you begin by: \n' );
+console.log( ` ${chalk.dim( '1.' )} Editing the ${chalk.green( 'wpgulp.config.js' )} file` );
+console.log( ` ${chalk.dim( '2.' )} Running ${chalk.green( 'npm' )} start`, '\n\n' );
+
+// };
