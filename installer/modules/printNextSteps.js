@@ -26,16 +26,16 @@ console.log(
 	'	Watches for any changes and reports back any errors in your code.'
 );
 
-	// Support.
-	console.log( '\n\n✊ ', chalk.black.bgYellow( ' Support WPGulp → \n' ) );
-	console.log(
-		'Like WPGulp? You can now support this free and open source project i.e. more updates and better maintenance: \n'
-	);
-	console.log(
-		`  ${chalk.yellow( 'Support for one hour or more →' )} https://AhmdA.ws/CGB99`,
-		'\n',
-		` ${chalk.yellow( 'More ways to support →' )} https://AhmdA.ws/CGBSupport`
-	);
+// Support.
+console.log( '\n✊ ', chalk.black.bgYellow( ' Support WPGulp \n' ) );
+console.log(
+	'Like WPGulp? You can now support this free and open source project i.e. more updates and better maintenance: \n'
+);
+console.log(
+	`	${chalk.yellow( 'Support for one hour or more →' )} https://AhmdA.ws/WPG99`,
+	'\n',
+	`	${chalk.yellow( 'More ways to support →' )} https://AhmdA.ws/WPGSupport`
+);
 
 	// Get started.
 	console.log( '\n\n🎯 ', chalk.black.bgGreen( ' Get Started → \n' ) );
