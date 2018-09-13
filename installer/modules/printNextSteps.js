@@ -8,10 +8,12 @@
 const chalk = require( 'chalk' );
 
 /* eslint-disable no-console */
-module.exports = () => {
-	console.log( '\n\n✅ ', chalk.black.bgGreen( ' All done! Use your code for good. \n' ) );
-	console.log( `Installer ${chalk.dim( '(install-wpgulp)' )} has added WPGulp files to the current directory.  ` );
-	console.log( '\nInside this directory, you can run this command:\n' );
+// module.exports = () => {
+console.log( '\n\n✅ ', chalk.black.bgGreen( ' All done! Use your code for good. \n' ) );
+console.log(
+	'Installer has added WPGulp files to the current directory.  ',
+	'\nInside this directory, you can run this command:'
+);
 
 	// Scripts.
 	console.log(
