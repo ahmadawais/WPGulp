@@ -129,7 +129,7 @@ npx wpgulp
 
 ([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/ahmadawais/e4c69b22561c7079c9d99faba90e3b23))
 
-![wpgulp install gif](https://on.ahmda.ws/e177e70294ca/c)
+![wpgulp install gif](https://on.ahmda.ws/c846c265e03a/c)
 
 > ⚠️  I'm assuming that there are no previously present similar files in the root of your folder. Otherwise, you need to merge these very carefully. E.g. You can include the `scripts`, `devDependencies` in your current `pacakge.json` file and so on for other files. If you run the above command all similar files will be overwritten.
 
