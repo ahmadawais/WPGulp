@@ -7,6 +7,23 @@
     "type": "git",
     "url": "https://github.com/ahmadawais/WPGulp"
   },
+  "main": "./installer/index.js",
+  "bin": {
+    "wpgulp": "./installer/index.js",
+    "WPGulp": "./installer/index.js"
+  },
+  "keywords": [
+    "wpgulp",
+    "WP Gulp",
+    "WordPress Gulp",
+    "Install WPGulp"
+  ],
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "download": "^7.1.0",
+    "execa": "^1.0.0",
+    "ora": "^3.0.0"
+  },
   "devDependencies": {
     "auto-changelog": "^1.8.0",
     "eslint": "^5.5.0",

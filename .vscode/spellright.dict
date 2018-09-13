@@ -31,3 +31,10 @@ rtlcss
 imagemin
 npm
 npx
+execa
+fs
+editorconfig
+eslintignore
+eslintrc
+gitignore
+Dotfiles
