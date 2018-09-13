@@ -9,8 +9,7 @@
   },
   "main": "./installer/index.js",
   "bin": {
-    "wpgulp": "./installer/index.js",
-    "WPGulp": "./installer/index.js"
+    "wpgulp": "./installer/index.js"
   },
   "keywords": [
     "wpgulp",
