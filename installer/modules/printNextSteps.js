@@ -15,16 +15,16 @@ console.log(
 	'\nInside this directory, you can run this command:'
 );
 
-	// Scripts.
-	console.log(
-		'\n👉 ',
-		' Type',
-		chalk.black.bgWhite( ' npm start ' ),
-		'\n\n',
-		'     Use to compile and run your files.',
-		'\n',
-		'     Watches for any changes and reports back any errors in your code.'
-	);
+// Scripts.
+console.log(
+	'\n👉 ',
+	' Type',
+	chalk.black.bgWhite( ' npm start ' ),
+	'\n\n',
+	'	Use to compile and run your files.',
+	'\n',
+	'	Watches for any changes and reports back any errors in your code.'
+);
 
 	// Support.
 	console.log( '\n\n✊ ', chalk.black.bgYellow( ' Support WPGulp → \n' ) );
