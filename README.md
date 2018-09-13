@@ -88,7 +88,7 @@ Run step `#1`, `#2`, and `#3` quickly in one go — Run inside local WP install'
 
 ```sh
 # 1— Install WPGulp in your WordPress theme/plugin.
-npx install-wpgulp
+npx wpgulp
 # 2— Now configure variables inside the `wpgulp.config.js` file.
 # 3— Start your npm build workflow.
 npm start
@@ -124,7 +124,7 @@ npm -v
 _It'll take a couple of minutes to install._
 
 ```sh
-npx install-wpgulp
+npx wpgulp
 ```
 
 ([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/ahmadawais/e4c69b22561c7079c9d99faba90e3b23))
@@ -175,7 +175,6 @@ gulp stylesRTL
 
 1. Download all the latest files in the [WPGulp/src](/src) folder inside the root folder of your WordPress plugin/theme by running `npx install-wpgulp` it will overwrite all the wpgulp files.
 2. Open terminal and Install WPGulp's node dependencies by running the `npm install` commands in the root folder of your WordPress plugin/theme.
-
 
 <br>
 
