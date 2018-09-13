@@ -10,6 +10,30 @@ All notable changes in this project are documented in this file.
 
 <br>
 
+### RELEASE: [2.5.0](https://github.com/ahmadawais/WPGulp/compare/2.4.0...2.5.0)
+
+![NEW](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Donate Links [`2aa9204`](https://github.com/ahmadawais/WPGulp/commit/2aa9204e50eda2f2ba7730fdf27f5bb980772bc0) <br>
+
+![IMPROVEMENT](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Scripts [`a06eee5`](https://github.com/ahmadawais/WPGulp/commit/a06eee540ecc8576655d3406ccecbae3df3f0d8e) <br>
+> 👌 Post info [`10eb7e8`](https://github.com/ahmadawais/WPGulp/commit/10eb7e885dcde7b4d5a3bf66a845aa809772eab1) <br>
+> 👌 Markdown Lint [`098461f`](https://github.com/ahmadawais/WPGulp/commit/098461f17662e37244c658a56ef551aba04b93dc) <br>
+> 👌 Next Steps [`03facd8`](https://github.com/ahmadawais/WPGulp/commit/03facd89c98871fa0fddd48a910f8a46431af80b) <br>
+
+![DOCS](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 WPGulp Install [`1ff381c`](https://github.com/ahmadawais/WPGulp/commit/1ff381c8f2847b837d684b82be7e59d7de152ead) <br>
+> 📖 New Gif [`95a787e`](https://github.com/ahmadawais/WPGulp/commit/95a787ee63398a856b0927121233376264bd56b9) <br>
+
+<br>
+
+![hr](https://on.ahmda.ws/t6N5/c)
+
+<br>
+
 ### RELEASE: [2.4.0](https://github.com/ahmadawais/WPGulp/compare/2.3.0...2.4.0)
 
 ![IMPROVEMENT](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
