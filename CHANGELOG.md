@@ -10,6 +10,18 @@ All notable changes in this project are documented in this file.
 
 <br>
 
+### RELEASE: [2.6.0](https://github.com/ahmadawais/WPGulp/compare/2.5.0...2.6.0)
+
+![FIX](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Print Next Steps [`59a0931`](https://github.com/ahmadawais/WPGulp/commit/59a0931e9bdcd1c4bba07b345bc77231bf0319ac) <br>
+
+<br>
+
+![hr](https://on.ahmda.ws/t6N5/c)
+
+<br>
+
 ### RELEASE: [2.5.0](https://github.com/ahmadawais/WPGulp/compare/2.4.0...2.5.0)
 
 ![NEW](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
