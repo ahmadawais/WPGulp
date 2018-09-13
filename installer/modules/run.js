@@ -36,7 +36,7 @@ module.exports = () => {
 	console.log('\n'); // eslint-disable-line no-console
 	console.log(
 		'📦 ',
-		chalk.black.bgYellow(` Downloading WPGulp files in: → ${chalk.black.bgWhite(` ${theDir} `)}`),
+		chalk.black.bgYellow(` Downloading WPGulp files in: → ${chalk.bgGreen(` ${theDir} `)}\n`),
 		chalk.dim(`\n In the directory: ${theCWD}\n`),
 		chalk.dim('This might take a couple of minutes.\n')
 	);
