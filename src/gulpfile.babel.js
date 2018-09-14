@@ -4,16 +4,16 @@
  * Gulp with WordPress.
  *
  * Implements:
- *      1. Live reloads browser with BrowserSync.
- *      2. CSS: Sass to CSS conversion, error catching, Autoprefixing, Sourcemaps,
- *         CSS minification, and Merge Media Queries.
- *      3. JS: Concatenates & uglifies Vendor and Custom JS files.
- *      4. Images: Minifies PNG, JPEG, GIF and SVG images.
- *      5. Watches files for changes in CSS or JS.
- *      6. Watches files for changes in PHP.
- *      7. Corrects the line endings.
- *      8. InjectCSS instead of browser page reload.
- *      9. Generates .pot file for i18n and l10n.
+ *	  1. Live reloads browser with BrowserSync.
+ *	  2. CSS: Sass to CSS conversion, error catching, Autoprefixing, Sourcemaps,
+ *		 CSS minification, and Merge Media Queries.
+ *	  3. JS: Concatenates & uglifies Vendor and Custom JS files.
+ *	  4. Images: Minifies PNG, JPEG, GIF and SVG images.
+ *	  5. Watches files for changes in CSS or JS.
+ *	  6. Watches files for changes in PHP.
+ *	  7. Corrects the line endings.
+ *	  8. InjectCSS instead of browser page reload.
+ *	  9. Generates .pot file for i18n and l10n.
  *
  * @tutorial https://github.com/ahmadawais/WPGulp
  * @author Ahmad Awais <https://twitter.com/MrAhmadAwais/>
@@ -101,35 +101,36 @@ const reload = done => {
 
 /**
  * Task: `styles`.
- * @param {function} done callback to indicate the task is done.
  *
  * Compiles Sass, Autoprefixes it and Minifies CSS.
  *
  * This task does the following:
- *    1. Gets the source scss file
- *    2. Compiles Sass to CSS
- *    3. Writes Sourcemaps for it
- *    4. Autoprefixes it and generates style.css
- *    5. Renames the CSS file with suffix .min.css
- *    6. Minifies the CSS file and generates style.min.css
- *    7. Injects CSS or reloads the browser via browserSync
+ *	1. Gets the source scss file
+ *	2. Compiles Sass to CSS
+ *	3. Writes Sourcemaps for it
+ *	4. Autoprefixes it and generates style.css
+ *	5. Renames the CSS file with suffix .min.css
+ *	6. Minifies the CSS file and generates style.min.css
+ *	7. Injects CSS or reloads the browser via browserSync
+ *
+ * @param {function} done callback to indicate the task is done.
  */
-gulp.task( 'styles', (done) => {
-	pump([ 
-        gulp.src( config.styleSRC, { allowEmpty: true }),
-        plumber( errorHandler ),
+gulp.task( 'styles', ( done ) => {
+	pump([
+		gulp.src( config.styleSRC, { allowEmpty: true }),
+		plumber( errorHandler ),
 		sourcemaps.init(),
-        sass({
-            errLogToConsole: config.errLogToConsole,
-            outputStyle: config.outputStyle,
-            precision: config.precision
-        })
-		.on( 'error', sass.logError ),
+		sass({
+			errLogToConsole: config.errLogToConsole,
+			outputStyle: config.outputStyle,
+			precision: config.precision
+		})
+			.on( 'error', sass.logError ),
 		sourcemaps.write({ includeContent: false }),
 		sourcemaps.init({ loadMaps: true }),
 		autoprefixer( config.BROWSERS_LIST ),
 		sourcemaps.write( './' ),
-        lineec(), // Consistent Line Endings for non UNIX systems.
+		lineec(), // Consistent Line Endings for non UNIX systems.
 		gulp.dest( config.styleDestination ),
 		filter( '**/*.css' ), // Filtering stream to only css files.
 		mmq({ log: true }), // Merge Media Queries only for .min.css version.
@@ -140,37 +141,38 @@ gulp.task( 'styles', (done) => {
 		gulp.dest( config.styleDestination ),
 		filter( '**/*.css' ), // Filtering stream to only css files.
 		browserSync.stream(), // Reloads style.min.css if that is enqueued.
-        notify({ message: '\n\n✅  ===> STYLES — completed!\n', onLast: true }),
-    ], done);
+		notify({ message: '\n\n✅  ===> STYLES — completed!\n', onLast: true }),
+	], done );
 });
 
 /**
  * Task: `stylesRTL`.
- * @param {function} done callback to indicate the task is done.
  *
  * Compiles Sass, Autoprefixes it, Generates RTL stylesheet, and Minifies CSS.
  *
  * This task does the following:
- *    1. Gets the source scss file
- *    2. Compiles Sass to CSS
- *    4. Autoprefixes it and generates style.css
- *    5. Renames the CSS file with suffix -rtl and generates style-rtl.css
- *    6. Writes Sourcemaps for style-rtl.css
- *    7. Renames the CSS files with suffix .min.css
- *    8. Minifies the CSS file and generates style-rtl.min.css
- *    9. Injects CSS or reloads the browser via browserSync
+ *	1. Gets the source scss file
+ *	2. Compiles Sass to CSS
+ *	4. Autoprefixes it and generates style.css
+ *	5. Renames the CSS file with suffix -rtl and generates style-rtl.css
+ *	6. Writes Sourcemaps for style-rtl.css
+ *	7. Renames the CSS files with suffix .min.css
+ *	8. Minifies the CSS file and generates style-rtl.min.css
+ *	9. Injects CSS or reloads the browser via browserSync
+ *
+ * @param {function} done callback to indicate the task is done.
  */
-gulp.task( 'stylesRTL', (done) => {
+gulp.task( 'stylesRTL', ( done ) => {
 	pump([
-        gulp.src( config.styleSRC, { allowEmpty: true }),
-        plumber( errorHandler ),
+		gulp.src( config.styleSRC, { allowEmpty: true }),
+		plumber( errorHandler ),
 		sourcemaps.init(),
-        sass({
-            errLogToConsole: config.errLogToConsole,
-            outputStyle: config.outputStyle,
-            precision: config.precision
-        })
-		.on( 'error', sass.logError ),
+		sass({
+			errLogToConsole: config.errLogToConsole,
+			outputStyle: config.outputStyle,
+			precision: config.precision
+		})
+			.on( 'error', sass.logError ),
 		sourcemaps.write({ includeContent: false }),
 		sourcemaps.init({ loadMaps: true }),
 		autoprefixer( config.BROWSERS_LIST ),
@@ -188,125 +190,128 @@ gulp.task( 'stylesRTL', (done) => {
 		gulp.dest( config.styleDestination ),
 		filter( '**/*.css' ), // Filtering stream to only css files.
 		browserSync.stream(), // Reloads style.css or style-rtl.css, if that is enqueued.
-        notify({ message: '\n\n✅  ===> STYLES RTL — completed!\n', onLast: true }),
-    ], done);
+		notify({ message: '\n\n✅  ===> STYLES RTL — completed!\n', onLast: true }),
+	], done );
 });
 
 /**
  * Task: `vendorsJS`.
- * @param {function} done callback to indicate the task is done.
  *
  * Concatenate and uglify vendor JS scripts.
  *
  * This task does the following:
- *     1. Gets the source folder for JS vendor files
- *     2. Concatenates all the files and generates vendors.js
- *     3. Renames the JS file with suffix .min.js
- *     4. Uglifes/Minifies the JS file and generates vendors.min.js
+ *	 1. Gets the source folder for JS vendor files
+ *	 2. Concatenates all the files and generates vendors.js
+ *	 3. Renames the JS file with suffix .min.js
+ *	 4. Uglifes/Minifies the JS file and generates vendors.min.js
+ *
+ * @param {function} done callback to indicate the task is done.
  */
-gulp.task( 'vendorsJS', (done) => {
+gulp.task( 'vendorsJS', ( done ) => {
 	pump([
-        gulp.src( config.jsVendorSRC, { since: gulp.lastRun( 'vendorsJS' ) }), // Only run on changed files.
-        plumber( errorHandler ),
-        babel({
-            presets: [
-                [
-                    '@babel/preset-env', // Preset to compile your modern JS to ES5.
-                    {
-                        targets: { browsers: config.BROWSERS_LIST } // Target browser list to support.
-                    }
-                ]
-            ]
-        }),
+		gulp.src( config.jsVendorSRC, { since: gulp.lastRun( 'vendorsJS' ) }), // Only run on changed files.
+		plumber( errorHandler ),
+		babel({
+			presets: [
+				[
+					'@babel/preset-env', // Preset to compile your modern JS to ES5.
+					{
+						targets: { browsers: config.BROWSERS_LIST } // Target browser list to support.
+					}
+				]
+			]
+		}),
 		remember( config.jsVendorSRC ), // Bring all files back to stream.
 		concat( config.jsVendorFile + '.js' ),
 		lineec(), // Consistent Line Endings for non UNIX systems.
 		gulp.dest( config.jsVendorDestination ),
-        rename({
-            basename: config.jsVendorFile,
-            suffix: '.min'
-        }),
+		rename({
+			basename: config.jsVendorFile,
+			suffix: '.min'
+		}),
 		uglify(),
 		lineec(), // Consistent Line Endings for non UNIX systems.
 		gulp.dest( config.jsVendorDestination ),
-        notify({ message: '\n\n✅  ===> VENDOR JS — completed!\n', onLast: true }),
-    ], done);
+		notify({ message: '\n\n✅  ===> VENDOR JS — completed!\n', onLast: true }),
+	], done );
 });
 
 /**
  * Task: `customJS`.
- * @param {function} done callback to indicate the task is done.
  *
  * Concatenate and uglify custom JS scripts.
  *
  * This task does the following:
- *     1. Gets the source folder for JS custom files
- *     2. Concatenates all the files and generates custom.js
- *     3. Renames the JS file with suffix .min.js
- *     4. Uglifes/Minifies the JS file and generates custom.min.js
+ *	 1. Gets the source folder for JS custom files
+ *	 2. Concatenates all the files and generates custom.js
+ *	 3. Renames the JS file with suffix .min.js
+ *	 4. Uglifes/Minifies the JS file and generates custom.min.js
+ *
+ * @param {function} done callback to indicate the task is done.
  */
-gulp.task( 'customJS', (done) => {
+gulp.task( 'customJS', ( done ) => {
 	pump([
-        gulp.src( config.jsCustomSRC, { since: gulp.lastRun( 'customJS' ) }), // Only run on changed files.
-        plumber( errorHandler ),
-        babel({
-            presets: [
-                [
-                    '@babel/preset-env', // Preset to compile your modern JS to ES5.
-                    {
-                        targets: { browsers: config.BROWSERS_LIST } // Target browser list to support.
-                    }
-                ]
-            ]
-        }),
+		gulp.src( config.jsCustomSRC, { since: gulp.lastRun( 'customJS' ) }), // Only run on changed files.
+		plumber( errorHandler ),
+		babel({
+			presets: [
+				[
+					'@babel/preset-env', // Preset to compile your modern JS to ES5.
+					{
+						targets: { browsers: config.BROWSERS_LIST } // Target browser list to support.
+					}
+				]
+			]
+		}),
 		remember( config.jsCustomSRC ), // Bring all files back to stream.
 		concat( config.jsCustomFile + '.js' ),
 		lineec(), // Consistent Line Endings for non UNIX systems.
 		gulp.dest( config.jsCustomDestination ),
-        rename({
-            basename: config.jsCustomFile,
-            suffix: '.min'
-        }),
+		rename({
+			basename: config.jsCustomFile,
+			suffix: '.min'
+		}),
 		uglify(),
 		lineec(), // Consistent Line Endings for non UNIX systems.
 		gulp.dest( config.jsCustomDestination ),
-        notify({ message: '\n\n✅  ===> CUSTOM JS — completed!\n', onLast: true }),
-    ], done);
+		notify({ message: '\n\n✅  ===> CUSTOM JS — completed!\n', onLast: true }),
+	], done );
 });
 
 /**
  * Task: `images`.
- * @param {function} done callback to indicate the task is done.
  *
  * Minifies PNG, JPEG, GIF and SVG images.
  *
  * This task does the following:
- *     1. Gets the source of images raw folder
- *     2. Minifies PNG, JPEG, GIF and SVG images
- *     3. Generates and saves the optimized images
+ *	 1. Gets the source of images raw folder
+ *	 2. Minifies PNG, JPEG, GIF and SVG images
+ *	 3. Generates and saves the optimized images
  *
  * This task will run only once, if you want to run it
  * again, do it with the command `gulp images`.
  *
  * Read the following to change these options.
  * @link https://github.com/sindresorhus/gulp-imagemin
+ *
+ * @param {function} done callback to indicate the task is done.
  */
-gulp.task( 'images', (done) => {
+gulp.task( 'images', ( done ) => {
 	pump([
-        gulp.src( config.imgSRC ),
-        cache(
-            imagemin([
-                imagemin.gifsicle({ interlaced: true }),
-                imagemin.jpegtran({ progressive: true }),
-                imagemin.optipng({ optimizationLevel: 3 }), // 0-7 low-high.
-                imagemin.svgo({
-                    plugins: [ { removeViewBox: true }, { cleanupIDs: false } ]
-                })
-            ])
-        ),
+		gulp.src( config.imgSRC ),
+		cache(
+			imagemin([
+				imagemin.gifsicle({ interlaced: true }),
+				imagemin.jpegtran({ progressive: true }),
+				imagemin.optipng({ optimizationLevel: 3 }), // 0-7 low-high.
+				imagemin.svgo({
+					plugins: [ { removeViewBox: true }, { cleanupIDs: false } ]
+				})
+			])
+		),
 		gulp.dest( config.imgDST ),
-        notify({ message: '\n\n✅  ===> IMAGES — completed!\n', onLast: true }),
-    ], done);
+		notify({ message: '\n\n✅  ===> IMAGES — completed!\n', onLast: true }),
+	], done );
 });
 
 /**
@@ -314,6 +319,8 @@ gulp.task( 'images', (done) => {
  *
  * Deletes the images cache. By running the next "images" task,
  * each image will be regenerated.
+ *
+ * @param {function} done callback to indicate the task is done.
  */
 gulp.task( 'clearCache', function( done ) {
 	return cache.clearAll( done );
@@ -321,28 +328,29 @@ gulp.task( 'clearCache', function( done ) {
 
 /**
  * WP POT Translation File Generator.
- * @param {function} done callback to indicate the task is done.
  *
  * This task does the following:
  * 1. Gets the source of all the PHP files
  * 2. Sort files in stream by path or any custom sort comparator
  * 3. Applies wpPot with the variable set at the top of this file
  * 4. Generate a .pot file of i18n that can be used for l10n to build .mo file
+ *
+ * @param {function} done callback to indicate the task is done.
  */
-gulp.task( 'translate', (done) => {
+gulp.task( 'translate', ( done ) => {
 	pump([
-        gulp.src( config.watchPhp ),
+		gulp.src( config.watchPhp ),
 		sort(),
-        wpPot({
-            domain: config.textDomain,
-            package: config.packageName,
-            bugReport: config.bugReport,
-            lastTranslator: config.lastTranslator,
-            team: config.team
-        }),
+		wpPot({
+			domain: config.textDomain,
+			package: config.packageName,
+			bugReport: config.bugReport,
+			lastTranslator: config.lastTranslator,
+			team: config.team
+		}),
 		gulp.dest( config.translationDestination + '/' + config.translationFile ),
-        notify({ message: '\n\n✅  ===> TRANSLATE — completed!\n', onLast: true }),
-    ], done);
+		notify({ message: '\n\n✅  ===> TRANSLATE — completed!\n', onLast: true }),
+	], done );
 });
 
 /**
