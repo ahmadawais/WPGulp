@@ -33,7 +33,8 @@
     "log": "auto-changelog && git add . && git ci -m ' 📖 DOC: Update the changelog' && git push",
     "release": "release-it",
     "release-major": "release-it major",
-    "release-dry": "release-it --dry-run"
+    "release-dry": "release-it --dry-run",
+    "release-beta": "release-it --dry-run --preRelease=beta"
   },
   "auto-changelog": {
     "output": "CHANGELOG.md",
