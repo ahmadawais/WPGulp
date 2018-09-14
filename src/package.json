@@ -38,13 +38,13 @@
     "gulp-wp-pot": "^2.0.7"
   },
   "scripts": {
-    "start": "gulp",
-    "styles": "gulp styles",
-    "stylesRTL": "gulp stylesRTL",
-    "vendorsJS": "gulp vendorsJS",
-    "customJS": "gulp customJS",
-    "images": "gulp images",
-    "clearCache": "gulp clearCache",
-    "translate": "gulp translate"
+    "start": "node ./node_modules/gulp/bin/gulp.js",
+    "styles": "node ./node_modules/gulp/bin/gulp.js styles",
+    "stylesRTL": "node ./node_modules/gulp/bin/gulp.js stylesRTL",
+    "vendorsJS": "node ./node_modules/gulp/bin/gulp.js vendorsJS",
+    "customJS": "node ./node_modules/gulp/bin/gulp.js customJS",
+    "images": "node ./node_modules/gulp/bin/gulp.js images",
+    "clearCache": "node ./node_modules/gulp/bin/gulp.js clearCache",
+    "translate": "node ./node_modules/gulp/bin/gulp.js translate"
   }
 }
