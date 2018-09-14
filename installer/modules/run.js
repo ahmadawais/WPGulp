@@ -51,7 +51,8 @@ module.exports = () => {
 
 		// The npm install.
 		spinner.start('2. Installing npm packages...');
-		await execa('npm', ['install', '--silent']);
+		// await execa('npm', ['install', '--silent']);
+		await execa('npm', ['install']);
 		spinner.succeed();
 
 		// Done.
