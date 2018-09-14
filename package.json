@@ -44,6 +44,7 @@
   "scripts": {
     "log": "auto-changelog && git add . && git ci -m ' 📖 DOC: Update the changelog' && git push",
     "release": "release-it",
+    "release-minor": "release-it minor",
     "release-major": "release-it major",
     "release-dry": "release-it --dry-run",
     "release-beta": "release-it --preRelease=beta"
