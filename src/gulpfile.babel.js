@@ -59,6 +59,7 @@ const wpPot = require( 'gulp-wp-pot' ); // For generating the .pot file.
 const sort = require( 'gulp-sort' ); // Recommended to prevent unnecessary changes in pot-file.
 const cache = require( 'gulp-cache' ); // Cache files in stream for later use.
 const remember = require( 'gulp-remember' ); //  Adds all the files it has ever seen back into the stream.
+const plumber = require( 'gulp-plumber' ); // Prevent pipe breaking caused by errors from gulp plugins.
 const beep = require( 'beepbeep' );
 const pump = require( 'pump' ); // See https://github.com/gulpjs/gulp/tree/v4.0.0/docs/why-use-pump
 
@@ -116,6 +117,7 @@ const reload = done => {
 gulp.task( 'styles', (done) => {
 	pump([ 
         gulp.src( config.styleSRC, { allowEmpty: true }),
+        plumber( errorHandler ),
 		sourcemaps.init(),
         sass({
             errLogToConsole: config.errLogToConsole,
@@ -161,6 +163,7 @@ gulp.task( 'styles', (done) => {
 gulp.task( 'stylesRTL', (done) => {
 	pump([
         gulp.src( config.styleSRC, { allowEmpty: true }),
+        plumber( errorHandler ),
 		sourcemaps.init(),
         sass({
             errLogToConsole: config.errLogToConsole,
@@ -204,6 +207,7 @@ gulp.task( 'stylesRTL', (done) => {
 gulp.task( 'vendorsJS', (done) => {
 	pump([
         gulp.src( config.jsVendorSRC, { since: gulp.lastRun( 'vendorsJS' ) }), // Only run on changed files.
+        plumber( errorHandler ),
         babel({
             presets: [
                 [
@@ -244,6 +248,7 @@ gulp.task( 'vendorsJS', (done) => {
 gulp.task( 'customJS', (done) => {
 	pump([
         gulp.src( config.jsCustomSRC, { since: gulp.lastRun( 'customJS' ) }), // Only run on changed files.
+        plumber( errorHandler ),
         babel({
             presets: [
                 [
