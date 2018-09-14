@@ -3,6 +3,10 @@
   "description": "A WPGulp based project.",
   "version": "1.0.0",
   "author": "Author Name (https://twitter.com/MrAhmadAwais/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmadawais/WPGulp"
+  },
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.0.0",
