@@ -10,6 +10,26 @@ All notable changes in this project are documented in this file.
 
 <br>
 
+### RELEASE: [2.6.1-beta.0](https://github.com/ahmadawais/WPGulp/compare/2.6.0...2.6.1-beta.0)
+
+![NEW](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Beta release it script [`2f80dc9`](https://github.com/ahmadawais/WPGulp/commit/2f80dc9a097893f4b08fa459f19ea383bf053a8f) <br>
+
+![IMPROVEMENT](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 beta script [`3d23046`](https://github.com/ahmadawais/WPGulp/commit/3d2304675cf2a5fd68a7ecac1706b277164cec15) <br>
+
+![FIX](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 npm install [`57627a1`](https://github.com/ahmadawais/WPGulp/commit/57627a1d4c64aa98884cbb8302720a1255a9d281) <br>
+
+<br>
+
+![hr](https://on.ahmda.ws/t6N5/c)
+
+<br>
+
 ### RELEASE: [2.6.0](https://github.com/ahmadawais/WPGulp/compare/2.5.0...2.6.0)
 
 ![FIX](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
