@@ -58,8 +58,8 @@
 
 🌋 **JavaScript**
 
->- _Concatenation,_
->- _Minification/uglification,_
+>- _Concatenation_
+>- _Minification/uglification_
 >- _Separate vendor and custom JS files handling_
 
 🌁 **IMAGES**
