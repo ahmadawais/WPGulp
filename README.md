@@ -15,7 +15,7 @@
     <tr>
         <td align='left' width='100%' colspan='2'>
             <strong>WPGulp (WordPress Gulp)</strong><br />
-            🎯 An advanced & extensively documented Gulp WordPress workflow. Kick start a build-workflow for your WordPress plugins and themes with Gulp.
+            🎯 An advanced & extensively documented Gulp WordPress workflow. Kick-start a build-workflow for your WordPress plugins and themes with Gulp.
         </td>
     </tr>
     <tr>
@@ -34,7 +34,7 @@
 
 ## 📦 WPGulp Can Do `THAT™`
 
-`WPGulp` is an advanced & extensively documented `Gulp.js` + `WordPress` workflow. It can help you kick start a build-workflow for your WordPress plugins and themes with `Gulp.js`, save you a lot of grunt work time, follow the DRY (Don't Repeat Yourself) principle, and `#0CJS` Zero-config JavaScript startup but still configurable via `wpgulp.config.js` file. It is:
+`WPGulp` is an advanced & extensively documented `Gulp.js` + `WordPress` workflow. It can help you kick-start a build-workflow for your WordPress plugins and themes with `Gulp.js`, save you a lot of grunt work time, follow the DRY (Don't Repeat Yourself) principle, and `#0CJS` Zero-config JavaScript startup but still configurable via `wpgulp.config.js` file. It is:
 
 - 🥞 Versioned ✓
 - 🤠 Updatable ✓
