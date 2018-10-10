@@ -157,7 +157,7 @@ npm start
 To optimize images and generate WP POT translation file, or generate a RTL stylesheet you can run the following commands
 
 ```sh
-# To optimize images
+# To optimize images.
 gulp images
 
 # To generate WP POT translation file.
