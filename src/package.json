@@ -22,6 +22,7 @@
     "gulp-cache": "^1.0.2",
     "gulp-concat": "^2.5.2",
     "gulp-filter": "^5.1.0",
+    "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-line-ending-corrector": "^1.0.1",
     "gulp-merge-media-queries": "^0.2.1",
@@ -36,6 +37,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-uglifycss": "^1.0.6",
     "gulp-wp-pot": "^2.0.7",
+    "lodash.defaults": "^4.2.0",
     "merge-stream": "^1.0.1"
   },
   "scripts": {

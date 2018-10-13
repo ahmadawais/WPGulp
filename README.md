@@ -139,6 +139,22 @@ Configure the project paths and other variables inside the `wpgulp.config.js` fi
 
 ![wpgulp config](https://on.ahmda.ws/f2ca9bb4a740/c)
 
+#### Add-on Styles Option
+
+This option is allow you to add more SCSS files for compilation to a different destination folder. Here is an example
+
+```javascript
+addonStyles: [
+    {
+        styleSRC: './assets/css/addon-1.scss', // Path to .scss file.
+        styleDestination: './', // Path to place the compiled CSS file. Default set to root folder.
+    },
+    {
+        styleSRC: './assets/css/addon-2.scss', // Path to .scss file.
+        styleDestination: './foo/bar/', // Path to place the compiled CSS file. Set to some folder.
+    },
+],
+```
 
 ### → `STEP #3` — Start your project
 
