@@ -22,6 +22,15 @@ module.exports = {
 	errLogToConsole: true,
 	precision: 10,
 
+	// Add-on Style options
+	// The following list is a set of SCSS/CSS files which you want to process and place it on a different folder.
+	addonStyles: [
+		{
+			styleSRC: './assets/css/addon.scss', // Path to .scss file.
+			styleDestination: './', // Path to place the compiled CSS file. Default set to root folder.
+		},
+	],
+
 	// JS Vendor options.
 	jsVendorSRC: './assets/js/vendor/*.js', // Path to JS vendor folder.
 	jsVendorDestination: './assets/js/', // Path to place the compiled JS vendors file.
