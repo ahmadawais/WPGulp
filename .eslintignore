@@ -1,3 +1,4 @@
+# ESLint: Ignore files.
 **/*.min.js
 **/node_modules/**
 **/vendor/**

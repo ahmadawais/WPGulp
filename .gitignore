@@ -1,3 +1,5 @@
+# Git ignore files.
+
 # NPM #
 ##########
 # Ignore all directories called node_modules in current folder and any subfolders.
