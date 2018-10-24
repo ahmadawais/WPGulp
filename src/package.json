@@ -16,7 +16,7 @@
     "browser-sync": "^2.11.1",
     "eslint": "^5.5.0",
     "eslint-config-wordpress": "^2.0.0",
-    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-cache": "^1.0.2",
