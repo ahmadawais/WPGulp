@@ -263,4 +263,23 @@ MIT © [Ahmad Awais](https://twitter.com/MrAhmadAwais/).
 
 This project is inspired by the work of many awesome developers especially those who contribute to this project, Gulp.js, Babel, and many other dependencies as listed in the `package.json` file. FOSS (Free & Open Source Software) for the win.
 
+[<img alt="ahmadawais" src="https://avatars1.githubusercontent.com/u/960133?v=4&s=117" width="117">](https://github.com/ahmadawais) |[<img alt="MaedahBatool" src="https://avatars2.githubusercontent.com/u/12712988?v=4&s=117" width="117">](https://github.com/MaedahBatool) |[<img alt="akmur" src="https://avatars2.githubusercontent.com/u/957841?v=4&s=117" width="117">](https://github.com/akmur) |[<img alt="marianrick" src="https://avatars0.githubusercontent.com/u/20360130?v=4&s=117" width="117">](https://github.com/marianrick) |[<img alt="asharirfan" src="https://avatars2.githubusercontent.com/u/8023941?v=4&s=117" width="117">](https://github.com/asharirfan) |[<img alt="JeremyEnglert" src="https://avatars2.githubusercontent.com/u/6110968?v=4&s=117" width="117">](https://github.com/JeremyEnglert) |
+:---: |:---: |:---: |:---: |:---: |:---: |
+[ahmadawais](https://github.com/ahmadawais) |[MaedahBatool](https://github.com/MaedahBatool) |[akmur](https://github.com/akmur) |[marianrick](https://github.com/marianrick) |[asharirfan](https://github.com/asharirfan) |[JeremyEnglert](https://github.com/JeremyEnglert) |
+
+[<img alt="ajitbohra" src="https://avatars2.githubusercontent.com/u/1039236?v=4&s=117" width="117">](https://github.com/ajitbohra) |[<img alt="noplanman" src="https://avatars3.githubusercontent.com/u/9423417?v=4&s=117" width="117">](https://github.com/noplanman) |[<img alt="cdils" src="https://avatars0.githubusercontent.com/u/3099408?v=4&s=117" width="117">](https://github.com/cdils) |[<img alt="selrond" src="https://avatars1.githubusercontent.com/u/6603389?v=4&s=117" width="117">](https://github.com/selrond) |[<img alt="EugenioPetulla" src="https://avatars3.githubusercontent.com/u/3589467?v=4&s=117" width="117">](https://github.com/EugenioPetulla) |[<img alt="FrankM1" src="https://avatars0.githubusercontent.com/u/1177638?v=4&s=117" width="117">](https://github.com/FrankM1) |
+:---: |:---: |:---: |:---: |:---: |:---: |
+[ajitbohra](https://github.com/ajitbohra) |[noplanman](https://github.com/noplanman) |[cdils](https://github.com/cdils) |[selrond](https://github.com/selrond) |[EugenioPetulla](https://github.com/EugenioPetulla) |[FrankM1](https://github.com/FrankM1) |
+
+[<img alt="isaacdanielanderson" src="https://avatars3.githubusercontent.com/u/22652927?v=4&s=117" width="117">](https://github.com/isaacdanielanderson) |[<img alt="JeffMatson" src="https://avatars2.githubusercontent.com/u/6805601?v=4&s=117" width="117">](https://github.com/JeffMatson) |[<img alt="AdnanMuhib" src="https://avatars0.githubusercontent.com/u/18069154?v=4&s=117" width="117">](https://github.com/AdnanMuhib) |[<img alt="mauryaratan" src="https://avatars3.githubusercontent.com/u/1505631?v=4&s=117" width="117">](https://github.com/mauryaratan) |[<img alt="richtabor" src="https://avatars2.githubusercontent.com/u/1813435?v=4&s=117" width="117">](https://github.com/richtabor) |[<img alt="saqibameen" src="https://avatars1.githubusercontent.com/u/31374163?v=4&s=117" width="117">](https://github.com/saqibameen) |
+:---: |:---: |:---: |:---: |:---: |:---: |
+[isaacdanielanderson](https://github.com/isaacdanielanderson) |[JeffMatson](https://github.com/JeffMatson) |[AdnanMuhib](https://github.com/AdnanMuhib) |[mauryaratan](https://github.com/mauryaratan) |[richtabor](https://github.com/richtabor) |[saqibameen](https://github.com/saqibameen) |
+
+[<img alt="slushman" src="https://avatars0.githubusercontent.com/u/2255645?v=4&s=117" width="117">](https://github.com/slushman) |
+:---: |
+[slushman](https://github.com/slushman) |
+
+
+
+
 _Follow me 👋 on Twitter for more updates and questions_ →  [![Tweet to say Hi](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
