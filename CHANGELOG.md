@@ -10,7 +10,38 @@ All notable changes in this project are documented in this file.
 
 <br>
 
-### RELEASE: [2.7.0](https://github.com/ahmadawais/WPGulp/compare/2.7.0...2.7.0)
+### RELEASE: [2.7.1-beta.0](https://github.com/ahmadawais/WPGulp/compare/2.7.0...2.7.1-beta.0)
+
+![DOCS](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+>  📖 Update the changelog [`27541e7`](https://github.com/ahmadawais/WPGulp/commit/27541e79eff60d92aa481eacc4f6aadf911e9e96) <br>
+> 📖 spellings [`42cd02d`](https://github.com/ahmadawais/WPGulp/commit/42cd02d95e27e2520192d0aba29e67804a74112c) <br>
+
+<br>
+
+![hr](https://on.ahmda.ws/t6N5/c)
+
+<br>
+
+### RELEASE: [2.7.0](https://github.com/ahmadawais/WPGulp/compare/2.6.1-beta.0...2.7.0)
+
+![NEW](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Scripts at the end [`fd16756`](https://github.com/ahmadawais/WPGulp/commit/fd167567841ae0ab11d3b82e2bd4e0cb79a60531) <br>
+> 📦 Repo field [`e30b1d2`](https://github.com/ahmadawais/WPGulp/commit/e30b1d2d8d8d28bcd3a6402d4060b51c8aff4a42) <br>
+> 📦 Description [`7ef4f09`](https://github.com/ahmadawais/WPGulp/commit/7ef4f09189e2987361db41290eaceb8cf0b38ba7) <br>
+
+![IMPROVEMENT](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> Docs Syntax [`b3407c3`](https://github.com/ahmadawais/WPGulp/commit/b3407c3cca717c16e38f8a8afdd589ac1058dcbf) <br>
+> 👌Node and NPM version names [`c198851`](https://github.com/ahmadawais/WPGulp/commit/c198851386eab8ada0d25a65d0000a30ed17ebe6) <br>
+> 👌Docs — JS Features. [`b5a73e3`](https://github.com/ahmadawais/WPGulp/commit/b5a73e34eca0215b332f08df0dc44cc7480fb785) <br>
+>  ✌️Readme grammar.  [`63627a6`](https://github.com/ahmadawais/WPGulp/commit/63627a670a6c66e3c92b0fc2cfeb81767b854503) <br>
+> 👌 release minor script [`00849ca`](https://github.com/ahmadawais/WPGulp/commit/00849cab12da25eef6d46abf0cd8b0326902cebf) <br>
+
+![FIX](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Badge [`735de56`](https://github.com/ahmadawais/WPGulp/commit/735de566457a7927c1b13f53cf395892d1582147) <br>
 
 <br>
 
