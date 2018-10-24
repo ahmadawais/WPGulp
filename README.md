@@ -279,7 +279,4 @@ This project is inspired by the work of many awesome developers especially those
 :---: |
 [slushman](https://github.com/slushman) |
 
-
-
-
 _Follow me 👋 on Twitter for more updates and questions_ →  [![Tweet to say Hi](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
