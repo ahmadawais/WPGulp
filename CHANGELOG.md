@@ -10,6 +10,18 @@ All notable changes in this project are documented in this file.
 
 <br>
 
+### RELEASE: [2.8.0](https://github.com/ahmadawais/WPGulp/compare/2.7.0...2.8.0)
+
+![DOCS](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 File header [`b1058c9`](https://github.com/ahmadawais/WPGulp/commit/b1058c91662ba0be49b6a114987d359248cff591) <br>
+
+<br>
+
+![hr](https://on.ahmda.ws/t6N5/c)
+
+<br>
+
 ### RELEASE: [2.7.0](https://github.com/ahmadawais/WPGulp/compare/2.6.1-beta.1...2.7.0)
 
 <br>
