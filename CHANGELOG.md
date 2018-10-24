@@ -10,6 +10,14 @@ All notable changes in this project are documented in this file.
 
 <br>
 
+### RELEASE: [2.7.0](https://github.com/ahmadawais/WPGulp/compare/2.6.1-beta.1...2.7.0)
+
+<br>
+
+![hr](https://on.ahmda.ws/t6N5/c)
+
+<br>
+
 ### RELEASE: [2.6.1-beta.1](https://github.com/ahmadawais/WPGulp/compare/2.6.1-beta.0...2.6.1-beta.1)
 
 ![NEW](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
