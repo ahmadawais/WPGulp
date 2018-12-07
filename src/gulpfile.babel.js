@@ -133,9 +133,10 @@ const deployScreenshot = () => {
  *    2. Compiles Sass to CSS
  *    3. Writes Sourcemaps for it
  *    4. Autoprefixes it and generates style.css
- *    5. Renames the CSS file with suffix .min.css
- *    6. Minifies the CSS file and generates style.min.css
- *    7. Injects CSS or reloads the browser via browserSync
+ *    5. Checks if you are deploying
+ *    6. Renames the CSS file with suffix .min.css
+ *    7. Minifies the CSS file and generates style.min.css
+ *    8. Injects CSS or reloads the browser via browserSync
  */
 gulp.task( 'styles', () => {
 	return gulp
@@ -240,8 +241,9 @@ gulp.task( 'stylesRTL', () => {
  * This task does the following:
  *     1. Gets the source folder for JS vendor files
  *     2. Concatenates all the files and generates vendors.js
- *     3. Renames the JS file with suffix .min.js
- *     4. Uglifes/Minifies the JS file and generates vendors.min.js
+ *     3. Check if you are deploying
+ *     4. Renames the JS file with suffix .min.js
+ *     5. Uglifes/Minifies the JS file and generates vendors.min.js
  */
 gulp.task( 'vendorsJS', () => {
 	return gulp
@@ -297,8 +299,9 @@ gulp.task( 'vendorsJS', () => {
  * This task does the following:
  *     1. Gets the source folder for JS custom files
  *     2. Concatenates all the files and generates custom.js
- *     3. Renames the JS file with suffix .min.js
- *     4. Uglifes/Minifies the JS file and generates custom.min.js
+ *     3. Checks if you are deploying
+ *     4. Renames the JS file with suffix .min.js
+ *     5. Uglifes/Minifies the JS file and generates custom.min.js
  */
 gulp.task( 'customJS', () => {
 	return gulp
@@ -354,7 +357,7 @@ gulp.task( 'customJS', () => {
  * This task does the following:
  *     1. Gets the source of images raw folder
  *     2. Minifies PNG, JPEG, GIF and SVG images
- *     3. Checks if the deployment is a deployment build.
+ *     3. Checks if you are deploying
  *     4. Generates and saves the optimized images
  *
  * This task will run only once, if you want to run it
@@ -405,7 +408,7 @@ gulp.task( 'clearCache', function( done ) {
  * 1. Gets the source of all the PHP files
  * 2. Sort files in stream by path or any custom sort comparator
  * 3. Applies wpPot with the variable set at the top of this file
- * 4. Checks if the deployment is a deployment build.
+ * 4. Checks if you are deploying
  * 5. Generate a .pot file of i18n that can be used for l10n to build .mo file in the appropriate location
  */
 gulp.task( 'translate', () => {
