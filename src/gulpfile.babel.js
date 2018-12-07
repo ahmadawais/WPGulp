@@ -156,7 +156,7 @@ gulp.task( 'styles', () => {
 		.pipe( sourcemaps.write( './' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe(
-			gulpif( // if not deploying, write file to the assets directory
+			gulpif( // if not deploying, write file to the root directory
 				! isDeploying,
 				gulp.dest( config.styleDestination )
 			)
@@ -173,7 +173,7 @@ gulp.task( 'styles', () => {
 		.pipe( minifycss({ maxLineLen: 10 }) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
 		.pipe(
-			gulpif( // if you are deploying, write to the deployment directory, else write to the assets directory
+			gulpif( // if you are deploying, write to the deployment directory, else write to the root directory
 				isDeploying,
 				gulp.dest( config.styleDeployDestination ),
 				gulp.dest( config.styleDestination )
@@ -379,7 +379,7 @@ gulp.task( 'images', () => {
 			)
 		)
 		.pipe(
-			gulpif(
+			gulpif( // if you are deploying, write to the deployment directory, else write to the assets directory
 				isDeploying,
 				gulp.dest( config.imgDeploy ),
 				gulp.dest( config.imgDST )
@@ -422,7 +422,7 @@ gulp.task( 'translate', () => {
 			})
 		)
 		.pipe(
-			gulpif(
+			gulpif( // if you are deploying, write to the deployment directory, else write to the assets directory
 				isDeploying,
 				gulp.dest( config.translationDeployDestination + '/' + config.translationFile ),
 				gulp.dest( config.translationDestination + '/' + config.translationFile )
