@@ -15,9 +15,13 @@ module.exports = {
 	browserAutoOpen: false,
 	injectChanges: true,
 
+	// PHP options.
+	phpDeployDestination: './dist/', // Path to place PHP files for deployment builds. Default set to dist folder.
+
 	// Style options.
 	styleSRC: './assets/css/style.scss', // Path to main .scss file.
 	styleDestination: './', // Path to place the compiled CSS file. Default set to root folder.
+	styleDeployDestination: './dist/', // Path to place the compiled CSS files for deployment builds. Default set to dist folder.
 	outputStyle: 'compact', // Available options → 'compact' or 'compressed' or 'nested' or 'expanded'
 	errLogToConsole: true,
 	precision: 10,
@@ -25,16 +29,19 @@ module.exports = {
 	// JS Vendor options.
 	jsVendorSRC: './assets/js/vendor/*.js', // Path to JS vendor folder.
 	jsVendorDestination: './assets/js/', // Path to place the compiled JS vendors file.
+	jsVendorDeployDestination: './dist/js/', // Path to place the compiled JS vendors file for deployment builds.
 	jsVendorFile: 'vendor', // Compiled JS vendors file name. Default set to vendors i.e. vendors.js.
 
 	// JS Custom options.
 	jsCustomSRC: './assets/js/custom/*.js', // Path to JS custom scripts folder.
 	jsCustomDestination: './assets/js/', // Path to place the compiled JS custom scripts file.
+	jsCustomDeployDestination: './dist/js/', // Path to place the compiled JS custom scripts file for deployment builds.
 	jsCustomFile: 'custom', // Compiled JS custom file name. Default set to custom i.e. custom.js.
 
 	// Images options.
 	imgSRC: './assets/img/raw/**/*', // Source folder of images which should be optimized and watched. You can also specify types e.g. raw/**.{png,jpg,gif} in the glob.
 	imgDST: './assets/img/', // Destination folder of optimized images. Must be different from the imagesSRC folder.
+	imgDeploy: './dist/img/', // Destination folder for optimized images for the deployment build.
 
 	// Watch files paths.
 	watchStyles: './assets/css/**/*.scss', // Path to all *.scss files inside css folder and inside them.
@@ -46,6 +53,7 @@ module.exports = {
 	textDomain: 'WPGULP', // Your textdomain here.
 	translationFile: 'WPGULP.pot', // Name of the translation file.
 	translationDestination: './languages', // Where to save the translation files.
+	translationDeployDestination: './dist/languages', // Where to save the translation files for deployment builds.
 	packageName: 'WPGULP', // Package name.
 	bugReport: 'https://AhmadAwais.com/contact/', // Where can users report bugs.
 	lastTranslator: 'Ahmad Awais <your_email@email.com>', // Last translator Email ID.

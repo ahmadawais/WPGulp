@@ -60,7 +60,12 @@ const sort = require( 'gulp-sort' ); // Recommended to prevent unnecessary chang
 const cache = require( 'gulp-cache' ); // Cache files in stream for later use.
 const remember = require( 'gulp-remember' ); //  Adds all the files it has ever seen back into the stream.
 const plumber = require( 'gulp-plumber' ); // Prevent pipe breaking caused by errors from gulp plugins.
-const beep = require( 'beepbeep' );
+const beep = require( 'beepbeep' ); // Make a beep sound from the console
+const gulpif = require( 'gulp-if' ); // Allows conditional logic in Gulp workflows
+const clean = require( 'gulp-clean' ); // Easy folder deletion for deployment folder
+
+// Helper variable for deployment builds
+let isDeploying = false;
 
 /**
  * Custom Error Handler.
@@ -98,6 +103,26 @@ const reload = done => {
 	done();
 };
 
+// Helper function to clean the deployment directory
+const cleanDeployment = () => {
+	return gulp
+		.src( config.phpDeployDestination, { allowEmpty: true })
+		.pipe( clean() );
+};
+
+// Helper function to toggle the isDeploying boolean on and off. By default the isDeploying boolean is set to false.
+const toggleIsDeploying = done => {
+	( isDeploying ) ? isDeploying = false : isDeploying = true;
+	done();
+};
+
+// Helper function to deploy screenshot.png
+const deployScreenshot = () => {
+	return gulp
+		.src( './screenshot.png', {allowEmpty: true})
+		.pipe( gulp.dest( config.phpDeployDestination ) );
+};
+
 /**
  * Task: `styles`.
  *
@@ -130,14 +155,30 @@ gulp.task( 'styles', () => {
 		.pipe( autoprefixer( config.BROWSERS_LIST ) )
 		.pipe( sourcemaps.write( './' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( gulp.dest( config.styleDestination ) )
+		.pipe(
+			gulpif( // if not deploying, write file to the assets directory
+				! isDeploying,
+				gulp.dest( config.styleDestination )
+			)
+		)
 		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
 		.pipe( mmq({ log: true }) ) // Merge Media Queries only for .min.css version.
 		.pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
-		.pipe( rename({ suffix: '.min' }) )
+		.pipe(
+			gulpif( // if not deploying, rename the file name
+				! isDeploying,
+				rename({ suffix: '.min' })
+			)
+		)
 		.pipe( minifycss({ maxLineLen: 10 }) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( gulp.dest( config.styleDestination ) )
+		.pipe(
+			gulpif( // if you are deploying, write to the deployment directory, else write to the assets directory
+				isDeploying,
+				gulp.dest( config.styleDeployDestination ),
+				gulp.dest( config.styleDestination )
+			)
+		)
 		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
 		.pipe( browserSync.stream() ) // Reloads style.min.css if that is enqueued.
 		.pipe( notify({ message: '\n\n✅  ===> STYLES — completed!\n', onLast: true }) );
@@ -221,16 +262,30 @@ gulp.task( 'vendorsJS', () => {
 		.pipe( remember( config.jsVendorSRC ) ) // Bring all files back to stream.
 		.pipe( concat( config.jsVendorFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( gulp.dest( config.jsVendorDestination ) )
 		.pipe(
-			rename({
-				basename: config.jsVendorFile,
-				suffix: '.min'
-			})
+			gulpif( // if not deploying, write file to the assets/js directory
+				! isDeploying,
+				gulp.dest( config.jsVendorDestination )
+			)
+		)
+		.pipe(
+			gulpif(
+				! isDeploying, // if not deploying, rename the file name
+				rename({
+					basename: config.jsVendorFile,
+					suffix: '.min'
+				})
+			)
 		)
 		.pipe( uglify() )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( gulp.dest( config.jsVendorDestination ) )
+		.pipe(
+			gulpif( // if you are deploying, write to the deployment directory, else write to the assets directory
+				isDeploying,
+				gulp.dest( config.jsVendorDeployDestination ),
+				gulp.dest( config.jsVendorDestination )
+			)
+		)
 		.pipe( notify({ message: '\n\n✅  ===> VENDOR JS — completed!\n', onLast: true }) );
 });
 
@@ -264,16 +319,30 @@ gulp.task( 'customJS', () => {
 		.pipe( remember( config.jsCustomSRC ) ) // Bring all files back to stream.
 		.pipe( concat( config.jsCustomFile + '.js' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( gulp.dest( config.jsCustomDestination ) )
 		.pipe(
-			rename({
-				basename: config.jsCustomFile,
-				suffix: '.min'
-			})
+			gulpif( // if not deploying, write file to the assets/js directory
+				! isDeploying,
+				gulp.dest( config.jsCustomDestination )
+			)
+		)
+		.pipe(
+			gulpif ( // if not deploying, rename the file name
+				! isDeploying,
+				rename({
+					basename: config.jsCustomFile,
+					suffix: '.min'
+				})
+			)
 		)
 		.pipe( uglify() )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( gulp.dest( config.jsCustomDestination ) )
+		.pipe(
+			gulpif( // if you are deploying, write to the deployment directory, else write to the assets directory
+				isDeploying,
+				gulp.dest( config.jsCustomDeployDestination ),
+				gulp.dest( config.jsCustomDestination )
+			)
+		)
 		.pipe( notify({ message: '\n\n✅  ===> CUSTOM JS — completed!\n', onLast: true }) );
 });
 
@@ -285,7 +354,8 @@ gulp.task( 'customJS', () => {
  * This task does the following:
  *     1. Gets the source of images raw folder
  *     2. Minifies PNG, JPEG, GIF and SVG images
- *     3. Generates and saves the optimized images
+ *     3. Checks if the deployment is a deployment build.
+ *     4. Generates and saves the optimized images
  *
  * This task will run only once, if you want to run it
  * again, do it with the command `gulp images`.
@@ -308,7 +378,13 @@ gulp.task( 'images', () => {
 				])
 			)
 		)
-		.pipe( gulp.dest( config.imgDST ) )
+		.pipe(
+			gulpif(
+				isDeploying,
+				gulp.dest( config.imgDeploy ),
+				gulp.dest( config.imgDST )
+			)
+		)
 		.pipe( notify({ message: '\n\n✅  ===> IMAGES — completed!\n', onLast: true }) );
 });
 
@@ -329,7 +405,8 @@ gulp.task( 'clearCache', function( done ) {
  * 1. Gets the source of all the PHP files
  * 2. Sort files in stream by path or any custom sort comparator
  * 3. Applies wpPot with the variable set at the top of this file
- * 4. Generate a .pot file of i18n that can be used for l10n to build .mo file
+ * 4. Checks if the deployment is a deployment build.
+ * 5. Generate a .pot file of i18n that can be used for l10n to build .mo file in the appropriate location
  */
 gulp.task( 'translate', () => {
 	return gulp
@@ -344,9 +421,53 @@ gulp.task( 'translate', () => {
 				team: config.team
 			})
 		)
-		.pipe( gulp.dest( config.translationDestination + '/' + config.translationFile ) )
+		.pipe(
+			gulpif(
+				isDeploying,
+				gulp.dest( config.translationDeployDestination + '/' + config.translationFile ),
+				gulp.dest( config.translationDestination + '/' + config.translationFile )
+			)
+		)
 		.pipe( notify({ message: '\n\n✅  ===> TRANSLATE — completed!\n', onLast: true }) );
 });
+
+/**
+ * Task: `deployPHP`.
+ *
+ * Copy PHP files from development directory into the deployment directory
+ *
+ * This task does the following:
+ *     1. Gets the source folder for PHP files
+ *     2. Copies PHP files into the folder specified in phpDeployDestination
+ */
+gulp.task( 'deployPHP', () => {
+	return gulp
+		.src( config.watchPhp )
+		.pipe( gulp.dest( config.phpDeployDestination ) );
+});
+
+
+/**
+ * Task: `deploy`.
+ *
+ * Processes source files in project into a distribution ready for deployment
+ *
+ * This task does the following:
+ *     1. Sets the isDeveloping boolean to true for task runners to know where to write
+ *     2. Builds CSS files in deployment directory
+ *     3. Builds vendor JS files in deploy directory
+ *     4. Builds custom JS files in deploy directory
+ *     5. Optimizes images and places them deploy directory
+ *     6. Loads all PHP files in the project into the deploy directory
+ *     7. Sets the isDeveloping boolean back to false
+ */
+gulp.task( 'deploy', gulp
+	.series(
+		cleanDeployment,
+		toggleIsDeploying, // this toggles the variable isDeploying which starts at false. Since we are deploying, set to true.
+		'styles', 'vendorsJS', 'customJS', 'images', 'deployPHP', 'translate', deployScreenshot,
+		toggleIsDeploying // we have finished deploying our code to deployment folder, set isDeploying back to false.
+	) );
 
 /**
  * Watch Tasks.

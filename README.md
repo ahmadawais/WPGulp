@@ -165,6 +165,9 @@ gulp translate
 
 # To generate RTL stylesheets and Sourcemap.
 gulp stylesRTL
+
+# Create a deployment-ready transpilation of your project
+gulp deploy
 ```
 
 <br>
