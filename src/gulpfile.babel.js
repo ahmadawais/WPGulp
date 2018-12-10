@@ -63,6 +63,7 @@ const plumber = require( 'gulp-plumber' ); // Prevent pipe breaking caused by er
 const beep = require( 'beepbeep' ); // Make a beep sound from the console
 const gulpif = require( 'gulp-if' ); // Allows conditional logic in Gulp workflows
 const clean = require( 'gulp-clean' ); // Easy folder deletion for deployment folder
+const zip = require( 'gulp-zip' ); // Allows functionality to zip a directory
 
 // Helper variable for deployment builds
 let isDeploying = false;
@@ -448,6 +449,21 @@ gulp.task( 'deployPHP', () => {
 
 
 /**
+ * ZIP Tasks.
+ * Task: `zip`.
+ *
+ * 1. Zip the production files up for deployment
+ * 2. Rename the folder to your Theme Name set at the beginning of the gulp file.
+ */
+gulp.task( 'zip', () => {
+	return gulp
+		.src( config.phpDeployDestination + '/**' )
+		.pipe( zip( config.projectName + '.zip' ) )
+		.pipe( gulp.dest( config.projectZipDeployDestination ) )
+		.pipe( notify({ sound: 'Beep', message: '\n\n✅  ===> ZIP THEME — completed!\n', onLast: true }) );
+});
+
+/**
  * Task: `deploy`.
  *
  * Processes source files in project into a distribution ready for deployment
@@ -465,7 +481,7 @@ gulp.task( 'deploy', gulp
 	.series(
 		cleanDeployment,
 		toggleIsDeploying, // this toggles the variable isDeploying which starts at false. Since we are deploying, set to true.
-		'styles', 'vendorsJS', 'customJS', 'images', 'deployPHP', 'translate', deployScreenshot,
+		'styles', 'vendorsJS', 'customJS', 'images', 'deployPHP', 'translate', deployScreenshot, 'zip',
 		toggleIsDeploying // we have finished deploying our code to deployment folder, set isDeploying back to false.
 	) );
 
