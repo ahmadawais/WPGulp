@@ -107,7 +107,7 @@ const reload = done => {
 // Helper function to clean the deployment directory
 const cleanDeployment = () => {
 	return gulp
-		.src( config.phpDeployDestination, { allowEmpty: true })
+		.src( config.projectZipDeployDestination, { allowEmpty: true })
 		.pipe( clean() );
 };
 

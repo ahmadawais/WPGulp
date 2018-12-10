@@ -31,19 +31,19 @@ module.exports = {
 	// JS Vendor options.
 	jsVendorSRC: './assets/js/vendor/*.js', // Path to JS vendor folder.
 	jsVendorDestination: './assets/js/', // Path to place the compiled JS vendors file.
-	jsVendorDeployDestination: './dist/build/js/', // Path to place the compiled JS vendors file for deployment builds.
+	jsVendorDeployDestination: './dist/build/assets/js/', // Path to place the compiled JS vendors file for deployment builds.
 	jsVendorFile: 'vendor', // Compiled JS vendors file name. Default set to vendors i.e. vendors.js.
 
 	// JS Custom options.
 	jsCustomSRC: './assets/js/custom/*.js', // Path to JS custom scripts folder.
 	jsCustomDestination: './assets/js/', // Path to place the compiled JS custom scripts file.
-	jsCustomDeployDestination: './dist/build/js/', // Path to place the compiled JS custom scripts file for deployment builds.
+	jsCustomDeployDestination: './dist/build/assets/js/', // Path to place the compiled JS custom scripts file for deployment builds.
 	jsCustomFile: 'custom', // Compiled JS custom file name. Default set to custom i.e. custom.js.
 
 	// Images options.
 	imgSRC: './assets/img/raw/**/*', // Source folder of images which should be optimized and watched. You can also specify types e.g. raw/**.{png,jpg,gif} in the glob.
 	imgDST: './assets/img/', // Destination folder of optimized images. Must be different from the imagesSRC folder.
-	imgDeploy: './dist/build/img/', // Destination folder for optimized images for the deployment build.
+	imgDeploy: './dist/build/assets/img/', // Destination folder for optimized images for the deployment build.
 
 	// Watch files paths.
 	watchStyles: './assets/css/**/*.scss', // Path to all *.scss files inside css folder and inside them.
