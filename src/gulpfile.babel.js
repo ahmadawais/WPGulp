@@ -463,7 +463,7 @@ gulp.task( 'zip', () => {
 		.src( config.phpDeployDestination + '/**' )
 		.pipe( zip( config.projectName + '.zip' ) )
 		.pipe( gulp.dest( config.projectZipDeployDestination ) )
-		.pipe( notify({ sound: 'Beep', message: '\n\n✅  ===> ZIP THEME — completed!\n', onLast: true }) );
+		.pipe( notify({ sound: 'Beep', message: '\n\n✅  ===> ZIP PROJECT — completed!\n', onLast: true }) );
 });
 
 /**
