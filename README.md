@@ -165,6 +165,9 @@ gulp translate
 
 # To generate RTL stylesheets and Sourcemap.
 gulp stylesRTL
+
+# To generate my-theme-folder.zip.
+gulp zip
 ```
 
 <br>
@@ -275,8 +278,10 @@ This project is inspired by the work of many awesome developers especially those
 :---: |:---: |:---: |:---: |:---: |:---: |
 [isaacdanielanderson](https://github.com/isaacdanielanderson) |[JeffMatson](https://github.com/JeffMatson) |[AdnanMuhib](https://github.com/AdnanMuhib) |[mauryaratan](https://github.com/mauryaratan) |[richtabor](https://github.com/richtabor) |[saqibameen](https://github.com/saqibameen) |
 
-[<img alt="slushman" src="https://avatars0.githubusercontent.com/u/2255645?v=4&s=117" width="117">](https://github.com/slushman) |
-:---: |
-[slushman](https://github.com/slushman) |
+[<img alt="slushman" src="https://avatars0.githubusercontent.com/u/2255645?v=4&s=117" width="117">](https://github.com/slushman) |[<img alt="saqibameen" src="https://avatars3.githubusercontent.com/u/37496983?s=460&v=4" width="117">](https://github.com/NaveenKharwar) |
+:---: | :---: |
+[slushman](https://github.com/slushman) |[NaveenKharwar](https://github.com/NaveenKharwar) |
+
+
 
 _Follow me 👋 on Twitter for more updates and questions_ →  [![Tweet to say Hi](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
