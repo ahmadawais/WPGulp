@@ -27,6 +27,7 @@
     "auto-changelog": "^1.8.0",
     "eslint": "^5.5.0",
     "eslint-config-wordpress": "^2.0.0",
+    "gulp-zip": "^4.2.0",
     "release-it": "^7.6.1"
   },
   "auto-changelog": {

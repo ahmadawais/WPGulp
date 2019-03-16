@@ -14,6 +14,8 @@
  *      7. Corrects the line endings.
  *      8. InjectCSS instead of browser page reload.
  *      9. Generates .pot file for i18n and l10n.
+ *      9. Generates my-theme-folder.zip of your theme.
+ * 
  *
  * @tutorial https://github.com/ahmadawais/WPGulp
  * @author Ahmad Awais <https://twitter.com/MrAhmadAwais/>
@@ -32,6 +34,9 @@ const config = require( './wpgulp.config.js' );
  * Load gulp plugins and passing them semantic names.
  */
 const gulp = require( 'gulp' ); // Gulp of-course.
+
+// Generates zip of theme.
+const zip = require( 'gulp-zip' ); // Gulp plugin to generate zip folder and remove unwanted files.
 
 // CSS related plugins.
 const sass = require( 'gulp-sass' ); // Gulp plugin for Sass compilation.
@@ -363,3 +368,28 @@ gulp.task(
 		gulp.watch( config.imgSRC, gulp.series( 'images', reload ) ); // Reload on customJS file changes.
 	})
 );
+
+/**
+ * Generate .zip
+ *
+ * Generate my-theme-folder.zip in your `/wp-content/themes` folder.
+ */
+
+gulp.task('zip', function () {
+	return gulp.src([
+		'./**/*', '!./{node_modules,node_modules/**/*}',
+		'!./.git',
+		'!./.svn',
+		'!./gulpfile.babel.js', 
+		'!./wpgulp.config.js',
+		'!./.eslintrc.js',
+		'!./.eslintignore',
+		'!./.editorconfig',
+		'!./phpcs.xml.dist',
+		'!./vscode',
+		'!./package.json', 
+		'!./package-lock.json'])
+		.pipe(zip('my-theme-folder.zip'))
+		.pipe(gulp.dest('./../'));
+  });
+
