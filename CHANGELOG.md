@@ -50,7 +50,6 @@ All notable changes in this project are documented in this file.
 ![FIX](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
 > 🐛 Badge [`735de56`](https://github.com/ahmadawais/WPGulp/commit/735de566457a7927c1b13f53cf395892d1582147) <br>
-> 🐛 gulp 4.0 conflict with latest npm [`c86998f`](https://github.com/ahmadawais/WPGulp/commit/c86998f5537d0109d325ff9f03c0dd93ebec4f9d) <br>
 
 ![DOCS](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
