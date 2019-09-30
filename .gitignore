@@ -50,9 +50,7 @@ Thumbs.db
 wpcs/
 /vendor/
 
-# Bower #
-##########
-assets/bower_components/*
+
 
 # Codekit #
 ##########
