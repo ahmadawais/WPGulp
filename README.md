@@ -59,12 +59,12 @@
 🌋 **JavaScript**
 
 >- _Concatenation_
->- _Minification/uglification_
+>- _Minification / uglification_
 >- _Separate vendor and custom JS files handling_
 
 🌁 **IMAGES**
 
->- _Minification/optimization of images_
+>- _Minification / optimization of images_
 >- _File types: `.png`, `.jpg`, `.jpeg`, `.gif`, `.svg`_
 
 💯 **TRANSLATION**
