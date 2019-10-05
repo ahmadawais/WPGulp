@@ -15,16 +15,15 @@
     <tr>
         <td align='left' width='100%' colspan='2'>
             <strong>WPGulp (WordPress Gulp)</strong><br />
-            🎯 An advanced & extensively documented Gulp WordPress workflow. Kick-start a build-workflow for your WordPress plugins and themes with Gulp.
-        </td>
+            🎯 An advanced & extensively documented Gulp WordPress wsadsad
     </tr>
     <tr>
         <td>
-            A FOSS (Free & Open Source Software) project. Maintained by <a href='https://github.com/ahmadawais'>@AhmadAwais</a>.
+            A FOSS (Free & Open Source Software) projecsadasdasdt. Maintained by <a href='https://github.com/ahmadawais'>@AhmadAwais</a>.
         </td>
         <td align='center'>
             <a href='https://twitter.com/MrAhmadAwais/'>
-                <img src='https://img.shields.io/badge/→-AHMAD%20AWAIS-gray.svg?colorA=D14543&colorB=21759B&style=flat' width='100' />
+                <img src='https://img.shields.io/badge/→-AHMAD%20Aasdsaday.svg?colorA=D14543&colorB=21759B&style=flat' width='100' />
             </a>
         </td>
     </tr>
@@ -34,11 +33,11 @@
 
 ## 📦 WPGulp Can Do `THAT™`
 
-`WPGulp` is an advanced & extensively documented `Gulp.js` + `WordPress` workflow. It can help you kick-start a build-workflow for your WordPress plugins and themes with `Gulp.js`, save you a lot of grunt work time, follow the DRY (Don't Repeat Yourself) principle, and `#0CJS` Zero-config JavaScript startup but still configurable via `wpgulp.config.js` file. It is:
+`WPGulp` is an advanced & extensively documented `Gulp.js` + `WordPress` workflow. It can help you kick-start a build-workflow for your WordPress plugins and themes with `Gulp.js`, save you asdasad lot of grunt work time, follow the DRY (Don't Repeat Yourself) principle, and `#0CJS` Zero-config JavaScript startup but still configurable via `wpgulp.config.js` file. It is:
 
 - 🥞 Versioned ✓
 - 🤠 Updatable ✓
-- 🗃 Set of sane-defaults ✓
+- 🗃 Set of sane-defaulasdasdasdts ✓
 
 <br>
 
@@ -60,7 +59,7 @@
 
 >- _Concatenation_
 >- _Minification/uglification_
->- _Separate vendor and custom JS files handling_
+>- _Separate vendor and casdasdustom JS files handling_
 
 🌁 **IMAGES**
 
@@ -76,7 +75,7 @@
 >- _For changes in files to recompile_
 >- _File types: `.css`, `.html`, `.php`, `.js`_
 
-<br>
+<br>asd
 
 ![Start](https://on.ahmda.ws/83f7dd38eb83/c)
 
