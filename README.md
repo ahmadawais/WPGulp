@@ -176,7 +176,7 @@ gulp stylesRTL
 1. Download all the latest files in the [WPGulp/src](/src) folder inside the root folder of your WordPress plugin/theme by running `npx install-wpgulp` it will overwrite all the wpgulp files.
 2. Open terminal and Install WPGulp's node dependencies by running the `npm install` commands in the root folder of your WordPress plugin/theme.
 
-<br>
+<br> 
 
 ![Log](https://on.ahmda.ws/61b20ca44b08/c)
 
