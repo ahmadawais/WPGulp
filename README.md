@@ -131,7 +131,7 @@ npx wpgulp
 
 ![wpgulp install gif](https://on.ahmda.ws/c846c265e03a/c)
 
-> ⚠️  I'm assuming that there are no previously present similar files in the root of your folder. Otherwise, you need to merge these very carefully. E.g. You can include the `scripts`, `devDependencies` in your current `pacakge.json` file and so on for other files. If you run the above command all similar files will be overwritten.
+> ⚠️  I'm assuming that there are no previously present similar files in the root of your folder. Otherwise, you need to merge these very carefully. E.g. You can include the `scripts`, `devDependencies` in your current `package.json` file and so on for other files. If you run the above command all similar files will be overwritten.
 
 ### → `STEP #2` — Editing the Project Variables
 
