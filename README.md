@@ -24,7 +24,7 @@
         </td>
         <td align='center'>
             <a href='https://twitter.com/MrAhmadAwais/'>
-                <img src='https://img.shields.io/badge/→-AHMAD%20AWAIS-gray.svg?colorA=D14543&colorB=21759B&style=flat' width='100' />
+                <img src='https://img.shields.io/badge/→-AHMAD%20AWAIS-gray.svg?colorA=D14543&colorB=5734F5&style=flat-square' width='100' />
             </a>
         </td>
     </tr>
