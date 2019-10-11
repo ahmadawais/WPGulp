@@ -14,7 +14,7 @@
 <table width='100%' align="center">
     <tr>
         <td align='left' width='100%' colspan='2'>
-            <strong>WPGulp (WordPress Gulp)</strong><br />
+            <b>WPGulp (WordPress Gulp)</b><br />
             🎯 An advanced & extensively documented Gulp WordPress workflow. Kick-start a build-workflow for your WordPress plugins and themes with Gulp.
         </td>
     </tr>
