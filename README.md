@@ -127,7 +127,7 @@ _It'll take a couple of minutes to install._
 npx wpgulp
 ```
 
-([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/ahmadawais/e4c69b22561c7079c9d99faba90e3b23))
+([npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) is a package runner tool that comes with npm 5.2+ and higher, see [instructions for older npm versions](https://gist.github.com/ahmadawais/e4c69b22561c7079c9d99faba90e3b23))
 
 ![wpgulp install gif](https://on.ahmda.ws/c846c265e03a/c)
 
