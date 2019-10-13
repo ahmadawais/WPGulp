@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
   <small><p><em><g-emoji class="g-emoji" alias="dart" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f3af.png" title=":dart:">🎯</g-emoji> — If 1,000 developers <a href="http://eepurl.com/cLwjeH" rel="nofollow">signup here</a>, I will make a video course for WPGulp.</em></p></small>
 
@@ -20,7 +20,7 @@
     </tr>
     <tr>
         <td>
-            A FOSS (Free & Open Source Software) project. Maintained by <a href='https://github.com/ahmadawais'>@AhmadAwais</a>.
+            A FOSS (Free & Open Source Software) project. Maintained by: <a href='https://github.com/ahmadawais'>@AhmadAwais</a>.
         </td>
         <td align='center'>
             <a href='https://twitter.com/MrAhmadAwais/'>
