@@ -80,7 +80,7 @@
 
 ![Start](https://on.ahmda.ws/83f7dd38eb83/c)
 
-## Getting Started
+## 🔥 Getting Started 
 
 #### ⚡️ Quick Overview
 
@@ -88,9 +88,12 @@ Run step `#1`, `#2`, and `#3` quickly in one go — Run inside local WP install'
 
 ```sh
 # 1— Install WPGulp in your WordPress theme/plugin.
+
 npx wpgulp
 # 2— Now configure variables inside the `wpgulp.config.js` file.
+
 # 3— Start your npm build workflow.
+
 npm start
 ```
 
@@ -102,7 +105,7 @@ npm start
 <details>
  <summary><strong><code>STEP #0</code></strong> — Don't have <code>Node.js</code> + <code>npm</code> installed? Read this. (CLICK TO EXPAND!)</summary>
 
-In case you are an absolute beginner to the world of `Node.js`, JavaScript, and `npm` packages — all you need to do is go to the Node's site [download + install](https://nodejs.org/en/download/) Node on your system. This will install both `Node.js` and `npm`, i.e., node package manager — the command line interface of Node.js.
+In case you are an absolute beginner to the world of `Node.js`, `JavaScript`, and `npm` packages — all you need to do is go to the Node's site [download + install](https://nodejs.org/en/download/) Node on your system. This will install both `Node.js` and `npm`, i.e., node package manager — the command line interface of Node.js.
 
 You can verify the install by opening your terminal app and typing...
 
@@ -119,6 +122,7 @@ npm -v
 ### → `STEP #1` — Download the Required Files
 
 1. In the terminal go to the root folder of your WordPress plugin/theme
+
 2. Run the following command to download all the files in the [WPGulp/src](/src) folder
 
 _It'll take a couple of minutes to install._
@@ -266,7 +270,7 @@ _Follow me 👋 on Twitter for more updates and questions_ →  [![Tweet to say 
 <br />
 <br />
 <p align="center">
-<strong>For anything else, tweet at <a href="https://twitter.com/MrAhmadAwais/" target="_blank" rel="noopener noreferrer">@MrAhmadAwais</a></strong>
+<strong>For anything else, 👋 tweet at <a href="https://twitter.com/MrAhmadAwais/" target="_blank" rel="noopener noreferrer">@MrAhmadAwais</a></strong>
 </p>
 
 <div align="center">
