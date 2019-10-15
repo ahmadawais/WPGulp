@@ -35,12 +35,16 @@
     "gulp-sourcemaps": "^2.6.2",
     "gulp-uglify": "^3.0.0",
     "gulp-uglifycss": "^1.0.6",
-    "gulp-wp-pot": "^2.0.7"
+    "gulp-wp-pot": "^2.0.7",
+    "lodash.defaults": "^4.2.0",
+    "merge-stream": "^1.0.1"
   },
   "scripts": {
     "start": "gulp",
     "styles": "gulp styles",
+    "addonStyles": "gulp addonStyles",
     "stylesRTL": "gulp stylesRTL",
+    "addonStylesRTL": "gulp addonStylesRTL",
     "vendorsJS": "gulp vendorsJS",
     "customJS": "gulp customJS",
     "images": "gulp images",

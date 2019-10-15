@@ -167,6 +167,26 @@ gulp translate
 gulp stylesRTL
 ```
 
+### → `FAQs`
+
+#### 📖 How to add SCSS files for `addonStyles` option?
+
+You can add a set of SCSS/CSS file for compilation as the following format
+
+```javascript
+addonStyles: [
+    {
+        styleSRC: './assets/css/add-on-1.scss', // Path to .scss file.
+        styleDestination: './assets/css/', // Path to place the compiled CSS file.
+    },
+    {
+        styleSRC: './assets/css/add-on-2.scss', // Path to another .scss file.
+        styleDestination: './', // Path to place the compiled CSS file.
+    },
+],
+```
+
+
 <br>
 
 ![Update](https://on.ahmda.ws/d0b586da13cc/c)

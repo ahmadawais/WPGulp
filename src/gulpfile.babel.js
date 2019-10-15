@@ -61,6 +61,8 @@ const cache = require( 'gulp-cache' ); // Cache files in stream for later use.
 const remember = require( 'gulp-remember' ); //  Adds all the files it has ever seen back into the stream.
 const plumber = require( 'gulp-plumber' ); // Prevent pipe breaking caused by errors from gulp plugins.
 const beep = require( 'beepbeep' );
+const merge = require( 'merge-stream' );
+const defaults = require('lodash.defaults');
 
 /**
  * Custom Error Handler.
@@ -99,11 +101,7 @@ const reload = done => {
 };
 
 /**
- * Task: `styles`.
- *
- * Compiles Sass, Autoprefixes it and Minifies CSS.
- *
- * This task does the following:
+ * This function does the following:
  *    1. Gets the source scss file
  *    2. Compiles Sass to CSS
  *    3. Writes Sourcemaps for it
@@ -112,9 +110,12 @@ const reload = done => {
  *    6. Minifies the CSS file and generates style.min.css
  *    7. Injects CSS or reloads the browser via browserSync
  */
-gulp.task( 'styles', () => {
-	return gulp
-		.src( config.styleSRC, { allowEmpty: true })
+function processStyle( gulpStream, processOptions = {} ) {
+	processOptions = defaults( processOptions, {
+		styleDestination: config.styleDestination,
+	} );
+
+	return gulpStream
 		.pipe( plumber( errorHandler ) )
 		.pipe( sourcemaps.init() )
 		.pipe(
@@ -130,17 +131,118 @@ gulp.task( 'styles', () => {
 		.pipe( autoprefixer( config.BROWSERS_LIST ) )
 		.pipe( sourcemaps.write( './' ) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( gulp.dest( config.styleDestination ) )
+		.pipe( gulp.dest( processOptions.styleDestination ) )
 		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
 		.pipe( mmq({ log: true }) ) // Merge Media Queries only for .min.css version.
-		.pipe( browserSync.stream() ) // Reloads style.css if that is enqueued.
+		.pipe( browserSync.stream() ) // Reloads .css if that is enqueued.
 		.pipe( rename({ suffix: '.min' }) )
 		.pipe( minifycss({ maxLineLen: 10 }) )
 		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( gulp.dest( config.styleDestination ) )
+		.pipe( gulp.dest( processOptions.styleDestination ) )
 		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
-		.pipe( browserSync.stream() ) // Reloads style.min.css if that is enqueued.
-		.pipe( notify({ message: '\n\n✅  ===> STYLES — completed!\n', onLast: true }) );
+		.pipe( browserSync.stream() ) // Reloads .min.css if that is enqueued.
+		;
+}
+
+/**
+ * This function does the following:
+ *    1. Gets the source scss file
+ *    2. Compiles Sass to CSS
+ *    4. Autoprefixes it and generates style.css
+ *    5. Renames the CSS file with suffix -rtl and generates style-rtl.css
+ *    6. Writes Sourcemaps for style-rtl.css
+ *    7. Renames the CSS files with suffix .min.css
+ *    8. Minifies the CSS file and generates style-rtl.min.css
+ *    9. Injects CSS or reloads the browser via browserSync
+ */
+function processStyleRTL( gulpStream, processOptions = {} ) {
+	processOptions = defaults( processOptions, {
+		styleDestination: config.styleDestination,
+	} );
+
+	return gulpStream
+		.pipe( plumber( errorHandler ) )
+		.pipe( sourcemaps.init() )
+		.pipe(
+			sass({
+				errLogToConsole: config.errLogToConsole,
+				outputStyle: config.outputStyle,
+				precision: config.precision
+			})
+		)
+		.on( 'error', sass.logError )
+		.pipe( sourcemaps.write({ includeContent: false }) )
+		.pipe( sourcemaps.init({ loadMaps: true }) )
+		.pipe( autoprefixer( config.BROWSERS_LIST ) )
+		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+		.pipe( rename({ suffix: '-rtl' }) ) // Append "-rtl" to the filename.
+		.pipe( rtlcss() ) // Convert to RTL.
+		.pipe( sourcemaps.write( './' ) ) // Output sourcemap for -rtl.css.
+		.pipe( gulp.dest( processOptions.styleDestination ) )
+		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
+		.pipe( browserSync.stream() ) // Reloads .css or -rtl.css, if that is enqueued.
+		.pipe( mmq({ log: true }) ) // Merge Media Queries only for .min.css version.
+		.pipe( rename({ suffix: '.min' }) )
+		.pipe( minifycss({ maxLineLen: 10 }) )
+		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
+		.pipe( gulp.dest( processOptions.styleDestination ) )
+		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
+		.pipe( browserSync.stream() ) // Reloads .css or -rtl.css, if that is enqueued.
+		;
+}
+
+/**
+ * Task: `styles`.
+ *
+ * Compiles Sass, Autoprefixes it and Minifies CSS.
+ *
+ * This task does the following:
+ *    1. Gets the source scss file
+ *    2. Compiles Sass to CSS
+ *    3. Writes Sourcemaps for it
+ *    4. Autoprefixes it and generates style.css
+ *    5. Renames the CSS file with suffix .min.css
+ *    6. Minifies the CSS file and generates style.min.css
+ *    7. Injects CSS or reloads the browser via browserSync
+ */
+gulp.task( 'styles', () => {
+	return	processStyle(
+				gulp.src( config.styleSRC, { allowEmpty: true }),
+				{ styleDestination: config.styleDestination }
+			).pipe( notify({ message: '\n\n✅  ===> STYLES — completed!\n', onLast: true }) );
+});
+
+/**
+ * Task: `addonStyles`.
+ *
+ * Compiles Sass, Autoprefixes it and Minifies CSS.
+ *
+ * This task does the following:
+ *    1. Gets the source scss file
+ *    2. Compiles Sass to CSS
+ *    3. Writes Sourcemaps for it
+ *    4. Autoprefixes it and generates CSS file
+ *    5. Renames the CSS file with suffix .min.css
+ *    6. Minifies the CSS file and generates .min.css
+ *    7. Injects CSS or reloads the browser via browserSync
+ */
+gulp.task( 'addonStyles', ( done ) => {
+	// Exit task when no addon styles
+	if ( config.addonStyles.length === 0 ) {
+		return done();
+	}
+
+	// Process each addon style
+	var tasks = config.addonStyles.map( function ( addon ) {
+
+		return	processStyle(
+				gulp.src( addon.styleSRC, { allowEmpty: true }),
+				{ styleDestination: addon.styleDestination }
+			).pipe( notify({ message: '\n\n✅  ===> ADDON STYLES — completed!\n', onLast: true }) );
+
+	} );
+
+	return merge( tasks );
 });
 
 /**
@@ -159,36 +261,45 @@ gulp.task( 'styles', () => {
  *    9. Injects CSS or reloads the browser via browserSync
  */
 gulp.task( 'stylesRTL', () => {
-	return gulp
-		.src( config.styleSRC, { allowEmpty: true })
-		.pipe( plumber( errorHandler ) )
-		.pipe( sourcemaps.init() )
-		.pipe(
-			sass({
-				errLogToConsole: config.errLogToConsole,
-				outputStyle: config.outputStyle,
-				precision: config.precision
-			})
-		)
-		.on( 'error', sass.logError )
-		.pipe( sourcemaps.write({ includeContent: false }) )
-		.pipe( sourcemaps.init({ loadMaps: true }) )
-		.pipe( autoprefixer( config.BROWSERS_LIST ) )
-		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( rename({ suffix: '-rtl' }) ) // Append "-rtl" to the filename.
-		.pipe( rtlcss() ) // Convert to RTL.
-		.pipe( sourcemaps.write( './' ) ) // Output sourcemap for style-rtl.css.
-		.pipe( gulp.dest( config.styleDestination ) )
-		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
-		.pipe( browserSync.stream() ) // Reloads style.css or style-rtl.css, if that is enqueued.
-		.pipe( mmq({ log: true }) ) // Merge Media Queries only for .min.css version.
-		.pipe( rename({ suffix: '.min' }) )
-		.pipe( minifycss({ maxLineLen: 10 }) )
-		.pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
-		.pipe( gulp.dest( config.styleDestination ) )
-		.pipe( filter( '**/*.css' ) ) // Filtering stream to only css files.
-		.pipe( browserSync.stream() ) // Reloads style.css or style-rtl.css, if that is enqueued.
-		.pipe( notify({ message: '\n\n✅  ===> STYLES RTL — completed!\n', onLast: true }) );
+	return	processStyleRTL(
+				gulp.src( config.styleSRC, { allowEmpty: true }),
+				{ styleDestination: config.styleDestination }
+			).pipe( notify({ message: '\n\n✅  ===> STYLES RTL — completed!\n', onLast: true }) );
+	
+});
+
+/**
+ * Task: `addonStylesRTL`.
+ *
+ * Compiles Sass, Autoprefixes it, Generates RTL stylesheet, and Minifies CSS.
+ *
+ * This task does the following:
+ *    1. Gets the source scss file
+ *    2. Compiles Sass to CSS
+ *    4. Autoprefixes it and generates style.css
+ *    5. Renames the CSS file with suffix -rtl and generates -rtl.css
+ *    6. Writes Sourcemaps for -rtl.css
+ *    7. Renames the CSS files with suffix .min.css
+ *    8. Minifies the CSS file and generates -rtl.min.css
+ *    9. Injects CSS or reloads the browser via browserSync
+ */
+gulp.task( 'addonStylesRTL', ( done ) => {
+	// Exit task when no addon styles
+	if ( config.addonStyles.length === 0 ) {
+		return done();
+	}
+
+	// Process each addon style
+	var tasks = config.addonStyles.map( function ( addon ) {
+
+		return	processStyleRTL(
+				gulp.src( addon.styleSRC, { allowEmpty: true }),
+				{ styleDestination: addon.styleDestination }
+			).pipe( notify({ message: '\n\n✅  ===> ADDON STYLES RTL — completed!\n', onLast: true }) );
+
+	} );
+
+	return merge( tasks );
 });
 
 /**
@@ -355,9 +466,9 @@ gulp.task( 'translate', () => {
  */
 gulp.task(
 	'default',
-	gulp.parallel( 'styles', 'vendorsJS', 'customJS', 'images', browsersync, () => {
+	gulp.parallel( 'styles', 'addonStyles', 'vendorsJS', 'customJS', 'images', browsersync, () => {
 		gulp.watch( config.watchPhp, reload ); // Reload on PHP file changes.
-		gulp.watch( config.watchStyles, gulp.parallel( 'styles' ) ); // Reload on SCSS file changes.
+		gulp.watch( config.watchStyles, gulp.parallel( 'styles', 'addonStyles' ) ); // Reload on SCSS file changes.
 		gulp.watch( config.watchJsVendor, gulp.series( 'vendorsJS', reload ) ); // Reload on vendorsJS file changes.
 		gulp.watch( config.watchJsCustom, gulp.series( 'customJS', reload ) ); // Reload on customJS file changes.
 		gulp.watch( config.imgSRC, gulp.series( 'images', reload ) ); // Reload on customJS file changes.
