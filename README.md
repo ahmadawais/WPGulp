@@ -243,7 +243,7 @@ This open source project is maintained by the help of awesome businesses listed 
 
 MIT © [Ahmad Awais](https://twitter.com/MrAhmadAwais/).
 
-This project is inspired by the work of many awesome developers especially those who contribute to this project, Gulp.js, Babel, and many other dependencies as listed in the `package.json` file. FOSS (Free & Open Source Software) for the win.
+This project is inspired by the work of many awesome developers especially those who contribute to this project, `Gulp.js`, `Babel`, and many other dependencies as listed in the `package.json` file. `FOSS` (Free & Open Source Software) for the win.
 
 [<img alt="ahmadawais" src="https://avatars1.githubusercontent.com/u/960133?v=4&s=117" width="117">](https://github.com/ahmadawais) |[<img alt="MaedahBatool" src="https://avatars2.githubusercontent.com/u/12712988?v=4&s=117" width="117">](https://github.com/MaedahBatool) |[<img alt="akmur" src="https://avatars2.githubusercontent.com/u/957841?v=4&s=117" width="117">](https://github.com/akmur) |[<img alt="marianrick" src="https://avatars0.githubusercontent.com/u/20360130?v=4&s=117" width="117">](https://github.com/marianrick) |[<img alt="asharirfan" src="https://avatars2.githubusercontent.com/u/8023941?v=4&s=117" width="117">](https://github.com/asharirfan) |[<img alt="JeremyEnglert" src="https://avatars2.githubusercontent.com/u/6110968?v=4&s=117" width="117">](https://github.com/JeremyEnglert) |
 :---: |:---: |:---: |:---: |:---: |:---: |
