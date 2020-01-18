@@ -68,3 +68,6 @@ assets/bower_components/*
 .idea/
 library/vendors/composer
 assets/img/.DS_Store
+
+# Vscode Project Files #
+.vscode/
