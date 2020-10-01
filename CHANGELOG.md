@@ -8,7 +8,7 @@ All notable changes in this project are documented in this file.
 
 ![hr](https://on.ahmda.ws/t6N5/c)
 
-<br>
+</br>
 
 ### RELEASE: [2.8.0](https://github.com/ahmadawais/WPGulp/compare/2.7.0...2.8.0)
 
