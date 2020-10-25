@@ -1,43 +1,63 @@
 #!/usr/bin/env node
-/**
- * Main Install WPGulp app
- *
- * Check the node version if above 8 then run the app.
- */
 
-'use strict';
+const fs = require('fs');
+const ora = require('ora');
+const execa = require('execa');
+const {yellow: y, green: g, dim: d} = require('chalk');
+const download = require('download');
+const clear = require('clear-any-console');
+const checkNode = require('cli-check-node');
+const handleError = require('./utils/handleError');
+const printNextSteps = require('./utils/printNextSteps');
+const unhandledError = require('cli-handle-unhandled');
 
-const chalk = require( 'chalk' );
-const currentNodeVersion = process.versions.node;
-const semver = currentNodeVersion.split( '.' );
-const major = semver[0];
+const spinner = ora({text: ''});
 
-// If below Node 8.
-if ( 8 > major ) {
-	// eslint-disable-next-line  no-console
-	console.error(
-		chalk.red(
-			'You are running Node ' +
-				currentNodeVersion +
-				'.\n' +
-				'Install WPGulp requires Node 8 or higher. \n' +
-				'Kindly, update your version of Node.'
-		)
-	);
-	process.exit( 1 );
-}
+(async () => {
+	clear();
+	unhandledError();
+	checkNode('10');
 
-// Makes the script crash on unhandled rejections instead of silently
-// ignoring them. In the future, promise rejections that are not handled will
-// terminate the Node.js process with a non-zero exit code.
-process.on( 'unhandledRejection', err => {
-	throw err;
-});
+	const CWD = process.cwd();
+	const CWDArray = CWD.split('/');
+	const installDir = CWDArray[CWDArray.length - 1];
 
-/**
- * Run the entire program.
- *
- * Runs all the functions with async/await.
- */
-const run = require( './modules/run' );
-run();
+	// Files.
+	const filesToDownload = [
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/.editorconfig`,
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/.eslintignore`,
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/.eslintrc.js`,
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/.gitignore`,
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/gulpfile.babel.js`,
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/package.json`,
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/wpgulp.config.js`
+	];
+
+	// Dotfiles (if any).
+	const dotFiles = [`.editorconfig`, `.eslintignore`, `.eslintrc.js`, `.gitignore`];
+
+	// Start.
+	console.log();
+	console.log(g(`Installing WPGulp in directory:`), d(installDir));
+	console.log(d(`This might take a couple of minutes.\n`));
+
+	spinner.start(`${y(`DOWNLOADING`)} WPGulp files…`);
+
+	// Download.
+	Promise.all(filesToDownload.map(x => download(x, `${CWD}`))).then(async () => {
+		dotFiles.map(dotFile =>
+			fs.rename(
+				`${CWD}/${dotFile.slice(1)}`, // e.g. gitignore without a (.) prefix.
+				`${CWD}/${dotFile}`, // Add the (.) preferred
+				err => handleError(err)
+			)
+		);
+		spinner.succeed(`${g(`DOWNLOADED`)} WPGulp files`);
+
+		spinner.start(`${y(`INSTALLING`)} npm packages…`);
+		await execa(`npm`, [`install`]);
+		spinner.succeed(`${g(`INSTALLED`)} npm packages`);
+
+		printNextSteps();
+	});
+})();

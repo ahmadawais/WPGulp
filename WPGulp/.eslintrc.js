@@ -10,9 +10,14 @@ module.exports = {
 		sourceType: 'module'
 	},
 	rules: {
+		// Disable weird WP spacing rules.
+		// 'space-before-function-paren': 'off',
+		// 'space-in-parens': 'off',
+		// 'array-bracket-spacing': 'off', // Disable weird WP spacing rules.
 		indent: ['error', 'tab'],
-		'linebreak-style': ['error', 'unix'],
+		semi: ['error', 'always'],
 		quotes: ['error', 'single'],
-		semi: ['error', 'always']
+		'linebreak-style': ['error', 'unix']
 	}
 };
+``;
