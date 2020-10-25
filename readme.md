@@ -1,6 +1,6 @@
 <div align="center">
 
-  <small><p><em><g-emoji class="g-emoji" alias="dart" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f3af.png" title=":dart:">🎯</g-emoji> — If 1,000 developers <a href="http://eepurl.com/cLwjeH" rel="nofollow">signup here</a>, I will make a video course for WPGulp.</em></p></small>
+  <small><p><em><g-emoji class="g-emoji" alias="dart" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f3af.png" title=":dart:">📟</g-emoji> — Learn to <a href="https://nodecli.com/?utm_source=github.com&utm_medium=referral&utm_campaign=ahmadawais/WPGulp" rel="nofollow">build CLI DevTools</a>, like WPGulp with me at <a href="https://nodecli.com/?utm_source=github.com&utm_medium=referral&utm_campaign=ahmadawais/WPGulp">NodeCLI.com</a>.</em></p></small>
 
   <img src="https://on.awais.dev/cf1298feadee/c" alt="WPGulp WordPress Gulp" />
 
@@ -221,7 +221,6 @@ without wasting a 1,000 hours][n] →</p>
 
 [![Node CLI](https://img.shields.io/badge/-NodeCLI.com%20%E2%86%92-gray.svg?colorB=488640&style=flat)][n]
 
-[n]: https://NodeCLI.com?utm_source=github&utm_medium=referral&utm_campaign=ahmadawais/cli-meow-help
 
 [![Awais on Twitter](https://raw.githubusercontent.com/ahmadawais/stuff/master/sponsor/sponsor.jpg)](https://github.com/AhmadAwais/sponsor)
 
@@ -261,5 +260,6 @@ This project is inspired by the work of many awesome developers especially those
 :---: |
 [slushman](https://github.com/slushman) |
 
-
 [![Ahmad on Twitter](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Follow%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
+
+[n]: https://nodecli.com/?utm_source=github.com&utm_medium=referral&utm_campaign=ahmadawais/WPGulp
