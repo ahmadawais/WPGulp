@@ -11,7 +11,9 @@
 		"wpgulp",
 		"WP Gulp",
 		"WordPress Gulp",
-		"Install WPGulp"
+		"Install WPGulp",
+		"Gulp with WordPress",
+		"Gulp.js WordPress"
 	],
 	"dependencies": {
 		"chalk": "^2.4.1",
