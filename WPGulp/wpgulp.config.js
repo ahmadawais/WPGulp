@@ -10,9 +10,9 @@
 // Project options.
 
 // Local project URL of your already running WordPress site.
-// > Could be something like wpgulp.local or localhost:3000
+// > Could be something like "wpgulp.local" or "localhost"
 // > depending upon your local WordPress setup.
-const projectURL = 'local.dv';
+const projectURL = 'wpgulp.local';
 
 // Theme/Plugin URL. Leave it like it is; since our gulpfile.js lives in the root folder.
 const productURL = './';
