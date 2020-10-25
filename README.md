@@ -2,12 +2,12 @@
 
   <small><p><em><g-emoji class="g-emoji" alias="dart" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f3af.png" title=":dart:">🎯</g-emoji> — If 1,000 developers <a href="http://eepurl.com/cLwjeH" rel="nofollow">signup here</a>, I will make a video course for WPGulp.</em></p></small>
 
-  <img src="https://on.ahmda.ws/cf1298feadee/c" alt="WPGulp WordPress Gulp" />
+  <img src="https://on.awais.dev/cf1298feadee/c" alt="WPGulp WordPress Gulp" />
 
   <h1><code>WordPress Gulp Workflow</code></h1>
 
 [![GitHub](https://img.shields.io/wordpress/v/akismet.svg?colorA=D14543&colorB=21759B&maxAge=2592000&style=flat&label=WordPress)](https://github.com/ahmadawais/WPGulp/)
-[![emoji-log](https://img.shields.io/badge/🚀%20Emoji-Log-gray.svg?colorA=D14543&colorB=21759B&style=flat)](https://github.com/ahmadawais/Emoji-Log/) [![GitHub stars](https://img.shields.io/github/stars/ahmadawais/WPGulp.svg?style=social&label=Stars)](https://github.com/ahmadawais/WPGulp/stargazers) [![GitHub followers](https://img.shields.io/github/followers/ahmadawais.svg?style=social&label=Follow)](https://github.com/ahmadawais?tab=followers)  [![Tweet for help](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/) [![VSCode.pro](https://img.shields.io/badge/Supported%20by-VSCode%20Power%20User%20Course%20%E2%86%92-gray.svg?colorA=D14543&colorB=21759B)](https://VSCode.pro "This open source project is supported by VSCode.pro") 
+[![emoji-log](https://img.shields.io/badge/🚀%20Emoji-Log-gray.svg?colorA=D14543&colorB=21759B&style=flat)](https://github.com/ahmadawais/Emoji-Log/) [![GitHub stars](https://img.shields.io/github/stars/ahmadawais/WPGulp.svg?style=social&label=Stars)](https://github.com/ahmadawais/WPGulp/stargazers) [![GitHub followers](https://img.shields.io/github/followers/ahmadawais.svg?style=social&label=Follow)](https://github.com/ahmadawais?tab=followers)  [![Tweet for help](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/) [![VSCode.pro](https://img.shields.io/badge/Supported%20by-VSCode%20Power%20User%20Course%20%E2%86%92-gray.svg?colorA=D14543&colorB=21759B)](https://VSCode.pro "This open source project is supported by VSCode.pro")
 
 </div>
 
@@ -78,7 +78,7 @@
 
 <br>
 
-![Start](https://on.ahmda.ws/83f7dd38eb83/c)
+![Start](https://on.awais.dev/83f7dd38eb83/c)
 
 ## Getting Started
 
@@ -129,7 +129,7 @@ npx wpgulp
 
 ([npx](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) is a package runner tool that comes with npm 5.2+ and higher).
 
-![wpgulp install gif](https://on.ahmda.ws/c846c265e03a/c)
+![wpgulp install gif](https://on.awais.dev/c846c265e03a/c)
 
 > ⚠️  I'm assuming that there are no previously present similar files in the root of your folder. Otherwise, you need to merge these very carefully. E.g. You can include the `scripts`, `devDependencies` in your current `package.json` file and so on for other files. If you run the above command all similar files will be overwritten.
 
@@ -137,7 +137,7 @@ npx wpgulp
 
 Configure the project paths and other variables inside the `wpgulp.config.js` file. This is a compulsory step.
 
-![wpgulp config](https://on.ahmda.ws/f2ca9bb4a740/c)
+![wpgulp config](https://on.awais.dev/f2ca9bb4a740/c)
 
 
 ### → `STEP #3` — Start your project
@@ -150,7 +150,7 @@ npm start
 # To stop press CTRL (⌃) + C
 ```
 
-![wpgulp start](https://on.ahmda.ws/d64abd87de1f/c)
+![wpgulp start](https://on.awais.dev/d64abd87de1f/c)
 
 ### → `OPTIONAL STEP #4` — More Scripts/Tasks
 
@@ -169,7 +169,7 @@ gulp stylesRTL
 
 <br>
 
-![Update](https://on.ahmda.ws/d0b586da13cc/c)
+![Update](https://on.awais.dev/d0b586da13cc/c)
 
 ## How to Update?
 
@@ -178,7 +178,7 @@ gulp stylesRTL
 
 <br>
 
-![Log](https://on.ahmda.ws/61b20ca44b08/c)
+![Log](https://on.awais.dev/61b20ca44b08/c)
 
 ## Changelog
 
@@ -201,25 +201,29 @@ Nothing's ever complete, so bear with us while we keep iterating towards a bette
 
 <br>
 
-![Hello](https://on.ahmda.ws/5cb79028dc04/c)
+![Hello](https://on.awais.dev/4guJenpQ)
 
-#### **Hello, we're the [Dev Couple](https://TheDevCouple.com)**!
+## Sponsor
 
-I ([Ahmad Awais](https://twitter.com/mrahmadawais/)) am a OSS developer advocate, Full Stack Web Developer and a regular core contributor at WordPress. My significant other ([Maedah Batool](https://twitter.com/MaedahBatool/)) is a Technical Project Manager, and she's also a WordPress Core Contributor. Together with our [team](https://TheDevCouple.com/team), we run the [TheDevCouple.com](https://TheDevCouple.com/).
+Me ([Ahmad Awais](https://twitter.com/mrahmadawais/)) and my incredible wife ([Maedah Batool](https://twitter.com/MaedahBatool/)) are two engineers who fell in love with open source and then with each other. You can read more [about me here](https://ahmadawais.com/about). If you or your company use any of my projects or like what I’m doing then consider backing me. I'm in this for the long run. An open-source developer advocate.
 
-If you'd like to get insights into our love for open source software, professional full stack development, WordPress community, the growth of JavaScript or growing a family, building, and bootstrapping a business, then subscribe to our premium newsletter called ↣ [The WordPress Takeaway](https://WPTakeaway.club)!
+[![Ahmad on Twitter](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Follow%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
 
-#### [**Support our Open Source Projects!**](https://pay.paddle.com/checkout/515568) 🎩
+### [NodeCLI.com][n] — Learn to build Node.js CLI Automation
 
-If you'd like us to keep producing professional free and open source software (FOSS). Consider [paying for an hour of my dev-time](https://pay.paddle.com/checkout/515568). We'll spend two hours on open source for each contribution. Yeah, that's right, you pay for one hour and get both of us to spend an hour as a thank you.
+> This repository is part of the [NodeCLI.com][n] course.
 
-- 🚀  $99.99 — [Support for one hour or more →](https://pay.paddle.com/checkout/515568)
-- 🔰  $49.99 — [Support half an hour maintenance →](https://pay.paddle.com/checkout/527253)
-- ☕️  $9.99 — [Buy us lunch or coffee to keep us trucking #OpenSource →](https://pay.paddle.com/checkout/527254)
+After building hundreds of developer automation tools used by millions of developers, I am sharing exactly how you can do it yourself with minimum effective effort. Learn to build Node.js & JavaScript based CLI (Command Line Interface) apps. Automate the grunt work, do more in less time, impress your manager, and help the community.
+→ I'm sharing it all in this online video course. [Node CLI Automation
+without wasting a 1,000 hours][n] →</p>
 
-<br>
+[![Node CLI Course](https://raw.githubusercontent.com/ahmadawais/stuff/master/nodecli/featured.jpg)][n]
 
-![Hello](https://on.ahmda.ws/3dea3a3b1de3/c)
+[![Node CLI](https://img.shields.io/badge/-NodeCLI.com%20%E2%86%92-gray.svg?colorB=488640&style=flat)][n]
+
+[n]: https://NodeCLI.com?utm_source=github&utm_medium=referral&utm_campaign=ahmadawais/cli-meow-help
+
+[![Awais on Twitter](https://raw.githubusercontent.com/ahmadawais/stuff/master/sponsor/sponsor.jpg)](https://github.com/AhmadAwais/sponsor)
 
 ### 🙌 [THEDEVCOUPLE PARTNERS](https://TheDevCouple.com/partners)
 
@@ -227,17 +231,13 @@ This open source project is maintained by the help of awesome businesses listed 
 
 <table width='100%'>
 	<tr>
-		<td width='500'><a target='_blank' href='https://kinsta.com/?kaid=WMDAKYHJLNJX&utm_source=TheDevCouple&utm_medium=Partner'><img src='https://on.ahmda.ws/73cedc/c' /></a></td>
-		<td width='500'><a target='_blank' href='https://ahmda.ws/USES_WPE?utm_source=TheDevCouple&utm_medium=Partner'><img src='https://on.ahmda.ws/ff40fe/c' /></a></td>
-	</tr>
-	<tr>
-		<td width='500'><a target='_blank' href='https://mythemeshop.com/?utm_source=TheDevCouple&utm_medium=Partner'><img src='https://on.ahmda.ws/3166d9/c' /></a></td>
-		<td width='500'><a target='_blank' href='https://ipapi.com/?utm_source=TheDevCouple&utm_medium=Partner'><img src='https://d2ddoduugvun08.cloudfront.net/items/1R190r2U0p3N3L0U0b2u/ip-api.png'/></a></td>
+		<td width='500'><a target='_blank' href='https://kinsta.com/?kaid=WMDAKYHJLNJX&utm_source=TheDevCouple&utm_medium=Partner'><img src='https://on.awais.dev/4guJenp9' /></a>
+		<td width='500'><a target='_blank' href='https://ipapi.com/?utm_source=TheDevCouple&utm_medium=Partner'><img src='https://on.awais.dev/z8uYQO2O'/></a></td>
 	</tr>
 </table>
 <br>
 
-![Update](https://on.ahmda.ws/63be41c10343/c)
+![Update](https://on.awais.dev/NQu1joGO)
 
 ## License & Attribution
 
@@ -261,20 +261,5 @@ This project is inspired by the work of many awesome developers especially those
 :---: |
 [slushman](https://github.com/slushman) |
 
-_Follow me 👋 on Twitter for more updates and questions_ →  [![Tweet to say Hi](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)
 
-<br />
-<br />
-<p align="center">
-<strong>For anything else, tweet at <a href="https://twitter.com/MrAhmadAwais/" target="_blank" rel="noopener noreferrer">@MrAhmadAwais</a></strong>
-</p>
-
-<div align="center">
-	<p>I have released a video course to help you become a better developer — <a href="https://VSCode.pro/?utm_source=GitHubFOSS" target="_blank">Become a VSCode Power User →</a></p>
-    <br />
-  <a href="https://VSCode.pro/?utm_source=GitHubFOSS" target="_blank">
-  <img src="https://raw.githubusercontent.com/ahmadawais/shades-of-purple-vscode/master/images/vscodeproPlay.jpg" /><br>VSCode</a>
-
-  _<small><a href="https://VSCode.pro/?utm_source=GitHubFOSS" target="_blank">VSCode Power User Course →</a></small>_
-</div>
-
+[![Ahmad on Twitter](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Follow%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/)

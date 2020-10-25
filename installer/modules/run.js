@@ -1,36 +1,33 @@
-/**
- * Install WPGulp
- */
-
 const fs = require('fs');
-const theCWD = process.cwd();
-const theCWDArray = theCWD.split('/');
-const theDir = theCWDArray[theCWDArray.length - 1];
 const ora = require('ora');
 const execa = require('execa');
 const chalk = require('chalk');
 const download = require('download');
-const handleError = require('./handleError.js');
-const clearConsole = require('./clearConsole.js');
-const printNextSteps = require('./printNextSteps.js');
+const clear = require('clear-any-console');
+const handleError = require('./handleError');
+const printNextSteps = require('./printNextSteps');
 
 module.exports = () => {
 	// Init.
-	clearConsole();
+	clear();
+
+	const theCWD = process.cwd();
+	const theCWDArray = theCWD.split('/');
+	const theDir = theCWDArray[theCWDArray.length - 1];
 
 	// Files.
 	const filesToDownload = [
-		'https://raw.githubusercontent.com/ahmadawais/WPGulp/master/src/.editorconfig',
-		'https://raw.githubusercontent.com/ahmadawais/WPGulp/master/src/.eslintignore',
-		'https://raw.githubusercontent.com/ahmadawais/WPGulp/master/src/.eslintrc.js',
-		'https://raw.githubusercontent.com/ahmadawais/WPGulp/master/src/.gitignore',
-		'https://raw.githubusercontent.com/ahmadawais/WPGulp/master/src/gulpfile.babel.js',
-		'https://raw.githubusercontent.com/ahmadawais/WPGulp/master/src/package.json',
-		'https://raw.githubusercontent.com/ahmadawais/WPGulp/master/src/wpgulp.config.js'
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/.editorconfig`,
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/.eslintignore`,
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/.eslintrc.js`,
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/.gitignore`,
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/gulpfile.babel.js`,
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/package.json`,
+		`https://raw.githubusercontent.com/ahmadawais/WPGulp/master/WPGulp/wpgulp.config.js`
 	];
 
 	// Dotfiles (if any).
-	const dotFiles = ['.editorconfig', '.eslintignore', '.eslintrc.js', '.gitignore'];
+	const dotFiles = [`.editorconfig`, `.eslintignore`, `.eslintrc.js`, `.gitignore`];
 
 	// Start.
 	console.log('\n'); // eslint-disable-line no-console
@@ -50,9 +47,8 @@ module.exports = () => {
 		spinner.succeed();
 
 		// The npm install.
-		spinner.start('2. Installing npm packages...');
-		// await execa('npm', ['install', '--silent']);
-		await execa('npm', ['install']);
+		spinner.start(`2. Installing npm packages...`);
+		await execa(`npm`, [`install`]);
 		spinner.succeed();
 
 		// Done.

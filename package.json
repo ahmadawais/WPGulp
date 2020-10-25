@@ -1,52 +1,27 @@
 {
-  "name": "wpgulp",
-  "version": "2.8.0",
-  "author": "Ahmad Awais (https://twitter.com/MrAhmadAwais/)",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ahmadawais/WPGulp"
-  },
-  "main": "./installer/index.js",
-  "bin": {
-    "wpgulp": "./installer/index.js"
-  },
-  "keywords": [
-    "wpgulp",
-    "WP Gulp",
-    "WordPress Gulp",
-    "Install WPGulp"
-  ],
-  "dependencies": {
-    "chalk": "^2.4.1",
-    "download": "^7.1.0",
-    "execa": "^1.0.0",
-    "ora": "^3.0.0"
-  },
-  "devDependencies": {
-    "auto-changelog": "^1.8.0",
-    "eslint": "^5.5.0",
-    "eslint-config-wordpress": "^2.0.0",
-    "release-it": "^7.6.1"
-  },
-  "auto-changelog": {
-    "output": "CHANGELOG.md",
-    "template": ".vscode/clTemplate.hbs",
-    "commitLimit": false,
-    "package": true,
-    "replaceText": {
-      "FIX: ": "",
-      "NEW: ": "",
-      "IMPROVE: ": "",
-      "DOC: ": ""
-    }
-  },
-  "scripts": {
-    "log": "auto-changelog && git add . && git ci -m ' 📖 DOC: Update the changelog' && git push",
-    "release": "release-it",
-    "release-minor": "release-it minor",
-    "release-major": "release-it major",
-    "release-dry": "release-it --dry-run",
-    "release-beta": "release-it --preRelease=beta"
-  }
+	"name": "wpgulp",
+	"version": "2.8.0",
+	"author": "Ahmad Awais (https://twitter.com/MrAhmadAwais/)",
+	"license": "MIT",
+	"repository": "ahmadawais/WPGulp",
+	"bin": {
+		"wpgulp": "./installer/index.js"
+	},
+	"keywords": [
+		"wpgulp",
+		"WP Gulp",
+		"WordPress Gulp",
+		"Install WPGulp"
+	],
+	"dependencies": {
+		"chalk": "^2.4.1",
+		"clear-any-console": "^1.16.2",
+		"download": "^7.1.0",
+		"execa": "^1.0.0",
+		"ora": "^3.0.0"
+	},
+	"devDependencies": {
+		"eslint": "^5.5.0",
+		"eslint-config-wordpress": "^2.0.0"
+	}
 }
