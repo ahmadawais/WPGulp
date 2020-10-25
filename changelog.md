@@ -32,6 +32,18 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 
 <br>
 
+### RELEASE: [3.0.1](https://github.com/ahmadawais/WPGulp/compare/3.0.0...3.0.1)
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Link [`92e1bda`](https://github.com/ahmadawais/WPGulp/commit/92e1bda4c6ac48a0c08537639c43089508df5a91) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [3.0.0](https://github.com/ahmadawais/WPGulp/compare/2.8.0...3.0.0)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
@@ -61,6 +73,7 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 
 ![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
+> 📖 Changelog [`89eef5c`](https://github.com/ahmadawais/WPGulp/commit/89eef5c8de44baa12b4bc8bb4a60a45dbcc24501) <br>
 > 📖 Zip [`d3da102`](https://github.com/ahmadawais/WPGulp/commit/d3da102fa6fef9ad7b06568c757f00df527af3c9) <br>
 
 <br>
