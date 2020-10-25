@@ -139,7 +139,6 @@ Configure the project paths and other variables inside the `wpgulp.config.js` fi
 
 ![wpgulp config](https://on.awais.dev/f2ca9bb4a740/c)
 
-
 ### → `STEP #3` — Start your project
 
 Once the installation is done, you can open your project (WordPress plugin/theme) folder and run the start script.
@@ -158,13 +157,16 @@ To optimize images and generate WP POT translation file, or generate a RTL style
 
 ```sh
 # To optimize images.
-gulp images
+npm run images
 
 # To generate WP POT translation file.
-gulp translate
+npm run translate
 
 # To generate RTL stylesheets and Sourcemap.
-gulp stylesRTL
+npm run styles-rtl
+
+# To generate theme/plugin zip file without extranious files.
+npm run zip
 ```
 
 <br>
