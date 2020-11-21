@@ -32,11 +32,27 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 
 <br>
 
+### RELEASE: [3.2.0](https://github.com/ahmadawais/WPGulp/compare/3.1.2...3.2.0)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Sourcemap v3 Upgrade [`f1e33aa`](https://github.com/ahmadawais/WPGulp/commit/f1e33aa87f68f19f66f1945d97ab0f3423f3d8cc) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [3.1.2](https://github.com/ahmadawais/WPGulp/compare/3.1.1...3.1.2)
 
 ![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
 > 🐛 Images [`8302eb7`](https://github.com/ahmadawais/WPGulp/commit/8302eb72da59f6f84620f57a205ac0e79b9c33ac) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`13eed4f`](https://github.com/ahmadawais/WPGulp/commit/13eed4f0ec240fcb20853ba3b2b39374c0dbe903) <br>
 
 <br>
 
