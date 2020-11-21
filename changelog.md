@@ -32,11 +32,27 @@ I have released a video course to help you build <a href="https://NodeCLI.com/?u
 
 <br>
 
+### RELEASE: [3.1.1](https://github.com/ahmadawais/WPGulp/compare/3.1.0...3.1.1)
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 License [`d01f28f`](https://github.com/ahmadawais/WPGulp/commit/d01f28f540161b7bfa55f2dccec6d37186f6ff55) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [3.1.0](https://github.com/ahmadawais/WPGulp/compare/3.0.1...3.1.0)
 
 ![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
 > 🐛 Zip task [`fff6fa7`](https://github.com/ahmadawais/WPGulp/commit/fff6fa72c3cad7d7a04d989504f347f7c683d399) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog [`1584a63`](https://github.com/ahmadawais/WPGulp/commit/1584a63315132965cab1e7b2bd781df0d37182af) <br>
 
 <br>
 
