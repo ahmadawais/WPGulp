@@ -2,7 +2,7 @@
 
   <small><p><em>📟 Learn to <a href="https://nodecli.com/?utm_source=github.com&utm_medium=referral&utm_campaign=ahmadawais/WPGulp" rel="nofollow">build CLI DevTools</a>, like WPGulp with me at <a href="https://nodecli.com/?utm_source=github.com&utm_medium=referral&utm_campaign=ahmadawais/WPGulp">NodeCLI.com</a>.</em></p></small>
 
-  <img src="https://on.awais.dev/o0uy14NY/c" alt="WP Gulp · WordPress Gulp" />
+  <img src="https://a.cl.ly/o0uy14NY/c" alt="WP Gulp · WordPress Gulp" />
 
   <h1><code>WordPress Gulp Workflow</code></h1>
 
@@ -78,7 +78,7 @@
 
 <br>
 
-![Start](https://on.awais.dev/83f7dd38eb83/c)
+![Start](https://a.cl.ly/83f7dd38eb83/c)
 
 ## Getting Started
 
@@ -129,7 +129,7 @@ npx wpgulp
 
 ([npx](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) is a package runner tool that comes with npm 5.2+ and higher).
 
-![wpgulp install gif](https://on.awais.dev/c846c265e03a/c)
+![wpgulp install gif](https://a.cl.ly/c846c265e03a/c)
 
 > ⚠️  I'm assuming that there are no previously present similar files in the root of your folder. Otherwise, you need to merge these very carefully. E.g. You can include the `scripts`, `devDependencies` in your current `package.json` file and so on for other files. If you run the above command all similar files will be overwritten.
 
@@ -137,7 +137,7 @@ npx wpgulp
 
 Configure the project paths and other variables inside the `wpgulp.config.js` file. This is a compulsory step.
 
-![wpgulp config](https://on.awais.dev/f2ca9bb4a740/c)
+![wpgulp config](https://a.cl.ly/f2ca9bb4a740/c)
 
 ### → `STEP #3` — Start your project
 
@@ -149,7 +149,7 @@ npm start
 # To stop press CTRL (⌃) + C
 ```
 
-![wpgulp start](https://on.awais.dev/d64abd87de1f/c)
+![wpgulp start](https://a.cl.ly/d64abd87de1f/c)
 
 ### → `OPTIONAL STEP #4` — More Scripts/Tasks
 
@@ -171,7 +171,7 @@ npm run zip
 
 <br>
 
-![Update](https://on.awais.dev/d0b586da13cc/c)
+![Update](https://a.cl.ly/d0b586da13cc/c)
 
 ## How to Update?
 
@@ -180,7 +180,7 @@ npm run zip
 
 <br>
 
-![Log](https://on.awais.dev/61b20ca44b08/c)
+![Log](https://a.cl.ly/61b20ca44b08/c)
 
 ## Changelog
 
@@ -203,7 +203,7 @@ Nothing's ever complete, so bear with us while we keep iterating towards a bette
 
 <br>
 
-![Hello](https://on.awais.dev/4guJenpQ)
+![Hello](https://a.cl.ly/4guJenpQ/c)
 
 ## Sponsor
 
@@ -231,13 +231,13 @@ This open source project is maintained by the help of awesome businesses listed 
 
 <table width='100%'>
 	<tr>
-		<td width='500'><a target='_blank' href='https://kinsta.com/?kaid=WMDAKYHJLNJX&utm_source=TheDevCouple&utm_medium=Partner'><img src='https://on.awais.dev/4guJenp9' /></a>
-		<td width='500'><a target='_blank' href='https://ipapi.com/?utm_source=TheDevCouple&utm_medium=Partner'><img src='https://on.awais.dev/z8uYQO2O'/></a></td>
+		<td width='500'><a target='_blank' href='https://kinsta.com/?kaid=WMDAKYHJLNJX&utm_source=TheDevCouple&utm_medium=Partner'><img src='https://a.cl.ly/4guJenp9' /></a>
+		<td width='500'><a target='_blank' href='https://ipapi.com/?utm_source=TheDevCouple&utm_medium=Partner'><img src='https://a.cl.ly/z8uYQO2O'/></a></td>
 	</tr>
 </table>
 <br>
 
-![Update](https://on.awais.dev/NQu1joGO)
+![Update](https://a.cl.ly/NQu1joGO)
 
 ## License & Attribution
 
