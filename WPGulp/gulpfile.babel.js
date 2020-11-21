@@ -61,6 +61,7 @@ const cache = require('gulp-cache'); // Cache files in stream for later use.
 const remember = require('gulp-remember'); //  Adds all the files it has ever seen back into the stream.
 const plumber = require('gulp-plumber'); // Prevent pipe breaking caused by errors from gulp plugins.
 const beep = require('beepbeep');
+const zip = require('gulp-zip'); // Zip plugin or theme file.
 
 /**
  * Custom Error Handler.
@@ -376,6 +377,19 @@ gulp.task('translate', () => {
 				onLast: true
 			})
 		);
+});
+
+/**
+ * Zips theme or plugin and places in the parent directory
+ *
+ * zipIncludeGlob: Files to be included in the zip file
+ * zipIgnoreGlob: Files to be ignored from the zip file
+ * zipDestination: Must be a folder outside of the zip folder.
+ * zipName: theme.zip or plugin.zip
+ */
+gulp.task('zip', () => {
+	const src = [...config.zipIncludeGlob, ...config.zipIgnoreGlob];
+	return gulp.src(src).pipe(zip(config.zipName)).pipe(gulp.dest(config.zipDestination));
 });
 
 /**

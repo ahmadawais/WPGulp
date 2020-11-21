@@ -2,7 +2,7 @@
 
   <small><p><em>📟 Learn to <a href="https://nodecli.com/?utm_source=github.com&utm_medium=referral&utm_campaign=ahmadawais/WPGulp" rel="nofollow">build CLI DevTools</a>, like WPGulp with me at <a href="https://nodecli.com/?utm_source=github.com&utm_medium=referral&utm_campaign=ahmadawais/WPGulp">NodeCLI.com</a>.</em></p></small>
 
-  <img src="https://on.awais.dev/cf1298feadee/c" alt="WPGulp WordPress Gulp" />
+  <img src="https://on.awais.dev/o0uy14NY/c" alt="WP Gulp · WordPress Gulp" />
 
   <h1><code>WordPress Gulp Workflow</code></h1>
 
